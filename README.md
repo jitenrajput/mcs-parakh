@@ -1,4 +1,4 @@
-# M-Connect Parakh (परख)
+# MCS Parakh (परख)
 
 **AI-driven MSME Financial Health Card — built for IDBI Innovate 2026 (PS3: Financial Health Score) by Team M-Connect Labs.**
 
