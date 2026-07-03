@@ -1,0 +1,569 @@
+[
+ {
+  "gstin": "24AAACS1234F1Z5",
+  "name": "Shree Ganesh Auto Components",
+  "city": "Rajkot",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": true
+ },
+ {
+  "gstin": "24AABCT9876K1Z3",
+  "name": "TrendKart Online",
+  "city": "Surat",
+  "archetype": "growth_ecom",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": true
+ },
+ {
+  "gstin": "24AADCM4321P1Z8",
+  "name": "Maruti Trading Co",
+  "city": "Ahmedabad",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": true
+ },
+ {
+  "gstin": "24EZDXZ8196B1Z0",
+  "name": "Balaji Plastics",
+  "city": "Rajkot",
+  "archetype": "stable_services",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "27TCFAP7974B1Z3",
+  "name": "Krishna Plastics",
+  "city": "Mumbai",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33TDYSD4124Q1Z8",
+  "name": "Prime Ceramics",
+  "city": "Chennai",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33GUZXT3735K1Z0",
+  "name": "Jay Textiles",
+  "city": "Coimbatore",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "27SXBFH8061Q1Z4",
+  "name": "New Agro Foods",
+  "city": "Nagpur",
+  "archetype": "growth_ecom",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07YRLHA0119X1Z7",
+  "name": "Ganesh Ceramics",
+  "city": "New Delhi",
+  "archetype": "growth_ecom",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09CJNMX6693S1Z0",
+  "name": "Krishna Auto Components",
+  "city": "Noida",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29XECZN8936H1Z9",
+  "name": "Silver Exports",
+  "city": "Bengaluru",
+  "archetype": "stressed_trader",
+  "new_to_credit": true,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33FCJBN6504J1Z2",
+  "name": "Shakti Exports",
+  "city": "Coimbatore",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08XRXDN7811E1Z6",
+  "name": "Shree Engineering Works",
+  "city": "Udaipur",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07XREFG2971P1Z7",
+  "name": "Jay Industries",
+  "city": "New Delhi",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07CECKQ8539B1Z7",
+  "name": "Classic Enterprises",
+  "city": "New Delhi",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07EGGZG0591X1Z2",
+  "name": "Sunrise Ceramics",
+  "city": "New Delhi",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "27EMECH1096E1Z2",
+  "name": "Shree Engineering Works",
+  "city": "Pune",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24CTDJH9666D1Z3",
+  "name": "Balaji Enterprises",
+  "city": "Ahmedabad",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29LZDYH7651M1Z8",
+  "name": "National Plastics",
+  "city": "Mysuru",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24VYSGU2250C1Z4",
+  "name": "Sunrise Engineering Works",
+  "city": "Surat",
+  "archetype": "growth_ecom",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24EJHUX5873U1Z5",
+  "name": "Golden Exports",
+  "city": "Surat",
+  "archetype": "growth_ecom",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29PNCRA7158R1Z9",
+  "name": "Silver Steel Works",
+  "city": "Mysuru",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24BBHHE2855N1Z6",
+  "name": "Perfect Plastics",
+  "city": "Ahmedabad",
+  "archetype": "stable_services",
+  "new_to_credit": true,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07ALFJS0880N1Z2",
+  "name": "Balaji Engineering Works",
+  "city": "New Delhi",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": true,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07SCUQM4373Y1Z4",
+  "name": "Perfect Auto Components",
+  "city": "New Delhi",
+  "archetype": "growth_ecom",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07TENUM8264C1Z8",
+  "name": "Shree Exports",
+  "city": "New Delhi",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24BJTRV7888U1Z7",
+  "name": "Om Engineering Works",
+  "city": "Surat",
+  "archetype": "growth_ecom",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "06FEKFQ6774N1Z2",
+  "name": "New Engineering Works",
+  "city": "Gurugram",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24BCTNY7740Y1Z3",
+  "name": "Classic Steel Works",
+  "city": "Vadodara",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08EKCGU3696Q1Z8",
+  "name": "Jay Packaging",
+  "city": "Jaipur",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29XTSZH5279Z1Z1",
+  "name": "New Packaging",
+  "city": "Bengaluru",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "06ENEMJ2041W1Z2",
+  "name": "Classic Engineering Works",
+  "city": "Gurugram",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "06PVYDH9521L1Z0",
+  "name": "Jay Agro Foods",
+  "city": "Faridabad",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33JPCRL5188Q1Z0",
+  "name": "Om Engineering Works",
+  "city": "Coimbatore",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24FVYLC6469G1Z3",
+  "name": "Apex Pharma Distributors",
+  "city": "Surat",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33SSZEV5868J1Z1",
+  "name": "Shree Food Products",
+  "city": "Chennai",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29BRYFA1489P1Z7",
+  "name": "Silver Packaging",
+  "city": "Mysuru",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09FJLMH3756L1Z6",
+  "name": "Perfect Packaging",
+  "city": "Noida",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33PXRJB6873M1Z4",
+  "name": "Prime Pharma Distributors",
+  "city": "Coimbatore",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08WUPYX4598Q1Z2",
+  "name": "Om Exports",
+  "city": "Udaipur",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07ZDNTE6822X1Z1",
+  "name": "Royal Enterprises",
+  "city": "New Delhi",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33ZUAPX7618H1Z7",
+  "name": "Om Ceramics",
+  "city": "Coimbatore",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09YHLQG3813H1Z0",
+  "name": "Classic Ceramics",
+  "city": "Noida",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08ZVWSC2130B1Z8",
+  "name": "Shakti Enterprises",
+  "city": "Jaipur",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24VBPWQ0151F1Z0",
+  "name": "National Electronics",
+  "city": "Vadodara",
+  "archetype": "growth_ecom",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09JGLNQ0277F1Z8",
+  "name": "National Food Products",
+  "city": "Noida",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "06BGEZN4525Q1Z3",
+  "name": "Balaji Pharma Distributors",
+  "city": "Gurugram",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29EEZYY1091E1Z9",
+  "name": "Balaji Packaging",
+  "city": "Mysuru",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09FWBQW5605E1Z6",
+  "name": "Ganesh Auto Components",
+  "city": "Noida",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "29BXMZM9169T1Z3",
+  "name": "Jay Auto Components",
+  "city": "Bengaluru",
+  "archetype": "stable_services",
+  "new_to_credit": true,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07HRGCC4933D1Z0",
+  "name": "Golden Exports",
+  "city": "New Delhi",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08LAULU1450K1Z9",
+  "name": "Classic Exports",
+  "city": "Udaipur",
+  "archetype": "growth_ecom",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07PBJCK2643B1Z2",
+  "name": "Silver Ceramics",
+  "city": "New Delhi",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "33EJNAW7372H1Z8",
+  "name": "Shakti Enterprises",
+  "city": "Chennai",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09GEGUY5936A1Z1",
+  "name": "Modern Garments",
+  "city": "Lucknow",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "08GYJMN8848N1Z5",
+  "name": "Shree Auto Components",
+  "city": "Udaipur",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07RCXAP2945A1Z2",
+  "name": "National Traders",
+  "city": "New Delhi",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "09VNFVZ0107V1Z3",
+  "name": "Royal Garments",
+  "city": "Noida",
+  "archetype": "growth_ecom",
+  "new_to_credit": true,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07CRCYQ1994L1Z7",
+  "name": "Shree Electronics",
+  "city": "New Delhi",
+  "archetype": "healthy_manufacturer",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ },
+ {
+  "gstin": "07ELQPB1380Y1Z7",
+  "name": "Golden Pharma Distributors",
+  "city": "New Delhi",
+  "archetype": "stressed_trader",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24YQWNU8801F1Z2",
+  "name": "Sunrise Enterprises",
+  "city": "Rajkot",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": true,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "27TKKFV8299H1Z1",
+  "name": "National Textiles",
+  "city": "Mumbai",
+  "archetype": "seasonal_retailer",
+  "new_to_credit": false,
+  "default_12m": true,
+  "demo_persona": false
+ },
+ {
+  "gstin": "24FTUTZ1223X1Z9",
+  "name": "Modern Plastics",
+  "city": "Rajkot",
+  "archetype": "stable_services",
+  "new_to_credit": false,
+  "default_12m": false,
+  "demo_persona": false
+ }
+]

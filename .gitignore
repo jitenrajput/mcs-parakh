@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Data (keep the small committed sample in data/sample/)
+data/generated/
+
+# ML artifacts
+*.pkl
+*.joblib
+models/artifacts/
+
+# Env & IDE
+.env
+.env.*
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
