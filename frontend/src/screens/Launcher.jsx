@@ -3,6 +3,29 @@
 import { Link } from 'react-router-dom'
 import { Footer, SyntheticStamp } from '../components/bits'
 
+/* Hairline SVG seat marks — rule 1: no emoji in product UI */
+function SeatMark({ kind }) {
+  const stroke = '#E8A33D'
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" className="shrink-0">
+      <rect x="1" y="1" width="28" height="28" fill="none" stroke="rgba(232,163,61,0.35)" />
+      {kind === 'bank' ? (
+        <g stroke={stroke} strokeWidth="1.6" fill="none">
+          <path d="M5 12 L15 5.5 L25 12" />
+          <path d="M7 12 V22 M12.3 12 V22 M17.7 12 V22 M23 12 V22" />
+          <path d="M5 23.5 H25" />
+        </g>
+      ) : (
+        <g stroke={stroke} strokeWidth="1.6" fill="none">
+          <path d="M5 11 L7 5.5 H23 L25 11" />
+          <path d="M5 11 Q7.5 14.5 10 11 Q12.5 14.5 15 11 Q17.5 14.5 20 11 Q22.5 14.5 25 11" />
+          <path d="M7 13.5 V24 H23 V13.5 M12.5 24 V17.5 H17.5 V24" />
+        </g>
+      )}
+    </svg>
+  )
+}
+
 const PERSONAS = [
   { gstin: '24AAACS1234F1Z5', name: 'Shree Ganesh Auto Components', who: 'Rameshbhai Patel · Rajkot',
     story: '12 years, 18 employees, supplies two OEMs. Wants a CNC machine.', score: '781 · Prime', tone: '#1E8E5A' },
@@ -37,13 +60,17 @@ export default function Launcher() {
         <div className="mt-9 grid md:grid-cols-2 gap-4 rise rise-1">
           <Link to="/lender" className="hairline bg-navy-800/70 p-6 hover:bg-navy-700/70 transition-colors group">
             <div className="caps-label text-teal-300">Take a seat as</div>
-            <div className="font-display font-bold text-2xl mt-1">🏦 The Bank RM</div>
+            <div className="font-display font-bold text-2xl mt-1 flex items-center gap-3">
+              <SeatMark kind="bank" /> The Bank RM
+            </div>
             <p className="text-paper/60 text-sm mt-2">Your Monday-morning book: 65 MSMEs ranked by health, two flashing alerts, one ₹75L lead.</p>
             <div className="mt-3 text-amber-500 text-sm font-semibold group-hover:translate-x-1 transition-transform">Open the portfolio →</div>
           </Link>
           <Link to={`/msme/${PERSONAS[1].gstin}`} className="hairline bg-navy-800/70 p-6 hover:bg-navy-700/70 transition-colors group">
             <div className="caps-label text-teal-300">Take a seat as</div>
-            <div className="font-display font-bold text-2xl mt-1">🏪 The MSME Owner</div>
+            <div className="font-display font-bold text-2xl mt-1 flex items-center gap-3">
+              <SeatMark kind="shop" /> The MSME Owner
+            </div>
             <p className="text-paper/60 text-sm mt-2">Meena's phone: her own score, in her own language, with actions priced in rupees.</p>
             <div className="mt-3 text-amber-500 text-sm font-semibold group-hover:translate-x-1 transition-transform">Open her card →</div>
           </Link>
@@ -54,9 +81,9 @@ export default function Launcher() {
           <div className="grid md:grid-cols-3 gap-3">
             {PERSONAS.map(p => (
               <Link key={p.gstin} to={`/lender/${p.gstin}`} className="hairline bg-navy-900/70 p-4 hover:bg-navy-800 transition-colors">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start gap-2">
                   <div className="font-display font-bold text-[15px] leading-tight">{p.name}</div>
-                  <span className="tnum font-mono text-xs px-1.5 py-0.5" style={{ color: p.tone, border: `1px solid ${p.tone}` }}>{p.score}</span>
+                  <span className="tnum font-mono text-xs px-1.5 py-0.5 whitespace-nowrap shrink-0" style={{ color: p.tone, border: `1px solid ${p.tone}` }}>{p.score}</span>
                 </div>
                 <div className="text-paper/50 text-xs mt-1">{p.who}</div>
                 <p className="text-paper/70 text-[13px] mt-2 leading-snug">{p.story}</p>

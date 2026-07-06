@@ -98,7 +98,8 @@ export function Sparkline({ series, w = 96, h = 26 }) {
 
 export function SyntheticStamp({ t }) {
   return (
-    <div className="fixed bottom-4 right-4 z-50 text-band-red/70 synthetic-stamp bg-paper/40 backdrop-blur-[1px]">
+    <div className="fixed bottom-4 right-4 z-50 synthetic-stamp bg-paper/85"
+      style={{ color: '#C0392B' }}>
       {t?.('synthetic') || 'SYNTHETIC DATA'} · DS-42-2026.07
     </div>
   )
