@@ -38,6 +38,10 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-213 | Improve-score simulator (re-runs engine; rupee-denominated deltas, Nayak-anchor formula) | FR-4.8 | CL+ZS | todo |
 | T-214 | Coverage ring + A–E grade chips on Health Card | FR-4.9 | FE+CL | todo |
 | T-215 | EN/HI/GU language toggle (react-i18next) | FR-4.10 | FE+CL | todo |
+| T-216 | Demo Launcher S0 (seat-picker, persona cards, reset) — MUST | docs/10 | FE+CL | todo |
+| T-217 | 7 designed error/empty states — MUST; NP tests all deliberately | docs/10 | FE+CL+NP | todo |
+| T-218 | tokens.json (palette/type) wired into Tailwind + copied to Slides master | docs/10 | CL+JT | todo |
+| T-219 | strings.json EN/HI/GU (~10 critical strings); JR native review Jul 7 eve | docs/10 | CL+JR | todo |
 
 ## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
 
@@ -54,6 +58,10 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
 | T-311 | Juror-rebuttal one-pager (6 attacks incl. "why your parameters" + translation table) for rehearsal | G1a | JT+CL | todo |
+| T-312 | Logo SVGs (hallmark-stamp concept) → JR picks; into app header + deck + favicon + OG image | docs/10 | CL+JR | todo |
+| T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
+| T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
+| T-315 | Demo script fitted to final screens (draft done); JR voices video; pitch-roles rehearsal | docs/10 | JT+JR | todo |
 
 ## P4 — Submit
 
