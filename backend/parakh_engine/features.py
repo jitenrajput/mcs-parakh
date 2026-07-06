@@ -40,23 +40,31 @@ def extract(sources: dict, profile: dict) -> tuple[dict, dict]:
         f.update({k: None for k in ("inflow_cov", "balance_floor_ratio", "net_margin",
                                     "emi_to_inflow", "bounces_12m")})
 
-    # ---- GST (last 12 return periods) -----------------------------------------
+    # ---- GST (turnover over 12 periods; filing DISCIPLINE over the recent 6 —
+    # recency window: momentum is creditable, and improvement actions must move
+    # the score the way a bank's rolling review would) ---------------------------
     gst = (sources.get("gst_returns") or [])[-12:]
     if gst:
-        delays, late, missed, gaps, turnovers = [], 0, 0, [], []
+        missed, gaps, turnovers = 0, [], []
+        delays6, late6 = [], 0
+        recent6 = gst[-6:]
         for r in gst:
             g3 = r["gstr3b"]
             if g3["status"] == "NF" or g3["dof"] is None:
                 missed += 1
                 continue
-            d = _days_between(g3["due_dt"], g3["dof"])
-            delays.append(max(0, d))
-            if d > 5:
-                late += 1
             gaps.append(r.get("gstr1_vs_3b_gap_pct", 0.0))
             turnovers.append(r["gstr1"]["ttl_val"])
-        f["gst_avg_delay_days"] = _mean(delays) if delays else 30.0
-        f["gst_late_count_12m"] = float(late)
+        for r in recent6:
+            g3 = r["gstr3b"]
+            if g3["status"] == "NF" or g3["dof"] is None:
+                continue
+            d = _days_between(g3["due_dt"], g3["dof"])
+            delays6.append(max(0, d))
+            if d > 5:
+                late6 += 1
+        f["gst_avg_delay_days"] = _mean(delays6) if delays6 else 30.0
+        f["gst_late_count_6m"] = float(late6)
         f["gst_missed_12m"] = float(missed)
         f["gstr1_3b_gap_pct"] = _mean(gaps) if gaps else 8.0
         # growth from declared turnover (robust MoM slope, trimmed)

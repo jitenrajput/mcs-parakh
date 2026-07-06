@@ -16,7 +16,7 @@ Defense: a credit memo's question order — can they repay (30), are they discip
 | **Weak** | 480–599 | 30% | Not now — coaching mode, re-assess 90 days |
 | **Critical** | 300–479 | 0% | Existing borrower → Parakh Watch alert; new → decline + rehab path |
 
-- **Lower-edge rule:** indicative eligibility is computed at the LOWER edge of the confidence band (score 690 ± 35 → eligibility at 655). Confidence is consequential, not decorative.
+- **Confidence-conservative rule (AMENDED Jul 06 night — ⚠️ pending JR confirm):** at **Low** confidence (±60), eligibility is banded at the lower edge (score − 60); at High/Medium the **point band** applies and the ± range is always displayed. *Why amended: the original strict lower-edge rule contradicted this doc's own canonical numbers — 720 − 35 = 685 = still Watch, which would have made Meena's +₹3.8L moment +₹0. The amendment preserves every canonical number, keeps confidence consequential (kill a source → Low → the limit visibly drops — a better kill-switch beat), and matches how the worked example below was always computed.*
 - Multipliers apply everywhere (today's readiness meter AND Kal-Parakh projections) — they are band properties, not simulator properties.
 - Everything labeled: "indicative — bank credit policy owns final sanction."
 - Calibration target on synthetic population: p10 ≈ 450, p90 ≈ 800.

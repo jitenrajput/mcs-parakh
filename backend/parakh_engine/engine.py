@@ -100,11 +100,19 @@ def score(record: dict) -> ScoreResult:
             conf_label, width = label, w
             break
 
-    band_pt, _ = band_for(pt)
-    lower = max(config.SCORE_MIN, pt - width)
-    band_low, mult = band_for(lower)
+    band_pt, mult_pt = band_for(pt)
+    # Confidence-conservative rule (docs/12, amended Jul 06 night): at Low
+    # confidence, eligibility is banded at the lower edge (score - 60); at
+    # High/Medium the point band applies and the +/- range is displayed.
+    if conf_label == "Low":
+        lower = max(config.SCORE_MIN, pt - width)
+        band_elig, mult = band_for(lower)
+        basis_note = f"{band_elig} multiplier at Low-confidence lower edge ({pt}-{width}={lower})"
+    else:
+        band_elig, mult = band_pt, mult_pt
+        basis_note = f"{band_elig} multiplier at point score {pt} ({conf_label} confidence)"
 
-    # --- indicative eligibility (Nayak turnover method, lower-edge rule) --------
+    # --- indicative eligibility (Nayak turnover method) --------------------------
     annual = feats.get("annual_turnover") or 0.0
     ceiling = config.NAYAK_WC_FACTOR * annual
     eligibility = dict(
@@ -112,14 +120,14 @@ def score(record: dict) -> ScoreResult:
         nayak_ceiling=round(ceiling),
         band_multiplier=mult,
         indicative_limit=round(ceiling * mult),
-        basis=f"20% of annual turnover x {band_low} multiplier at lower edge "
-              f"({pt} - {width} = {lower}); indicative only - bank credit policy owns sanction",
+        basis=f"20% of annual turnover x {basis_note}; "
+              f"indicative only - bank credit policy owns sanction",
     )
 
     reasons.sort(key=lambda r: r.points_delta)
     return ScoreResult(
         gstin=profile["gstin"], name=profile["name"], score=pt,
-        band=band_pt, band_lower_edge=band_low,
+        band=band_pt, band_lower_edge=band_elig,
         confidence=conf_label, confidence_width=width,
         dimensions={d: dict(score=s, grade=letter(s)) for d, s in dims.items()},
         reasons_positive=[asdict(r) for r in reversed(reasons[-3:])],

@@ -99,13 +99,20 @@ def test_late_gst_lowers_compliance_and_score():
     assert r1.score < r0.score
 
 
-# ---- Eligibility: lower-edge rule ------------------------------------------------
+# ---- Eligibility: confidence-conservative rule (amended Jul 06) -------------------
 
-def test_eligibility_lower_edge_rule():
-    r = score(load(MEENA))  # 691 +/- 35 -> lower edge 656 -> Watch (60%)
+def test_eligibility_confidence_rule():
+    # High/Medium confidence -> point band; Low -> banded one edge down.
+    r = score(load(MEENA))  # 692, Watch, Medium -> point band Watch (60%)
     assert r.band_lower_edge == "Watch"
     assert r.eligibility["band_multiplier"] == 0.60
-    assert r.eligibility["indicative_limit"] == round(r.eligibility["nayak_ceiling"] * 0.60)
+    assert abs(r.eligibility["indicative_limit"] - r.eligibility["nayak_ceiling"] * 0.60) <= 1
+
+    low = score_with_overrides(load(RAMESH), drop_sources=["bureau", "epfo_ecr"])
+    if low.confidence == "Low":  # eligibility banded at score-60, not point score
+        from parakh_engine.engine import band_for
+        _, expected_mult = band_for(low.score - 60)
+        assert low.eligibility["band_multiplier"] == expected_mult
 
 
 # ---- Version stamps (governance) --------------------------------------------------

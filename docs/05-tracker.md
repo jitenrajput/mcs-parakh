@@ -25,11 +25,14 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 | ID | Task | Req | Owner | Status |
 |---|---|---|---|---|
-| T-201 | `SourceAdapter` protocol + 5 mock adapters + registry | FR-2.1/2.2 | CL | todo |
-| T-202 | Adapter kill-switch endpoint/toggle | FR-2.4 | CL | todo |
-| T-203 | FastAPI: /score, /score/{id}, /explain/{id}, /portfolio, /consent, /msmes + OpenAPI | FR-3.1/3.2 | CL+ZS | todo |
-| T-204 | Audit log stub (SQLite) | FR-3.3 | CL | todo |
-| T-205 | Score time-series (rolling monthly) + alert rules | FR-1.5/1.6 | ZS | todo |
+| T-201 | `SourceAdapter` protocol + 5 mock adapters + registry | FR-2.1/2.2 | CL | **done** |
+| T-202 | Adapter kill-switch (`/admin/killswitch`) — Low confidence also drops the limit | FR-2.4 | CL | **done** |
+| T-203 | FastAPI: /score, /score/{id}, /explain/{id}, /portfolio, /consent, /msmes, /simulate + OpenAPI | FR-3.1/3.2 | CL+ZS | **done** |
+| T-204 | Audit log + consent store (SQLite; version stamps per row) | FR-3.3 | CL | **done** |
+| T-205 | Parakh Watch: score time-series (rolling monthly) + transparent alert rules | FR-1.5/1.6 | ZS | **done** |
+| T-213b | Kal-Parakh backend (`/simulate` re-runs real engine; canon verified 692→721, +₹3.9L) | FR-4.8 | CL | **done** |
+
+**⚠️ Policy amendment pending JR confirm (docs/12): lower-edge eligibility now applies at Low confidence only; High/Medium use point band — required to keep the canonical +₹3.8L moment true. API tests 6/6, engine 10/10.**
 | T-206 | React scaffold (Vite + Tailwind + Recharts) | FR-4.x | FE+CL | todo |
 | T-207 | Health Card component (gauge, dimensions, confidence badge, reasons) | FR-4.1 | FE+CL | todo |
 | T-208 | AA consent screen + DPDP notice | FR-4.2, CR-1/2 | FE+CL | todo |

@@ -27,8 +27,8 @@ COMPONENTS = {
         ("net_margin",          0.35, 0.18, -0.05),  # (credits-debits)/credits
     ],
     "compliance": [
-        ("gst_avg_delay_days",  0.40, 1.0, 25.0),
-        ("gst_late_count_12m",  0.20, 0.0, 8.0),
+        ("gst_avg_delay_days",  0.40, 1.0, 25.0),   # recent-6m window (momentum)
+        ("gst_late_count_6m",   0.20, 0.0, 5.0),
         ("gst_missed_12m",      0.20, 0.0, 3.0),
         ("gstr1_3b_gap_pct",    0.20, 1.0, 8.0),
     ],
@@ -82,7 +82,7 @@ REASON_LABELS = {
     "balance_floor_ratio": ("Healthy balance cushion", "Thin balance cushion"),
     "net_margin":          ("Strong cash-flow margin", "Weak cash-flow margin"),
     "gst_avg_delay_days":  ("GST filed on time", "GST filed late (avg {v:.0f} days)"),
-    "gst_late_count_12m":  ("Few late GST filings", "{v:.0f} late GST filings in 12m"),
+    "gst_late_count_6m":   ("Recent GST filings on time", "{v:.0f} late GST filings in last 6m"),
     "gst_missed_12m":      ("No missed GST returns", "{v:.0f} missed GST returns"),
     "gstr1_3b_gap_pct":    ("GSTR-1 and 3B consistent", "GSTR-1 vs 3B gap {v:.1f}%"),
     "turnover_slope_pct":  ("Growing turnover", "Declining turnover"),
