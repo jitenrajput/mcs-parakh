@@ -27,3 +27,7 @@ models/artifacts/
 # OS
 Thumbs.db
 .DS_Store
+
+# runtime stores
+backend/parakh.db
+*.db
