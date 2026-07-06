@@ -62,6 +62,11 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script fitted to final screens (draft done); JR voices video; pitch-roles rehearsal | docs/10 | JT+JR | todo |
+| T-316 | PS-language mirror pass: slide 4 uses PS3's exact vocabulary verbatim | pre-mortem | JT+CL | todo |
+| T-317 | Template-compliance checklist (structure, slide count, PDF ≤5MB, naming) | pre-mortem | NP | todo |
+| T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
+| T-319 | Read Hack2Skill/IDBI T&Cs (IP terms) BEFORE repo goes public | IP | JR+CL | todo |
+| T-320 | Submission-form field screenshots (Jul 7) + pre-written answers incl. 250-word abstract | dry-run | JR+CL | todo |
 
 ## P4 — Submit
 
