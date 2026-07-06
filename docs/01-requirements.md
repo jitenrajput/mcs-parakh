@@ -43,6 +43,11 @@ Each requirement carries an ID (used in commits, tracker, and PRs), a priority, 
 | FR-4.5 | Lender/MSME view flip on one card | MUST |
 | FR-4.6 | Mobile-responsive (jury will open the link on a phone) | MUST |
 | FR-4.7 | Synthetic-data watermark visible on every screen | MUST |
+| FR-4.8 | **"Improve your score" simulator** (headline wow): toggle actions → re-run the real engine with modified inputs → score projection + **rupee-denominated** eligible-limit delta (turnover-method/Nayak anchor, formula in footnote) | MUST |
+| FR-4.9 | Confidence visual = **coverage ring**: 5 source icons around the gauge (lit/dim) + band ("720 ± 35"); dimension scores as **A–E grade chips** with thin bar | MUST |
+| FR-4.10 | Language toggle on MSME view: EN/HI/GU via i18n JSON files (adding a language = one file; roadmap: all 22 scheduled languages) | SHOULD |
+
+**UX hard rule (locked Jul 06):** every MSME-facing recommendation is denominated in **rupees** (eligible-limit impact), never in points. Points are internal machinery; rupees are the message. Demo storyline = "RM's Monday morning" (fear → hope → wow → money), per brainstorm decisions 1–4.
 
 ## 2. Non-functional requirements
 

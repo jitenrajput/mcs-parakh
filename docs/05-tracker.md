@@ -35,6 +35,9 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-210 | MSME self-view + improve-actions + readiness meter | FR-4.4 | FE+CL | todo |
 | T-211 | View flip + mobile responsiveness + watermark | FR-4.5/4.6/4.7 | FE | todo |
 | T-212 | CGTMSE flag + propensity panel | FR-1.8/1.9 | ZS+FE | todo |
+| T-213 | Improve-score simulator (re-runs engine; rupee-denominated deltas, Nayak-anchor formula) | FR-4.8 | CL+ZS | todo |
+| T-214 | Coverage ring + A–E grade chips on Health Card | FR-4.9 | FE+CL | todo |
+| T-215 | EN/HI/GU language toggle (react-i18next) | FR-4.10 | FE+CL | todo |
 
 ## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
 
@@ -50,6 +53,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-308 | 2-min demo video | G1a booster | JT | todo |
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
+| T-311 | Juror-rebuttal one-pager (6 attacks incl. "why your parameters" + translation table) for rehearsal | G1a | JT+CL | todo |
 
 ## P4 — Submit
 

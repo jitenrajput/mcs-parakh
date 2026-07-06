@@ -23,6 +23,8 @@ Examples:
 
 Rules: tracker status updates ride **in the same commit** as the work · no `WIP`/`asdf` commits on master (squash first) · commit messages are jury-visible — write them like the repo is being graded, because it is.
 
+**Attribution rule:** all commits and co-author trailers attribute to **MCS-Labs** only (`Co-Authored-By: MCS-Labs <dev@mconnectsolutions.com>`). No AI-vendor names (Claude/Anthropic/etc.) anywhere in git history, commit messages, or release notes.
+
 ## Tags — milestone markers
 
 | Tag | When |
