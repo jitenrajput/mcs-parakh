@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ————— The assayer's ledger: sharp corners, hairlines, stamped ink ————— */
+
+:root {
+  --hair: rgba(232, 163, 61, 0.28);
+  --hair-teal: rgba(87, 183, 159, 0.22);
+}
+
+html { scroll-behavior: smooth; }
+body { @apply font-body antialiased; }
+
+/* Lender chrome: ruled-ledger texture on deep navy */
+.ledger-bg {
+  background-color: #0b1526;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(232, 163, 61, 0.035) 31px 32px),
+    radial-gradient(1100px 500px at 85% -10%, rgba(14, 110, 92, 0.22), transparent 60%);
+}
+
+/* MSME side: warm paper with faint laid-lines */
+.paper-bg {
+  background-color: #f7f5f0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(28, 36, 52, 0.045) 27px 28px),
+    radial-gradient(900px 420px at 10% -8%, rgba(232, 163, 61, 0.10), transparent 55%);
+}
+
+.hairline { border: 1px solid var(--hair); }
+.hairline-b { border-bottom: 1px solid var(--hair); }
+.hairline-teal { border: 1px solid var(--hair-teal); }
+
+.caps-label { @apply uppercase tracking-caps text-[11px] font-semibold; }
+
+/* Assay-stamp grade chip: notched corner via clip-path */
+.stamp-chip {
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Mukta, 'Noto Sans', sans-serif;
+  font-weight: 800;
+}
+
+/* Rubber-stamp watermark */
+.synthetic-stamp {
+  transform: rotate(-7deg);
+  border: 2.5px double currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.92'/%3E%3C/svg%3E");
+  mask-size: 120px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 600;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Score digits: tabular so rupee tables never wobble */
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* Card assemble animation: sources sealing in one by one */
+@keyframes seal-in {
+  0% { opacity: 0; transform: scale(1.6) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(0.96) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+.seal-in { animation: seal-in 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+
+@keyframes needle-sweep { from { stroke-dashoffset: var(--arc-len); } to { stroke-dashoffset: var(--arc-target); } }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.5s ease-out both; }
+.rise-1 { animation-delay: 0.08s; } .rise-2 { animation-delay: 0.16s; }
+.rise-3 { animation-delay: 0.24s; } .rise-4 { animation-delay: 0.32s; }
+
+/* Ledger table rows */
+.ledger-row {
+  border-bottom: 1px solid rgba(232, 163, 61, 0.12);
+  transition: background-color 0.15s;
+}
+.ledger-row:hover { background: rgba(20, 36, 61, 0.6); }
+
+::selection { background: rgba(232, 163, 61, 0.35); }

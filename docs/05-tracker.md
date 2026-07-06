@@ -33,20 +33,20 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-213b | Kal-Parakh backend (`/simulate` re-runs real engine; canon verified 692→721, +₹3.9L) | FR-4.8 | CL | **done** |
 
 **⚠️ Policy amendment pending JR confirm (docs/12): lower-edge eligibility now applies at Low confidence only; High/Medium use point band — required to keep the canonical +₹3.8L moment true. API tests 6/6, engine 10/10.**
-| T-206 | React scaffold (Vite + Tailwind + Recharts) | FR-4.x | FE+CL | todo |
-| T-207 | Health Card component (gauge, dimensions, confidence badge, reasons) | FR-4.1 | FE+CL | todo |
-| T-208 | AA consent screen + DPDP notice | FR-4.2, CR-1/2 | FE+CL | todo |
-| T-209 | Lender portfolio view + early-warning list | FR-4.3 | FE+CL | todo |
-| T-210 | MSME self-view + improve-actions + readiness meter | FR-4.4 | FE+CL | todo |
-| T-211 | View flip + mobile responsiveness + watermark | FR-4.5/4.6/4.7 | FE | todo |
-| T-212 | CGTMSE flag + propensity panel | FR-1.8/1.9 | ZS+FE | todo |
-| T-213 | Improve-score simulator (re-runs engine; rupee-denominated deltas, Nayak-anchor formula) | FR-4.8 | CL+ZS | todo |
-| T-214 | Coverage ring + A–E grade chips on Health Card | FR-4.9 | FE+CL | todo |
-| T-215 | EN/HI/GU language toggle (react-i18next) | FR-4.10 | FE+CL | todo |
-| T-216 | Demo Launcher S0 (seat-picker, persona cards, reset) — MUST | docs/10 | FE+CL | todo |
-| T-217 | 7 designed error/empty states — MUST; NP tests all deliberately | docs/10 | FE+CL+NP | todo |
-| T-218 | tokens.json (palette/type) wired into Tailwind + copied to Slides master | docs/10 | CL+JT | todo |
-| T-219 | strings.json EN/HI/GU (~10 critical strings); JR native review Jul 7 eve | docs/10 | CL+JR | todo |
+| T-206 | React scaffold (Vite + Tailwind; custom SVG viz — lighter than Recharts) | FR-4.x | FE+CL | **done** |
+| T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record) | FR-4.1 | FE+CL | **done** |
+| T-208 | AA consent screen (para-6.3 fields) + DPDP notice + declined state | FR-4.2, CR-1/2 | FE+CL | **done** |
+| T-209 | Lender portfolio: ranked ledger, sparklines, Parakh Watch section on top | FR-4.3 | FE+CL | **done** |
+| T-210 | MSME self-view: card + plain-words reasons + readiness meter | FR-4.4 | FE+CL | **done** |
+| T-211 | Flip button + watermark done; **mobile pass on real phone pending (Jul 7 QA)** | FR-4.5/4.6/4.7 | FE | doing |
+| T-212 | CGTMSE flag (4-condition, circulars cited) + propensity rail | FR-1.8/1.9 | ZS+FE | **done** |
+| T-213 | Kal-Parakh UI: action toggles → live re-score → +₹ delta (canon 692→721 +₹3.9L) | FR-4.8 | CL+ZS | **done** |
+| T-214 | Seal-dot coverage ring + assay-stamp A–E chips | FR-4.9 | FE+CL | **done** |
+| T-215 | EN/HI/GU toggle (custom i18n, one block per language) | FR-4.10 | FE+CL | **done** |
+| T-216 | Demo Launcher S0: seat-picker, persona cards, 30-sec explainer | docs/10 | FE+CL | **done** |
+| T-217 | Error states: consent-declined, unknown-GSTIN→persona chips, API-cold, skeletons, 404→S0, source-failed toast-equivalent | docs/10 | FE+CL+NP | **done** (NP re-test Jul 7) |
+| T-218 | Tokens wired into tailwind.config.js; **copy to Slides master pending (JT)** | docs/10 | CL+JT | doing |
+| T-219 | Strings EN/HI/GU live in i18n.jsx; **JR native review pending** | docs/10 | CL+JR | doing |
 
 ## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
 
