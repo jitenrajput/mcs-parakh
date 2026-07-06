@@ -1,0 +1,70 @@
+# 05 — Task Tracker
+
+**This file is the single source of truth for status.** Update it in the same commit as the work (see 08-git-workflow.md). Statuses: `todo` · `doing` · `blocked` · `done` · `cut`.
+
+Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE** frontend owner (TBD) · **CL** Claude
+
+## P1 — Foundation (gate: personas score correctly from CLI)
+
+| ID | Task | Req | Owner | Status |
+|---|---|---|---|---|
+| T-101 | Upgrade datagen to ReBIT `deposit.xsd` field fidelity (txn `mode`, `narration`, balances) | FR-2.3, NFR-8 | ZS+CL | todo |
+| T-102 | Add GSTR-1/3B filing records w/ due-date + filed-date (timeliness signal) | FR-2.3 | ZS+CL | todo |
+| T-103 | EPFO ECR mock records (UAN count, wages, contribution dates) — employer-consented path | FR-2.2 | CL | todo |
+| T-104 | Bureau mock (CMR-style; NULL for persona P2 NTC) | FR-2.2 | CL | todo |
+| T-105 | Regenerate dataset: 60+ MSMEs, 24 mo, 3 personas + 2 deteriorating; SYNTHETIC watermark | FR-2.3 | ZS | todo |
+| T-106 | `parakh_engine`: FeatureExtractor per source | FR-1.1 | ZS+CL | todo |
+| T-107 | Scorecard: bins → points → 5 dimensions → weighted composite → 300–900 affine scaling | FR-1.1/1.2 | ZS+CL | todo |
+| T-108 | Reason-code generator from point contributions | FR-1.3 | CL | todo |
+| T-109 | Confidence band from coverage vector | FR-1.4 | CL | todo |
+| T-110 | Unit tests: persona bands, monotonicity spot-checks, missing-source behavior | NFR-5/6 | ZS+NP | todo |
+
+## P2 — End-to-end product (gate: full flow clickable locally)
+
+| ID | Task | Req | Owner | Status |
+|---|---|---|---|---|
+| T-201 | `SourceAdapter` protocol + 5 mock adapters + registry | FR-2.1/2.2 | CL | todo |
+| T-202 | Adapter kill-switch endpoint/toggle | FR-2.4 | CL | todo |
+| T-203 | FastAPI: /score, /score/{id}, /explain/{id}, /portfolio, /consent, /msmes + OpenAPI | FR-3.1/3.2 | CL+ZS | todo |
+| T-204 | Audit log stub (SQLite) | FR-3.3 | CL | todo |
+| T-205 | Score time-series (rolling monthly) + alert rules | FR-1.5/1.6 | ZS | todo |
+| T-206 | React scaffold (Vite + Tailwind + Recharts) | FR-4.x | FE+CL | todo |
+| T-207 | Health Card component (gauge, dimensions, confidence badge, reasons) | FR-4.1 | FE+CL | todo |
+| T-208 | AA consent screen + DPDP notice | FR-4.2, CR-1/2 | FE+CL | todo |
+| T-209 | Lender portfolio view + early-warning list | FR-4.3 | FE+CL | todo |
+| T-210 | MSME self-view + improve-actions + readiness meter | FR-4.4 | FE+CL | todo |
+| T-211 | View flip + mobile responsiveness + watermark | FR-4.5/4.6/4.7 | FE | todo |
+| T-212 | CGTMSE flag + propensity panel | FR-1.8/1.9 | ZS+FE | todo |
+
+## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
+
+| ID | Task | Req | Owner | Status |
+|---|---|---|---|---|
+| T-301 | Dockerfile + compose; container runs full stack locally | NFR-4 | CL | todo |
+| T-302 | Deploy API → App Runner (fallback Render after 3 hrs) | NFR-2 | JR+CL | todo |
+| T-303 | Deploy frontend → Amplify | NFR-2 | JR+CL | todo |
+| T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
+| T-305 | README: quickstart, architecture diagram, demo GIF, MIT, no-secrets scan | NFR-3/7, G1c | NP+CL | todo |
+| T-306 | Deck 10 slides in IDBI template — stats from research-findings §3 ONLY | G1a | JR+JT | todo |
+| T-307 | Deck speaker notes: primary source per number | G1a | JT | todo |
+| T-308 | 2-min demo video | G1a booster | JT | todo |
+| T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
+| T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
+
+## P4 — Submit
+
+| ID | Task | Owner | Status |
+|---|---|---|---|
+| T-401 | Final review meeting 09:00 Jul 9 | all | todo |
+| T-402 | Export PDF ≤ 5 MB; slide-1 fields; submit deck + links before noon | JR | todo |
+| T-403 | Confirm Hack2Skill team formation complete | JR | todo |
+| T-404 | Confirmation screenshot archived | JR | todo |
+
+## Blockers (live)
+
+| # | Blocker | Blocks | Owner | Raised |
+|---|---|---|---|---|
+| B-1 | Frontend owner unassigned | T-206…T-212 | JR | Jul 3 |
+| B-2 | Working defaults unconfirmed (deploy / model scope / EPFO) — defaults adopted, flag to flip | T-302, T-310, T-103 | JR | Jul 6 |
+| B-3 | AWS account + Amplify/App Runner access not yet verified | T-302/303 | JR | Jul 6 |
+| B-4 | IDBI Google Slides template access (download + fonts) not verified | T-306 | JT | Jul 6 |
