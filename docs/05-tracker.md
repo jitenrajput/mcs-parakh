@@ -8,16 +8,18 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 | ID | Task | Req | Owner | Status |
 |---|---|---|---|---|
-| T-101 | Upgrade datagen to ReBIT `deposit.xsd` field fidelity (txn `mode`, `narration`, balances) | FR-2.3, NFR-8 | ZS+CL | todo |
-| T-102 | Add GSTR-1/3B filing records w/ due-date + filed-date (timeliness signal) | FR-2.3 | ZS+CL | todo |
-| T-103 | EPFO ECR mock records (UAN count, wages, contribution dates) — employer-consented path | FR-2.2 | CL | todo |
-| T-104 | Bureau mock (CMR-style; NULL for persona P2 NTC) | FR-2.2 | CL | todo |
-| T-105 | Regenerate dataset: 60+ MSMEs, 24 mo, 3 personas + 2 deteriorating; SYNTHETIC watermark | FR-2.3 | ZS | todo |
-| T-106 | `parakh_engine`: FeatureExtractor per source | FR-1.1 | ZS+CL | todo |
-| T-107 | Scorecard: bins → points → 5 dimensions → weighted composite → 300–900 affine scaling | FR-1.1/1.2 | ZS+CL | todo |
-| T-108 | Reason-code generator from point contributions | FR-1.3 | CL | todo |
-| T-109 | Confidence band from coverage vector | FR-1.4 | CL | todo |
-| T-110 | Unit tests: persona bands, monotonicity spot-checks, missing-source behavior | NFR-5/6 | ZS+NP | todo |
+| T-101 | Upgrade datagen to ReBIT `deposit.xsd` field fidelity (txn `mode`, `narration`, balances) | FR-2.3, NFR-8 | ZS+CL | **done** |
+| T-102 | Add GSTR-1/3B filing records w/ due-date + filed-date (timeliness signal) | FR-2.3 | ZS+CL | **done** |
+| T-103 | EPFO ECR mock records (UAN count, wages, contribution dates) — employer-consented path | FR-2.2 | CL | **done** |
+| T-104 | Bureau mock (CMR-style; NULL for persona P2 NTC) | FR-2.2 | CL | **done** |
+| T-105 | Regenerate dataset: 65 MSMEs, 24 mo, 3 personas + 2 deteriorating; SYNTHETIC watermark, DS-42-2026.07 | FR-2.3 | ZS | **done** |
+| T-106 | `parakh_engine`: FeatureExtractor per source | FR-1.1 | ZS+CL | **done** |
+| T-107 | Scorecard: graded bins → points → 5 dimensions → weighted composite → 300–900 affine scaling (calibrated: personas 781/691/410) | FR-1.1/1.2 | ZS+CL | **done** |
+| T-108 | Reason-code generator from point contributions | FR-1.3 | CL | **done** |
+| T-109 | Confidence band from coverage vector (majors/minors; lower-edge eligibility) | FR-1.4 | CL | **done** |
+| T-110 | Unit tests: persona bands, determinism, degradation, monotonicity, lower-edge, version stamps — **10/10 green** | NFR-5/6 | ZS+NP | **done** |
+
+**✅ P1 GATE PASSED (Jul 06 night): personas score 781 Prime High±15 / 691 Watch Medium±35 / 410 Critical from CLI; pytest 10/10.**
 
 ## P2 — End-to-end product (gate: full flow clickable locally)
 

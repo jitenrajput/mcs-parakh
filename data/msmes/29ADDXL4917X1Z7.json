@@ -1,0 +1,1573 @@
+{
+ "_synthetic": true,
+ "dataset_version": "DS-42-2026.07",
+ "generator": "parakh-datagen 2.0 (MCS-Labs)",
+ "profile": {
+  "gstin": "29ADDXL4917X1Z7",
+  "name": "National Ceramics",
+  "owner": "Proprietor",
+  "city": "Bengaluru",
+  "state_code": "29",
+  "sector": "manufacturing",
+  "archetype": "seasonal_retailer",
+  "vintage_years": 8.5,
+  "employees": 7,
+  "new_to_credit": true,
+  "udyam_registered": false
+ },
+ "sources": {
+  "aa_deposit": {
+   "type": "deposit",
+   "maskedAccNumber": "XXXXXXXX4974",
+   "version": "1.1",
+   "linkedAccRef": "REF-29ADDXL4",
+   "profile": {
+    "holders": {
+     "type": "SINGLE",
+     "holder": {
+      "name": "Proprietor",
+      "pan": "ADDXL4917X",
+      "ckycCompliance": true,
+      "nominee": "REGISTERED",
+      "address": "Bengaluru, 29 IN"
+     }
+    }
+   },
+   "summary": {
+    "currentBalance": "1096087",
+    "currency": "INR",
+    "type": "CURRENT",
+    "branch": "Bengaluru Main",
+    "facility": "OD",
+    "ifscCode": "IBKL0000001",
+    "status": "ACTIVE",
+    "openingDate": "2018-04-01",
+    "drawingLimit": "697618",
+    "currentODLimit": "697618",
+    "exchgeRate": "",
+    "micrCode": "",
+    "pending": {
+     "amount": 0.0
+    }
+   },
+   "transactions": {
+    "startDate": "2024-07-01",
+    "endDate": "2026-06-30",
+    "transaction": [
+     {
+      "txnId": "S202604000",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 26537,
+      "currentBalance": 1099195,
+      "transactionTimestamp": "2026-04-02T09:15:00+05:30",
+      "valueDate": "2026-04-02",
+      "narration": "SALARY",
+      "reference": "REF1018808350"
+     },
+     {
+      "txnId": "S202604001",
+      "type": "CREDIT",
+      "mode": "OTHERS",
+      "amount": 23879,
+      "currentBalance": 1123074,
+      "transactionTimestamp": "2026-04-04T10:15:00+05:30",
+      "valueDate": "2026-04-04",
+      "narration": "UPI/CR/cust payment",
+      "reference": "REF4005546440"
+     },
+     {
+      "txnId": "S202604002",
+      "type": "DEBIT",
+      "mode": "CASH",
+      "amount": 61972,
+      "currentBalance": 1061102,
+      "transactionTimestamp": "2026-04-06T11:15:00+05:30",
+      "valueDate": "2026-04-06",
+      "narration": "GST PMT",
+      "reference": "REF4902259654"
+     },
+     {
+      "txnId": "S202604003",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 70756,
+      "currentBalance": 1131858,
+      "transactionTimestamp": "2026-04-08T12:15:00+05:30",
+      "valueDate": "2026-04-08",
+      "narration": "IMPS/order",
+      "reference": "REF5156255272"
+     },
+     {
+      "txnId": "S202604004",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 36294,
+      "currentBalance": 1095564,
+      "transactionTimestamp": "2026-04-10T13:15:00+05:30",
+      "valueDate": "2026-04-10",
+      "narration": "SALARY",
+      "reference": "REF8339311247"
+     },
+     {
+      "txnId": "S202604005",
+      "type": "CREDIT",
+      "mode": "CASH",
+      "amount": 45837,
+      "currentBalance": 1141401,
+      "transactionTimestamp": "2026-04-12T14:15:00+05:30",
+      "valueDate": "2026-04-12",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF7871960768"
+     },
+     {
+      "txnId": "S202604006",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 54115,
+      "currentBalance": 1087286,
+      "transactionTimestamp": "2026-04-14T15:15:00+05:30",
+      "valueDate": "2026-04-14",
+      "narration": "ELEC BILL",
+      "reference": "REF5940762586"
+     },
+     {
+      "txnId": "S202604007",
+      "type": "DEBIT",
+      "mode": "OTHERS",
+      "amount": 35028,
+      "currentBalance": 1052258,
+      "transactionTimestamp": "2026-04-16T16:15:00+05:30",
+      "valueDate": "2026-04-16",
+      "narration": "ACH DR EMI",
+      "reference": "REF5745844242"
+     },
+     {
+      "txnId": "S202604008",
+      "type": "DEBIT",
+      "mode": "CASH",
+      "amount": 50324,
+      "currentBalance": 1001934,
+      "transactionTimestamp": "2026-04-18T17:15:00+05:30",
+      "valueDate": "2026-04-18",
+      "narration": "ACH DR EMI",
+      "reference": "REF5888030184"
+     },
+     {
+      "txnId": "S202604009",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 73769,
+      "currentBalance": 928165,
+      "transactionTimestamp": "2026-04-20T09:15:00+05:30",
+      "valueDate": "2026-04-20",
+      "narration": "SALARY",
+      "reference": "REF2474441529"
+     },
+     {
+      "txnId": "S202604010",
+      "type": "DEBIT",
+      "mode": "CASH",
+      "amount": 37669,
+      "currentBalance": 890496,
+      "transactionTimestamp": "2026-04-22T10:15:00+05:30",
+      "valueDate": "2026-04-22",
+      "narration": "ELEC BILL",
+      "reference": "REF4108772304"
+     },
+     {
+      "txnId": "S202604011",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 33474,
+      "currentBalance": 923970,
+      "transactionTimestamp": "2026-04-24T11:15:00+05:30",
+      "valueDate": "2026-04-24",
+      "narration": "UPI/CR/cust payment",
+      "reference": "REF3204615377"
+     },
+     {
+      "txnId": "S202605000",
+      "type": "CREDIT",
+      "mode": "FT",
+      "amount": 66491,
+      "currentBalance": 1172454,
+      "transactionTimestamp": "2026-05-02T09:15:00+05:30",
+      "valueDate": "2026-05-02",
+      "narration": "IMPS/order",
+      "reference": "REF9720711916"
+     },
+     {
+      "txnId": "S202605001",
+      "type": "DEBIT",
+      "mode": "OTHERS",
+      "amount": 62433,
+      "currentBalance": 1110021,
+      "transactionTimestamp": "2026-05-04T10:15:00+05:30",
+      "valueDate": "2026-05-04",
+      "narration": "RENT",
+      "reference": "REF8352319944"
+     },
+     {
+      "txnId": "S202605002",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 79905,
+      "currentBalance": 1189926,
+      "transactionTimestamp": "2026-05-06T11:15:00+05:30",
+      "valueDate": "2026-05-06",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF9290493116"
+     },
+     {
+      "txnId": "S202605003",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 37315,
+      "currentBalance": 1227241,
+      "transactionTimestamp": "2026-05-08T12:15:00+05:30",
+      "valueDate": "2026-05-08",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF8992688065"
+     },
+     {
+      "txnId": "S202605004",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 16629,
+      "currentBalance": 1243870,
+      "transactionTimestamp": "2026-05-10T13:15:00+05:30",
+      "valueDate": "2026-05-10",
+      "narration": "IMPS/order",
+      "reference": "REF5950136254"
+     },
+     {
+      "txnId": "S202605005",
+      "type": "CREDIT",
+      "mode": "CASH",
+      "amount": 35615,
+      "currentBalance": 1279485,
+      "transactionTimestamp": "2026-05-12T14:15:00+05:30",
+      "valueDate": "2026-05-12",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF7990426116"
+     },
+     {
+      "txnId": "S202605006",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 32449,
+      "currentBalance": 1247036,
+      "transactionTimestamp": "2026-05-14T15:15:00+05:30",
+      "valueDate": "2026-05-14",
+      "narration": "ACH DR EMI",
+      "reference": "REF6883835914"
+     },
+     {
+      "txnId": "S202605007",
+      "type": "DEBIT",
+      "mode": "FT",
+      "amount": 20386,
+      "currentBalance": 1226650,
+      "transactionTimestamp": "2026-05-16T16:15:00+05:30",
+      "valueDate": "2026-05-16",
+      "narration": "GST PMT",
+      "reference": "REF2921471213"
+     },
+     {
+      "txnId": "S202605008",
+      "type": "DEBIT",
+      "mode": "FT",
+      "amount": 68875,
+      "currentBalance": 1157775,
+      "transactionTimestamp": "2026-05-18T17:15:00+05:30",
+      "valueDate": "2026-05-18",
+      "narration": "RENT",
+      "reference": "REF7855348124"
+     },
+     {
+      "txnId": "S202605009",
+      "type": "DEBIT",
+      "mode": "FT",
+      "amount": 12520,
+      "currentBalance": 1145255,
+      "transactionTimestamp": "2026-05-20T09:15:00+05:30",
+      "valueDate": "2026-05-20",
+      "narration": "ELEC BILL",
+      "reference": "REF9518091669"
+     },
+     {
+      "txnId": "S202605010",
+      "type": "CREDIT",
+      "mode": "CASH",
+      "amount": 34168,
+      "currentBalance": 1179423,
+      "transactionTimestamp": "2026-05-22T10:15:00+05:30",
+      "valueDate": "2026-05-22",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF9144925278"
+     },
+     {
+      "txnId": "S202605011",
+      "type": "DEBIT",
+      "mode": "FT",
+      "amount": 77394,
+      "currentBalance": 1102029,
+      "transactionTimestamp": "2026-05-24T11:15:00+05:30",
+      "valueDate": "2026-05-24",
+      "narration": "RENT",
+      "reference": "REF2831251866"
+     },
+     {
+      "txnId": "S202606000",
+      "type": "CREDIT",
+      "mode": "UPI",
+      "amount": 82075,
+      "currentBalance": 1241534,
+      "transactionTimestamp": "2026-06-02T09:15:00+05:30",
+      "valueDate": "2026-06-02",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF7368042639"
+     },
+     {
+      "txnId": "S202606001",
+      "type": "CREDIT",
+      "mode": "FT",
+      "amount": 84118,
+      "currentBalance": 1325652,
+      "transactionTimestamp": "2026-06-04T10:15:00+05:30",
+      "valueDate": "2026-06-04",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF5073499937"
+     },
+     {
+      "txnId": "S202606002",
+      "type": "DEBIT",
+      "mode": "FT",
+      "amount": 29521,
+      "currentBalance": 1296131,
+      "transactionTimestamp": "2026-06-06T11:15:00+05:30",
+      "valueDate": "2026-06-06",
+      "narration": "RENT",
+      "reference": "REF1212280102"
+     },
+     {
+      "txnId": "S202606003",
+      "type": "CREDIT",
+      "mode": "FT",
+      "amount": 97879,
+      "currentBalance": 1394010,
+      "transactionTimestamp": "2026-06-08T12:15:00+05:30",
+      "valueDate": "2026-06-08",
+      "narration": "IMPS/order",
+      "reference": "REF6539606100"
+     },
+     {
+      "txnId": "S202606004",
+      "type": "CREDIT",
+      "mode": "FT",
+      "amount": 98149,
+      "currentBalance": 1492159,
+      "transactionTimestamp": "2026-06-10T13:15:00+05:30",
+      "valueDate": "2026-06-10",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF4442073207"
+     },
+     {
+      "txnId": "S202606005",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 48528,
+      "currentBalance": 1443631,
+      "transactionTimestamp": "2026-06-12T14:15:00+05:30",
+      "valueDate": "2026-06-12",
+      "narration": "ELEC BILL",
+      "reference": "REF1922084911"
+     },
+     {
+      "txnId": "S202606006",
+      "type": "CREDIT",
+      "mode": "CASH",
+      "amount": 98741,
+      "currentBalance": 1542372,
+      "transactionTimestamp": "2026-06-14T15:15:00+05:30",
+      "valueDate": "2026-06-14",
+      "narration": "IMPS/order",
+      "reference": "REF8577567174"
+     },
+     {
+      "txnId": "S202606007",
+      "type": "CREDIT",
+      "mode": "OTHERS",
+      "amount": 17462,
+      "currentBalance": 1559834,
+      "transactionTimestamp": "2026-06-16T16:15:00+05:30",
+      "valueDate": "2026-06-16",
+      "narration": "NEFT-DEALER SETTLEMENT",
+      "reference": "REF4258280696"
+     },
+     {
+      "txnId": "S202606008",
+      "type": "CREDIT",
+      "mode": "OTHERS",
+      "amount": 83964,
+      "currentBalance": 1643798,
+      "transactionTimestamp": "2026-06-18T17:15:00+05:30",
+      "valueDate": "2026-06-18",
+      "narration": "UPI/CR/cust payment",
+      "reference": "REF9718651715"
+     },
+     {
+      "txnId": "S202606009",
+      "type": "CREDIT",
+      "mode": "FT",
+      "amount": 76334,
+      "currentBalance": 1720132,
+      "transactionTimestamp": "2026-06-20T09:15:00+05:30",
+      "valueDate": "2026-06-20",
+      "narration": "UPI/CR/cust payment",
+      "reference": "REF5636235533"
+     },
+     {
+      "txnId": "S202606010",
+      "type": "CREDIT",
+      "mode": "CASH",
+      "amount": 93473,
+      "currentBalance": 1813605,
+      "transactionTimestamp": "2026-06-22T10:15:00+05:30",
+      "valueDate": "2026-06-22",
+      "narration": "IMPS/order",
+      "reference": "REF1681506405"
+     },
+     {
+      "txnId": "S202606011",
+      "type": "DEBIT",
+      "mode": "CHEQUE",
+      "amount": 61809,
+      "currentBalance": 1751796,
+      "transactionTimestamp": "2026-06-24T11:15:00+05:30",
+      "valueDate": "2026-06-24",
+      "narration": "ACH DR EMI",
+      "reference": "REF6253035041"
+     }
+    ]
+   },
+   "monthly_aggregates": [
+    {
+     "period": "2024-07",
+     "total_credits": 1283784,
+     "total_debits": 1213506,
+     "upi_credits": 914711,
+     "cash_deposits": 103412,
+     "neft_rtgs_credits": 265661,
+     "salary_debits": 140242,
+     "emi_debits": 150664,
+     "supplier_debits": 749695,
+     "inward_bounce_count": 0,
+     "min_balance": 960837,
+     "avg_balance": 1281783
+    },
+    {
+     "period": "2024-08",
+     "total_credits": 1511887,
+     "total_debits": 1335073,
+     "upi_credits": 1077238,
+     "cash_deposits": 121786,
+     "neft_rtgs_credits": 312864,
+     "salary_debits": 147488,
+     "emi_debits": 150664,
+     "supplier_debits": 886748,
+     "inward_bounce_count": 0,
+     "min_balance": 1059156,
+     "avg_balance": 1437127
+    },
+    {
+     "period": "2024-09",
+     "total_credits": 1665631,
+     "total_debits": 1597694,
+     "upi_credits": 1186782,
+     "cash_deposits": 134170,
+     "neft_rtgs_credits": 344679,
+     "salary_debits": 122889,
+     "emi_debits": 150664,
+     "supplier_debits": 1158329,
+     "inward_bounce_count": 0,
+     "min_balance": 1238404,
+     "avg_balance": 1654812
+    },
+    {
+     "period": "2024-10",
+     "total_credits": 1696816,
+     "total_debits": 1550900,
+     "upi_credits": 1209002,
+     "cash_deposits": 136682,
+     "neft_rtgs_credits": 351132,
+     "salary_debits": 100020,
+     "emi_debits": 150664,
+     "supplier_debits": 1152472,
+     "inward_bounce_count": 0,
+     "min_balance": 1128822,
+     "avg_balance": 1553026
+    },
+    {
+     "period": "2024-11",
+     "total_credits": 1676455,
+     "total_debits": 1554708,
+     "upi_credits": 1194494,
+     "cash_deposits": 135042,
+     "neft_rtgs_credits": 346919,
+     "salary_debits": 110711,
+     "emi_debits": 150664,
+     "supplier_debits": 1134734,
+     "inward_bounce_count": 1,
+     "min_balance": 751020,
+     "avg_balance": 1170134
+    },
+    {
+     "period": "2024-12",
+     "total_credits": 1556851,
+     "total_debits": 1469311,
+     "upi_credits": 1109275,
+     "cash_deposits": 125408,
+     "neft_rtgs_credits": 322168,
+     "salary_debits": 149795,
+     "emi_debits": 150664,
+     "supplier_debits": 1043119,
+     "inward_bounce_count": 0,
+     "min_balance": 1037966,
+     "avg_balance": 1427178
+    },
+    {
+     "period": "2025-01",
+     "total_credits": 1363978,
+     "total_debits": 1456695,
+     "upi_credits": 971850,
+     "cash_deposits": 109872,
+     "neft_rtgs_credits": 282256,
+     "salary_debits": 109706,
+     "emi_debits": 150664,
+     "supplier_debits": 997219,
+     "inward_bounce_count": 0,
+     "min_balance": 832500,
+     "avg_balance": 1173495
+    },
+    {
+     "period": "2025-02",
+     "total_credits": 1142344,
+     "total_debits": 1158810,
+     "upi_credits": 813934,
+     "cash_deposits": 92018,
+     "neft_rtgs_credits": 236392,
+     "salary_debits": 110906,
+     "emi_debits": 150664,
+     "supplier_debits": 756852,
+     "inward_bounce_count": 0,
+     "min_balance": 749698,
+     "avg_balance": 1035284
+    },
+    {
+     "period": "2025-03",
+     "total_credits": 984903,
+     "total_debits": 930895,
+     "upi_credits": 701755,
+     "cash_deposits": 79336,
+     "neft_rtgs_credits": 203812,
+     "salary_debits": 122185,
+     "emi_debits": 150664,
+     "supplier_debits": 575531,
+     "inward_bounce_count": 0,
+     "min_balance": 631592,
+     "avg_balance": 877818
+    },
+    {
+     "period": "2025-04",
+     "total_credits": 943024,
+     "total_debits": 915223,
+     "upi_credits": 671916,
+     "cash_deposits": 75963,
+     "neft_rtgs_credits": 195145,
+     "salary_debits": 143680,
+     "emi_debits": 150664,
+     "supplier_debits": 553443,
+     "inward_bounce_count": 0,
+     "min_balance": 680834,
+     "avg_balance": 916590
+    },
+    {
+     "period": "2025-05",
+     "total_credits": 1000623,
+     "total_debits": 1050241,
+     "upi_credits": 712955,
+     "cash_deposits": 80602,
+     "neft_rtgs_credits": 207065,
+     "salary_debits": 123843,
+     "emi_debits": 150664,
+     "supplier_debits": 668136,
+     "inward_bounce_count": 0,
+     "min_balance": 838388,
+     "avg_balance": 1088543
+    },
+    {
+     "period": "2025-06",
+     "total_credits": 1211492,
+     "total_debits": 1211413,
+     "upi_credits": 863202,
+     "cash_deposits": 97588,
+     "neft_rtgs_credits": 250701,
+     "salary_debits": 109781,
+     "emi_debits": 150664,
+     "supplier_debits": 766051,
+     "inward_bounce_count": 0,
+     "min_balance": 924394,
+     "avg_balance": 1227267
+    },
+    {
+     "period": "2025-07",
+     "total_credits": 1465408,
+     "total_debits": 1388518,
+     "upi_credits": 1044121,
+     "cash_deposits": 118042,
+     "neft_rtgs_credits": 303245,
+     "salary_debits": 122232,
+     "emi_debits": 150664,
+     "supplier_debits": 956443,
+     "inward_bounce_count": 0,
+     "min_balance": 1200480,
+     "avg_balance": 1566832
+    },
+    {
+     "period": "2025-08",
+     "total_credits": 1735921,
+     "total_debits": 1557661,
+     "upi_credits": 1236864,
+     "cash_deposits": 139832,
+     "neft_rtgs_credits": 359224,
+     "salary_debits": 125551,
+     "emi_debits": 150664,
+     "supplier_debits": 1073603,
+     "inward_bounce_count": 0,
+     "min_balance": 1442376,
+     "avg_balance": 1876356
+    },
+    {
+     "period": "2025-09",
+     "total_credits": 1928181,
+     "total_debits": 1857476,
+     "upi_credits": 1373852,
+     "cash_deposits": 155319,
+     "neft_rtgs_credits": 399010,
+     "salary_debits": 116730,
+     "emi_debits": 150664,
+     "supplier_debits": 1326314,
+     "inward_bounce_count": 1,
+     "min_balance": 924597,
+     "avg_balance": 1406642
+    },
+    {
+     "period": "2025-10",
+     "total_credits": 1955085,
+     "total_debits": 1893342,
+     "upi_credits": 1393021,
+     "cash_deposits": 157487,
+     "neft_rtgs_credits": 404577,
+     "salary_debits": 127552,
+     "emi_debits": 150664,
+     "supplier_debits": 1365772,
+     "inward_bounce_count": 0,
+     "min_balance": 1430151,
+     "avg_balance": 1918922
+    },
+    {
+     "period": "2025-11",
+     "total_credits": 1900988,
+     "total_debits": 1838870,
+     "upi_credits": 1354477,
+     "cash_deposits": 153129,
+     "neft_rtgs_credits": 393383,
+     "salary_debits": 146500,
+     "emi_debits": 150664,
+     "supplier_debits": 1297566,
+     "inward_bounce_count": 1,
+     "min_balance": 786430,
+     "avg_balance": 1261677
+    },
+    {
+     "period": "2025-12",
+     "total_credits": 1741508,
+     "total_debits": 1673003,
+     "upi_credits": 1240845,
+     "cash_deposits": 140282,
+     "neft_rtgs_credits": 360380,
+     "salary_debits": 142009,
+     "emi_debits": 150664,
+     "supplier_debits": 1228177,
+     "inward_bounce_count": 0,
+     "min_balance": 1095355,
+     "avg_balance": 1530732
+    },
+    {
+     "period": "2026-01",
+     "total_credits": 1489032,
+     "total_debits": 1414406,
+     "upi_credits": 1060953,
+     "cash_deposits": 119945,
+     "neft_rtgs_credits": 308134,
+     "salary_debits": 129470,
+     "emi_debits": 150664,
+     "supplier_debits": 995844,
+     "inward_bounce_count": 0,
+     "min_balance": 981828,
+     "avg_balance": 1354086
+    },
+    {
+     "period": "2026-02",
+     "total_credits": 1255804,
+     "total_debits": 1165685,
+     "upi_credits": 894775,
+     "cash_deposits": 101158,
+     "neft_rtgs_credits": 259871,
+     "salary_debits": 141749,
+     "emi_debits": 150664,
+     "supplier_debits": 751040,
+     "inward_bounce_count": 0,
+     "min_balance": 1028131,
+     "avg_balance": 1342082
+    },
+    {
+     "period": "2026-03",
+     "total_credits": 1091500,
+     "total_debits": 1192614,
+     "upi_credits": 777707,
+     "cash_deposits": 87923,
+     "neft_rtgs_credits": 225870,
+     "salary_debits": 147926,
+     "emi_debits": 150664,
+     "supplier_debits": 788134,
+     "inward_bounce_count": 0,
+     "min_balance": 753918,
+     "avg_balance": 1026793
+    },
+    {
+     "period": "2026-04",
+     "total_credits": 993563,
+     "total_debits": 1059342,
+     "upi_credits": 707925,
+     "cash_deposits": 80034,
+     "neft_rtgs_credits": 205604,
+     "salary_debits": 123923,
+     "emi_debits": 150664,
+     "supplier_debits": 719633,
+     "inward_bounce_count": 0,
+     "min_balance": 827663,
+     "avg_balance": 1076054
+    },
+    {
+     "period": "2026-05",
+     "total_credits": 1076581,
+     "total_debits": 1118708,
+     "upi_credits": 767077,
+     "cash_deposits": 86721,
+     "neft_rtgs_credits": 222783,
+     "salary_debits": 135812,
+     "emi_debits": 150664,
+     "supplier_debits": 680267,
+     "inward_bounce_count": 0,
+     "min_balance": 782988,
+     "avg_balance": 1052133
+    },
+    {
+     "period": "2026-06",
+     "total_credits": 1267429,
+     "total_debits": 1223068,
+     "upi_credits": 903058,
+     "cash_deposits": 102094,
+     "neft_rtgs_credits": 262276,
+     "salary_debits": 141485,
+     "emi_debits": 150664,
+     "supplier_debits": 819324,
+     "inward_bounce_count": 0,
+     "min_balance": 779230,
+     "avg_balance": 1096087
+    }
+   ]
+  },
+  "gst_returns": [
+   {
+    "ret_prd": "072024",
+    "gstr1": {
+     "due_dt": "2024-08-11",
+     "dof": "2024-08-14",
+     "status": "FIL",
+     "ttl_val": 1279311
+    },
+    "gstr3b": {
+     "due_dt": "2024-08-20",
+     "dof": "2024-08-23",
+     "status": "FIL",
+     "tax_paid": 80597
+    },
+    "gstr1_vs_3b_gap_pct": 0.5
+   },
+   {
+    "ret_prd": "082024",
+    "gstr1": {
+     "due_dt": "2024-09-11",
+     "dof": "2024-09-17",
+     "status": "FIL",
+     "ttl_val": 1534904
+    },
+    "gstr3b": {
+     "due_dt": "2024-09-20",
+     "dof": "2024-09-26",
+     "status": "FIL",
+     "tax_paid": 96699
+    },
+    "gstr1_vs_3b_gap_pct": 0.8
+   },
+   {
+    "ret_prd": "092024",
+    "gstr1": {
+     "due_dt": "2024-10-11",
+     "dof": "2024-10-17",
+     "status": "FIL",
+     "ttl_val": 1678706
+    },
+    "gstr3b": {
+     "due_dt": "2024-10-20",
+     "dof": "2024-10-26",
+     "status": "FIL",
+     "tax_paid": 105758
+    },
+    "gstr1_vs_3b_gap_pct": 0.9
+   },
+   {
+    "ret_prd": "102024",
+    "gstr1": {
+     "due_dt": "2024-11-11",
+     "dof": "2024-11-14",
+     "status": "FIL",
+     "ttl_val": 1700447
+    },
+    "gstr3b": {
+     "due_dt": "2024-11-20",
+     "dof": "2024-11-23",
+     "status": "FIL",
+     "tax_paid": 107128
+    },
+    "gstr1_vs_3b_gap_pct": 0.0
+   },
+   {
+    "ret_prd": "112024",
+    "gstr1": {
+     "due_dt": "2024-12-11",
+     "dof": "2024-12-16",
+     "status": "FIL",
+     "ttl_val": 1691374
+    },
+    "gstr3b": {
+     "due_dt": "2024-12-20",
+     "dof": "2024-12-25",
+     "status": "FIL",
+     "tax_paid": 106557
+    },
+    "gstr1_vs_3b_gap_pct": 2.2
+   },
+   {
+    "ret_prd": "122024",
+    "gstr1": {
+     "due_dt": "2025-01-11",
+     "dof": "2025-01-16",
+     "status": "FIL",
+     "ttl_val": 1552917
+    },
+    "gstr3b": {
+     "due_dt": "2025-01-20",
+     "dof": "2025-01-25",
+     "status": "FIL",
+     "tax_paid": 97834
+    },
+    "gstr1_vs_3b_gap_pct": 0.6
+   },
+   {
+    "ret_prd": "012025",
+    "gstr1": {
+     "due_dt": "2025-02-11",
+     "dof": "2025-02-16",
+     "status": "FIL",
+     "ttl_val": 1382816
+    },
+    "gstr3b": {
+     "due_dt": "2025-02-20",
+     "dof": "2025-02-25",
+     "status": "FIL",
+     "tax_paid": 87117
+    },
+    "gstr1_vs_3b_gap_pct": 0.4
+   },
+   {
+    "ret_prd": "022025",
+    "gstr1": {
+     "due_dt": "2025-03-11",
+     "dof": "2025-03-15",
+     "status": "FIL",
+     "ttl_val": 1127083
+    },
+    "gstr3b": {
+     "due_dt": "2025-03-20",
+     "dof": "2025-03-24",
+     "status": "FIL",
+     "tax_paid": 71006
+    },
+    "gstr1_vs_3b_gap_pct": 1.0
+   },
+   {
+    "ret_prd": "032025",
+    "gstr1": {
+     "due_dt": "2025-04-11",
+     "dof": "2025-04-20",
+     "status": "FIL",
+     "ttl_val": 989562
+    },
+    "gstr3b": {
+     "due_dt": "2025-04-20",
+     "dof": "2025-04-29",
+     "status": "FIL",
+     "tax_paid": 62342
+    },
+    "gstr1_vs_3b_gap_pct": 0.1
+   },
+   {
+    "ret_prd": "042025",
+    "gstr1": {
+     "due_dt": "2025-05-11",
+     "dof": "2025-05-17",
+     "status": "FIL",
+     "ttl_val": 931882
+    },
+    "gstr3b": {
+     "due_dt": "2025-05-20",
+     "dof": "2025-05-26",
+     "status": "FIL",
+     "tax_paid": 58709
+    },
+    "gstr1_vs_3b_gap_pct": 0.1
+   },
+   {
+    "ret_prd": "052025",
+    "gstr1": {
+     "due_dt": "2025-06-11",
+     "dof": "2025-06-15",
+     "status": "FIL",
+     "ttl_val": 994947
+    },
+    "gstr3b": {
+     "due_dt": "2025-06-20",
+     "dof": "2025-06-24",
+     "status": "FIL",
+     "tax_paid": 62682
+    },
+    "gstr1_vs_3b_gap_pct": 1.8
+   },
+   {
+    "ret_prd": "062025",
+    "gstr1": {
+     "due_dt": "2025-07-11",
+     "dof": "2025-07-15",
+     "status": "FIL",
+     "ttl_val": 1225154
+    },
+    "gstr3b": {
+     "due_dt": "2025-07-20",
+     "dof": "2025-07-24",
+     "status": "FIL",
+     "tax_paid": 77185
+    },
+    "gstr1_vs_3b_gap_pct": 1.9
+   },
+   {
+    "ret_prd": "072025",
+    "gstr1": {
+     "due_dt": "2025-08-11",
+     "dof": "2025-08-16",
+     "status": "FIL",
+     "ttl_val": 1466462
+    },
+    "gstr3b": {
+     "due_dt": "2025-08-20",
+     "dof": "2025-08-25",
+     "status": "FIL",
+     "tax_paid": 92387
+    },
+    "gstr1_vs_3b_gap_pct": 3.1
+   },
+   {
+    "ret_prd": "082025",
+    "gstr1": {
+     "due_dt": "2025-09-11",
+     "dof": "2025-09-19",
+     "status": "FIL",
+     "ttl_val": 1701355
+    },
+    "gstr3b": {
+     "due_dt": "2025-09-20",
+     "dof": "2025-09-28",
+     "status": "FIL",
+     "tax_paid": 107185
+    },
+    "gstr1_vs_3b_gap_pct": 0.8
+   },
+   {
+    "ret_prd": "092025",
+    "gstr1": {
+     "due_dt": "2025-10-11",
+     "dof": "2025-10-12",
+     "status": "FIL",
+     "ttl_val": 1932050
+    },
+    "gstr3b": {
+     "due_dt": "2025-10-20",
+     "dof": "2025-10-21",
+     "status": "FIL",
+     "tax_paid": 121719
+    },
+    "gstr1_vs_3b_gap_pct": 0.0
+   },
+   {
+    "ret_prd": "102025",
+    "gstr1": {
+     "due_dt": "2025-11-11",
+     "dof": "2025-11-19",
+     "status": "FIL",
+     "ttl_val": 1977367
+    },
+    "gstr3b": {
+     "due_dt": "2025-11-20",
+     "dof": "2025-11-28",
+     "status": "FIL",
+     "tax_paid": 124574
+    },
+    "gstr1_vs_3b_gap_pct": 4.2
+   },
+   {
+    "ret_prd": "112025",
+    "gstr1": {
+     "due_dt": "2025-12-11",
+     "dof": "2025-12-16",
+     "status": "FIL",
+     "ttl_val": 1906105
+    },
+    "gstr3b": {
+     "due_dt": "2025-12-20",
+     "dof": "2025-12-25",
+     "status": "FIL",
+     "tax_paid": 120085
+    },
+    "gstr1_vs_3b_gap_pct": 1.8
+   },
+   {
+    "ret_prd": "122025",
+    "gstr1": {
+     "due_dt": "2026-01-11",
+     "dof": "2026-01-16",
+     "status": "FIL",
+     "ttl_val": 1706241
+    },
+    "gstr3b": {
+     "due_dt": "2026-01-20",
+     "dof": "2026-01-25",
+     "status": "FIL",
+     "tax_paid": 107493
+    },
+    "gstr1_vs_3b_gap_pct": 2.8
+   },
+   {
+    "ret_prd": "012026",
+    "gstr1": {
+     "due_dt": "2026-02-11",
+     "dof": "2026-02-16",
+     "status": "FIL",
+     "ttl_val": 1523674
+    },
+    "gstr3b": {
+     "due_dt": "2026-02-20",
+     "dof": "2026-02-25",
+     "status": "FIL",
+     "tax_paid": 95991
+    },
+    "gstr1_vs_3b_gap_pct": 1.3
+   },
+   {
+    "ret_prd": "022026",
+    "gstr1": {
+     "due_dt": "2026-03-11",
+     "dof": "2026-03-15",
+     "status": "FIL",
+     "ttl_val": 1233297
+    },
+    "gstr3b": {
+     "due_dt": "2026-03-20",
+     "dof": "2026-03-24",
+     "status": "FIL",
+     "tax_paid": 77698
+    },
+    "gstr1_vs_3b_gap_pct": 1.3
+   },
+   {
+    "ret_prd": "032026",
+    "gstr1": {
+     "due_dt": "2026-04-11",
+     "dof": "2026-04-16",
+     "status": "FIL",
+     "ttl_val": 1084821
+    },
+    "gstr3b": {
+     "due_dt": "2026-04-20",
+     "dof": "2026-04-25",
+     "status": "FIL",
+     "tax_paid": 68344
+    },
+    "gstr1_vs_3b_gap_pct": 0.3
+   },
+   {
+    "ret_prd": "042026",
+    "gstr1": {
+     "due_dt": "2026-05-11",
+     "dof": "2026-05-14",
+     "status": "FIL",
+     "ttl_val": 977324
+    },
+    "gstr3b": {
+     "due_dt": "2026-05-20",
+     "dof": "2026-05-23",
+     "status": "FIL",
+     "tax_paid": 61571
+    },
+    "gstr1_vs_3b_gap_pct": 0.9
+   },
+   {
+    "ret_prd": "052026",
+    "gstr1": {
+     "due_dt": "2026-06-11",
+     "dof": "2026-06-16",
+     "status": "FIL",
+     "ttl_val": 1082036
+    },
+    "gstr3b": {
+     "due_dt": "2026-06-20",
+     "dof": "2026-06-25",
+     "status": "FIL",
+     "tax_paid": 68168
+    },
+    "gstr1_vs_3b_gap_pct": 1.9
+   },
+   {
+    "ret_prd": "062026",
+    "gstr1": {
+     "due_dt": "2026-07-11",
+     "dof": "2026-07-16",
+     "status": "FIL",
+     "ttl_val": 1284961
+    },
+    "gstr3b": {
+     "due_dt": "2026-07-20",
+     "dof": "2026-07-25",
+     "status": "FIL",
+     "tax_paid": 80953
+    },
+    "gstr1_vs_3b_gap_pct": 3.0
+   }
+  ],
+  "upi_months": [
+   {
+    "period": "2024-07",
+    "inflow_amount": 914711,
+    "inflow_count": 496,
+    "unique_payers": 308,
+    "qr_share_pct": 50.8
+   },
+   {
+    "period": "2024-08",
+    "inflow_amount": 1077238,
+    "inflow_count": 320,
+    "unique_payers": 207,
+    "qr_share_pct": 74.1
+   },
+   {
+    "period": "2024-09",
+    "inflow_amount": 1186782,
+    "inflow_count": 544,
+    "unique_payers": 356,
+    "qr_share_pct": 34.3
+   },
+   {
+    "period": "2024-10",
+    "inflow_amount": 1209002,
+    "inflow_count": 358,
+    "unique_payers": 254,
+    "qr_share_pct": 30.3
+   },
+   {
+    "period": "2024-11",
+    "inflow_amount": 1194494,
+    "inflow_count": 237,
+    "unique_payers": 141,
+    "qr_share_pct": 77.7
+   },
+   {
+    "period": "2024-12",
+    "inflow_amount": 1109275,
+    "inflow_count": 282,
+    "unique_payers": 170,
+    "qr_share_pct": 70.7
+   },
+   {
+    "period": "2025-01",
+    "inflow_amount": 971850,
+    "inflow_count": 180,
+    "unique_payers": 103,
+    "qr_share_pct": 74.6
+   },
+   {
+    "period": "2025-02",
+    "inflow_amount": 813934,
+    "inflow_count": 351,
+    "unique_payers": 223,
+    "qr_share_pct": 45.5
+   },
+   {
+    "period": "2025-03",
+    "inflow_amount": 701755,
+    "inflow_count": 211,
+    "unique_payers": 166,
+    "qr_share_pct": 61.4
+   },
+   {
+    "period": "2025-04",
+    "inflow_amount": 671916,
+    "inflow_count": 650,
+    "unique_payers": 507,
+    "qr_share_pct": 36.1
+   },
+   {
+    "period": "2025-05",
+    "inflow_amount": 712955,
+    "inflow_count": 134,
+    "unique_payers": 68,
+    "qr_share_pct": 34.8
+   },
+   {
+    "period": "2025-06",
+    "inflow_amount": 863202,
+    "inflow_count": 179,
+    "unique_payers": 132,
+    "qr_share_pct": 52.5
+   },
+   {
+    "period": "2025-07",
+    "inflow_amount": 1044121,
+    "inflow_count": 288,
+    "unique_payers": 238,
+    "qr_share_pct": 81.8
+   },
+   {
+    "period": "2025-08",
+    "inflow_amount": 1236864,
+    "inflow_count": 213,
+    "unique_payers": 114,
+    "qr_share_pct": 70.5
+   },
+   {
+    "period": "2025-09",
+    "inflow_amount": 1373852,
+    "inflow_count": 289,
+    "unique_payers": 208,
+    "qr_share_pct": 71.5
+   },
+   {
+    "period": "2025-10",
+    "inflow_amount": 1393021,
+    "inflow_count": 633,
+    "unique_payers": 531,
+    "qr_share_pct": 74.3
+   },
+   {
+    "period": "2025-11",
+    "inflow_amount": 1354477,
+    "inflow_count": 625,
+    "unique_payers": 340,
+    "qr_share_pct": 40.2
+   },
+   {
+    "period": "2025-12",
+    "inflow_amount": 1240845,
+    "inflow_count": 369,
+    "unique_payers": 251,
+    "qr_share_pct": 71.0
+   },
+   {
+    "period": "2026-01",
+    "inflow_amount": 1060953,
+    "inflow_count": 576,
+    "unique_payers": 325,
+    "qr_share_pct": 64.4
+   },
+   {
+    "period": "2026-02",
+    "inflow_amount": 894775,
+    "inflow_count": 898,
+    "unique_payers": 489,
+    "qr_share_pct": 82.1
+   },
+   {
+    "period": "2026-03",
+    "inflow_amount": 777707,
+    "inflow_count": 133,
+    "unique_payers": 112,
+    "qr_share_pct": 31.6
+   },
+   {
+    "period": "2026-04",
+    "inflow_amount": 707925,
+    "inflow_count": 186,
+    "unique_payers": 140,
+    "qr_share_pct": 76.9
+   },
+   {
+    "period": "2026-05",
+    "inflow_amount": 767077,
+    "inflow_count": 419,
+    "unique_payers": 292,
+    "qr_share_pct": 73.3
+   },
+   {
+    "period": "2026-06",
+    "inflow_amount": 903058,
+    "inflow_count": 244,
+    "unique_payers": 197,
+    "qr_share_pct": 72.8
+   }
+  ],
+  "epfo_ecr": [
+   {
+    "wage_month": "072024",
+    "total_members": 7,
+    "gross_wages": 140242,
+    "epf_contribution": 25200,
+    "due_dt": "2024-08-15",
+    "payment_date": "2024-09-07",
+    "paid_on_time": false
+   },
+   {
+    "wage_month": "082024",
+    "total_members": 7,
+    "gross_wages": 147488,
+    "epf_contribution": 25200,
+    "due_dt": "2024-09-15",
+    "payment_date": "2024-10-09",
+    "paid_on_time": false
+   },
+   {
+    "wage_month": "092024",
+    "total_members": 7,
+    "gross_wages": 122889,
+    "epf_contribution": 25200,
+    "due_dt": "2024-10-15",
+    "payment_date": "2024-10-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "102024",
+    "total_members": 7,
+    "gross_wages": 100020,
+    "epf_contribution": 24005,
+    "due_dt": "2024-11-15",
+    "payment_date": "2024-11-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "112024",
+    "total_members": 7,
+    "gross_wages": 110711,
+    "epf_contribution": 25200,
+    "due_dt": "2024-12-15",
+    "payment_date": "2024-12-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "122024",
+    "total_members": 7,
+    "gross_wages": 149795,
+    "epf_contribution": 25200,
+    "due_dt": "2025-01-15",
+    "payment_date": "2025-01-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "012025",
+    "total_members": 7,
+    "gross_wages": 109706,
+    "epf_contribution": 25200,
+    "due_dt": "2025-02-15",
+    "payment_date": "2025-02-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "022025",
+    "total_members": 7,
+    "gross_wages": 110906,
+    "epf_contribution": 25200,
+    "due_dt": "2025-03-15",
+    "payment_date": "2025-03-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "032025",
+    "total_members": 7,
+    "gross_wages": 122185,
+    "epf_contribution": 25200,
+    "due_dt": "2025-04-15",
+    "payment_date": "2025-04-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "042025",
+    "total_members": 7,
+    "gross_wages": 143680,
+    "epf_contribution": 25200,
+    "due_dt": "2025-05-15",
+    "payment_date": "2025-05-30",
+    "paid_on_time": false
+   },
+   {
+    "wage_month": "052025",
+    "total_members": 7,
+    "gross_wages": 123843,
+    "epf_contribution": 25200,
+    "due_dt": "2025-06-15",
+    "payment_date": "2025-06-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "062025",
+    "total_members": 7,
+    "gross_wages": 109781,
+    "epf_contribution": 25200,
+    "due_dt": "2025-07-15",
+    "payment_date": "2025-07-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "072025",
+    "total_members": 7,
+    "gross_wages": 122232,
+    "epf_contribution": 25200,
+    "due_dt": "2025-08-15",
+    "payment_date": "2025-08-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "082025",
+    "total_members": 7,
+    "gross_wages": 125551,
+    "epf_contribution": 25200,
+    "due_dt": "2025-09-15",
+    "payment_date": "2025-09-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "092025",
+    "total_members": 7,
+    "gross_wages": 116730,
+    "epf_contribution": 25200,
+    "due_dt": "2025-10-15",
+    "payment_date": "2025-10-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "102025",
+    "total_members": 7,
+    "gross_wages": 127552,
+    "epf_contribution": 25200,
+    "due_dt": "2025-11-15",
+    "payment_date": "2025-11-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "112025",
+    "total_members": 7,
+    "gross_wages": 146500,
+    "epf_contribution": 25200,
+    "due_dt": "2025-12-15",
+    "payment_date": "2025-12-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "122025",
+    "total_members": 7,
+    "gross_wages": 142009,
+    "epf_contribution": 25200,
+    "due_dt": "2026-01-15",
+    "payment_date": "2026-01-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "012026",
+    "total_members": 7,
+    "gross_wages": 129470,
+    "epf_contribution": 25200,
+    "due_dt": "2026-02-15",
+    "payment_date": "2026-02-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "022026",
+    "total_members": 7,
+    "gross_wages": 141749,
+    "epf_contribution": 25200,
+    "due_dt": "2026-03-15",
+    "payment_date": "2026-03-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "032026",
+    "total_members": 7,
+    "gross_wages": 147926,
+    "epf_contribution": 25200,
+    "due_dt": "2026-04-15",
+    "payment_date": "2026-04-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "042026",
+    "total_members": 7,
+    "gross_wages": 123923,
+    "epf_contribution": 25200,
+    "due_dt": "2026-05-15",
+    "payment_date": "2026-05-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "052026",
+    "total_members": 7,
+    "gross_wages": 135812,
+    "epf_contribution": 25200,
+    "due_dt": "2026-06-15",
+    "payment_date": "2026-06-15",
+    "paid_on_time": true
+   },
+   {
+    "wage_month": "062026",
+    "total_members": 7,
+    "gross_wages": 141485,
+    "epf_contribution": 25200,
+    "due_dt": "2026-07-15",
+    "payment_date": "2026-07-15",
+    "paid_on_time": true
+   }
+  ],
+  "bureau": null
+ },
+ "label": {
+  "p_default_true": 0.737
+ }
+}

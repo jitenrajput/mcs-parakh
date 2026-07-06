@@ -1,8 +1,10 @@
+# Core (P1/P2) — the scoring engine itself is stdlib-only by design (runs anywhere)
 fastapi>=0.110
 uvicorn[standard]>=0.29
 pydantic>=2.6
-numpy>=1.26
-pandas>=2.2
-scikit-learn>=1.4
-xgboost>=2.0
-shap>=0.45
+pytest>=8.0
+
+# Stretch only (T-310 GBM risk lens) — install when built
+# lightgbm>=4.3
+# shap>=0.45
+# scikit-learn>=1.4
