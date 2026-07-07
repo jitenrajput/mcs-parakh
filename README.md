@@ -1,5 +1,11 @@
 # MCS Parakh (परख) — by M-Connect Labs
 
+[![CI](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml/badge.svg)](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
+![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-14243D)
+![Node 20](https://img.shields.io/badge/Node-20-14243D)
+![Data: synthetic](https://img.shields.io/badge/Data-100%25%20synthetic-E8A33D)
+
 **A two-sided, explainable MSME Financial Health Card. Built for IDBI Innovate 2026 (PS3).**
 
 > *Parakh — har khare vyapar ki pehchaan.* Every genuine business, recognized.
@@ -24,6 +30,16 @@ For centuries, a goldsmith could tell genuine gold with a touchstone. India's MS
 - Loan-readiness meter tied to band-based eligibility (indicative — bank credit policy owns final sanction).
 
 **Governance built in**: every score response and audit row carries `engine_version` + `scorecard_version` + `dataset_version`; consent is a first-class object (AA para-6.3 style consent screen, DPDP notice); SQLite audit log per decision — aligned with RBI's draft Model Risk Management guidance (24 Jun 2026) and FREE-AI (Aug 2025) direction.
+
+## Screenshots
+
+| The demo launcher | The RM's Monday morning |
+|---|---|
+| ![Demo launcher](assets/screenshots/launcher.png) | ![Lender portfolio with Parakh Watch alerts](assets/screenshots/lender-portfolio.png) |
+
+| Lender health card (692 · Watch · Medium ±35) | The same business, MSME side |
+|---|---|
+| ![Health card, lender view](assets/screenshots/health-card.png) | ![MSME self-view with Kal-Parakh actions](assets/screenshots/msme-card.png) |
 
 ## Quick start
 
@@ -58,8 +74,17 @@ cd backend/datagen && python generate.py   # seed-stamped as DS-42-2026.07 in da
 **Tests:**
 
 ```bash
-cd backend && python -m pytest   # engine (10) + API (6)
+cd backend && python -m pytest   # engine (10) + API (6) + demo-canon regression (4)
 ```
+
+The demo-canon suite pins the exact numbers the demo promises (781 / 692→721 / +₹3.9L / 409, and the kill-a-source degradation staircase) — if a change breaks a demo beat, CI goes red before demo day does.
+
+## Design decisions (deliberate, not missing)
+
+- **No login screen.** This PoC is an open jury demo over 100% synthetic data — there is no real datum to protect, and a QR-scanning juror must be inside the product in five seconds. Role separation is demonstrated by the seat-picker (lender console vs MSME self-view). Production design: Cognito with role-scoped views, OAuth2 client-credentials + mTLS on the API (see architecture).
+- **The demo panel (`/admin/killswitch`) is intentionally exposed.** Killing a data source live — and watching the score survive while the confidence band widens and the eligible limit honestly drops — is the core resilience demonstration, offered to the jury interactively.
+- **Open CORS, no rate limiting (yet).** Correct for a synthetic-data demo; rate limiting ships with public hosting, and both are one-line changes for production.
+- **No LLM anywhere in the scoring path.** Scores, reasons, and simulations are pure deterministic computation — reproducible, auditable, zero hallucination risk, ₹0 per score.
 
 ## Architecture
 
