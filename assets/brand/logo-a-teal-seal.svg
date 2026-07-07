@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Parakh hallmark stamp">
+  <!-- Option A — Teal Seal: solid teal stamp, amber assay notch top-right -->
+  <rect x="8" y="8" width="104" height="104" rx="22" fill="#0E6E5C"/>
+  <path d="M86 8 L90 8 A22 22 0 0 1 112 30 L112 34 Z" fill="#E8A33D"/>
+  <text x="60" y="86" text-anchor="middle" font-family="Mukta,'Noto Sans Devanagari','Nirmala UI',sans-serif" font-weight="700" font-size="62" fill="#F7F5F0">प</text>
+</svg>

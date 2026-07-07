@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Parakh hallmark stamp">
+  <!-- Option B — Navy Assay: navy stamp, teal inner keyline, amber notch bottom-left -->
+  <rect x="8" y="8" width="104" height="104" rx="22" fill="#14243D"/>
+  <rect x="15" y="15" width="90" height="90" rx="16" fill="none" stroke="#0E6E5C" stroke-width="2.5"/>
+  <path d="M8 86 L8 90 A22 22 0 0 0 30 112 L34 112 Z" fill="#E8A33D"/>
+  <text x="60" y="86" text-anchor="middle" font-family="Mukta,'Noto Sans Devanagari','Nirmala UI',sans-serif" font-weight="700" font-size="62" fill="#F7F5F0">प</text>
+</svg>

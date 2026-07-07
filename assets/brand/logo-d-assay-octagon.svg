@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Parakh hallmark stamp">
+  <!-- Option D — Assay Octagon: BIS-hallmark-adjacent octagonal punch, amber notch on the cut corner -->
+  <polygon points="38,8 82,8 112,38 112,82 82,112 38,112 8,82 8,38" fill="#14243D"/>
+  <polygon points="82,8 112,8 112,38" fill="#E8A33D"/>
+  <text x="60" y="86" text-anchor="middle" font-family="Mukta,'Noto Sans Devanagari','Nirmala UI',sans-serif" font-weight="700" font-size="62" fill="#F7F5F0">प</text>
+</svg>

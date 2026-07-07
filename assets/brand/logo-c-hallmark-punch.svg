@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Parakh hallmark stamp">
+  <!-- Option C — Hallmark Punch: outline stamp like an assayer's punch, amber diamond seal top-right.
+       Works on light and dark; ink color inherits via currentColor where embedded. -->
+  <rect x="10" y="10" width="100" height="100" rx="20" fill="none" stroke="#0E6E5C" stroke-width="7"/>
+  <text x="60" y="85" text-anchor="middle" font-family="Mukta,'Noto Sans Devanagari','Nirmala UI',sans-serif" font-weight="700" font-size="60" fill="#14243D">प</text>
+  <rect x="93" y="3" width="24" height="24" rx="6" fill="#E8A33D" transform="rotate(45 105 15)"/>
+</svg>
