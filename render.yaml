@@ -1,0 +1,11 @@
+# Render Blueprint — PoC live hosting (T-302, fallback path per docs/09-runtime-versioning.md).
+# One Docker service = API + engine + built frontend (same image as compose/App Runner).
+# Starter plan keeps the instance warm — no cold starts in front of the jury.
+services:
+  - type: web
+    name: mcs-parakh
+    runtime: docker
+    plan: starter
+    region: singapore
+    healthCheckPath: /api/
+    autoDeploy: true
