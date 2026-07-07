@@ -1,0 +1,11 @@
+.git
+docs
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+*.db
+frontend/node_modules
+frontend/dist
+data/generated
+Dockerfile
+compose.yaml

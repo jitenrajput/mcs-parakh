@@ -1,0 +1,14 @@
+# MCS Parakh — full demo stack in one container (T-301).
+# docker compose up → http://localhost:8000  (API docs: /api/docs)
+services:
+  parakh:
+    build: .
+    image: mcs-parakh:0.3
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

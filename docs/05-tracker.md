@@ -52,7 +52,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 | ID | Task | Req | Owner | Status |
 |---|---|---|---|---|
-| T-301 | Dockerfile + compose; container runs full stack locally | NFR-4 | CL | todo |
+| T-301 | Dockerfile + compose; container runs full stack locally (single image 255 MB; `docker compose up` → :8000; pytest 16/16 in-container; healthcheck green) | NFR-4 | CL | **done** |
 | T-302 | Deploy API → App Runner (fallback Render after 3 hrs) | NFR-2 | JR+CL | todo |
 | T-303 | Deploy frontend → Amplify | NFR-2 | JR+CL | todo |
 | T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
