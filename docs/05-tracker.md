@@ -32,7 +32,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-205 | Parakh Watch: score time-series (rolling monthly) + transparent alert rules | FR-1.5/1.6 | ZS | **done** |
 | T-213b | Kal-Parakh backend (`/simulate` re-runs real engine; canon verified 692→721, +₹3.9L) | FR-4.8 | CL | **done** |
 
-**⚠️ Policy amendment pending JR confirm (docs/12): lower-edge eligibility now applies at Low confidence only; High/Medium use point band — required to keep the canonical +₹3.9L moment true (persona canon reconciled Jul 7). API tests 6/6, engine 10/10.**
+**✅ Policy amendment LOCKED by JR (Jul 7): lower-edge eligibility applies at Low confidence only; High/Medium use point band (docs/12). Demo-canon tests pin the behavior.**
 | T-206 | React scaffold (Vite + Tailwind; custom SVG viz — lighter than Recharts) | FR-4.x | FE+CL | **done** |
 | T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record) | FR-4.1 | FE+CL | **done** |
 | T-208 | AA consent screen (para-6.3 fields) + DPDP notice + declined state | FR-4.2, CR-1/2 | FE+CL | **done** |
