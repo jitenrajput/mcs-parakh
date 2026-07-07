@@ -84,9 +84,10 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 ## Blockers (live)
 
-| # | Blocker | Blocks | Owner | Raised |
-|---|---|---|---|---|
-| B-1 | Frontend owner unassigned | T-206…T-212 | JR | Jul 3 |
-| B-2 | Working defaults unconfirmed (deploy / model scope / EPFO) — defaults adopted, flag to flip | T-302, T-310, T-103 | JR | Jul 6 |
-| B-3 | AWS account + Amplify/App Runner access not yet verified | T-302/303 | JR | Jul 6 |
-| B-4 | IDBI Google Slides template access (download + fonts) not verified | T-306 | JT | Jul 6 |
+| # | Blocker | Blocks | Owner | Raised | Status |
+|---|---|---|---|---|---|
+| B-1 | Frontend owner unassigned | T-206…T-212 | JR | Jul 3 | **resolved Jul 6** — CL built the frontend; NP covers QA |
+| B-2 | Working defaults unconfirmed (deploy / model scope / EPFO) | T-302, T-310, T-103 | JR | Jul 6 | **resolved** — EPFO shipped; scorecard-only shipped (GBM stays stretch); deploy superseded by B-5 |
+| B-3 | AWS account access not verified | T-302/303 | JR | Jul 6 | **superseded Jul 7** — no AWS; hosting = mconnectsolutions.com (B-5) |
+| B-4 | IDBI template access not verified | T-306 | JT | Jul 6 | **resolved Jul 7** — template downloaded + analyzed; 15-slide structure mapped |
+| B-5 | **Hosting timing on mconnectsolutions.com (JR)** — blocks deploy chain T-302/303/304/313/314/318 (QR) | deploy chain | JR | Jul 7 | **live** |
