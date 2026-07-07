@@ -57,9 +57,9 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-303 | Deploy frontend — deferred with T-302 (single container already serves the SPA, so one host may cover both) | NFR-2 | JR+CL | blocked |
 | T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
 | T-305 | README rewritten (verified stats, Docker+bare quickstart, architecture, MIT LICENSE) + no-secrets scan clean; **demo GIF pending (after T-308 video)** | NFR-3/7, G1c | NP+CL | doing |
-| T-306 | Deck: full 10-slide content draft + 250-word abstract ready (`deck-draft.md`, private) — **JT builds in IDBI template Jul 8 (needs B-4)** | G1a | JR+JT | doing |
+| T-306 | Deck: content draft + abstract ready; **template analyzed Jul 7 — STRUCTURE-MANDATORY, 15 prescribed slides; full remap in `deck-draft.md`. JT builds Jul 8 against the mapping** | G1a | JR+JT | doing |
 | T-307 | Deck speaker notes: primary source per number | G1a | JT | todo |
-| T-308 | 2-min demo video | G1a booster | JT | todo |
+| T-308 | Demo video — **template allows 3 min**; script + optional extension beats in `demo-script.md`; JR voices | G1a booster | JT | todo |
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
 | T-311 | Juror-rebuttal one-pager **done** (`juror-rebuttals.md`, private): 6 attacks + translation table + stat guardrails | G1a | JT+CL | **done** |
@@ -68,10 +68,10 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script **written & live-verified** (`demo-script.md`, private): 2-min video VO + 5-min walkthrough + kill-switch choreography + reset checklist. **Pending: JR voices video, pitch-roles rehearsal** | docs/10 | JT+JR | doing |
 | T-316 | PS-language mirror pass: slide 4 uses PS3's exact vocabulary verbatim | pre-mortem | JT+CL | todo |
-| T-317 | Template-compliance checklist (structure, slide count, PDF ≤5MB, naming) | pre-mortem | NP | todo |
+| T-317 | Template-compliance checklist — facts confirmed Jul 7: 15 mandatory sections, section titles kept, PDF ≤5 MB, links ≤1024 chars, video ≤3 min, repo public. NP verifies final PDF against `submission-form.md` | pre-mortem | NP | doing |
 | T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
-| T-319 | Read Hack2Skill/IDBI T&Cs (IP terms) BEFORE repo goes public | IP | JR+CL | todo |
-| T-320 | Submission-form field screenshots (Jul 7) + pre-written answers incl. 250-word abstract | dry-run | JR+CL | todo |
+| T-319 | Read Hack2Skill/IDBI T&Cs (IP terms) BEFORE repo goes public — **now critical path: template requires a PUBLIC GitHub repo on slide 13; read by Jul 8** | IP | JR+CL | todo |
+| T-320 | Form captured + template analyzed Jul 7 (`submission-form.md`): Challenges dropdown · deployment link · **PDF ≤5 MB mandatory** · GitHub link. No abstract field seen (draft kept as backup). **Remaining: JR clicks "Add Submission" once to check for hidden fields** | dry-run | JR+CL | doing |
 
 ## P4 — Submit
 
