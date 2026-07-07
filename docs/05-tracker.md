@@ -70,7 +70,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-316 | PS-language mirror pass: slide 4 uses PS3's exact vocabulary verbatim | pre-mortem | JT+CL | todo |
 | T-317 | Template-compliance checklist — facts confirmed Jul 7: 15 mandatory sections, section titles kept, PDF ≤5 MB, links ≤1024 chars, video ≤3 min, repo public. NP verifies final PDF against `submission-form.md` | pre-mortem | NP | doing |
 | T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
-| T-319 | T&Cs researched (CL, Jul 7): event page's linked terms = standard H2S boilerplate — **IP retained by team; 6-mo ROFR on exclusive licenses only; MIT-compatible; safe to go public.** Residual: JR glances at dashboard for any separately-signed participation agreement, then says "flip public" | IP | JR+CL | doing |
+| T-319 | **DONE (Jul 7):** terms researched (standard H2S boilerplate — IP retained, 6-mo ROFR on exclusive licenses only, MIT-compatible); JR found no separate participation agreement → **repo flipped PUBLIC** (github.com/jitenrajput/mcs-parakh) | IP | JR+CL | **done** |
 | T-320 | Form captured + template analyzed Jul 7 (`submission-form.md`): Challenges dropdown · deployment link · **PDF ≤5 MB mandatory** · GitHub link. No abstract field seen (draft kept as backup). **Remaining: JR clicks "Add Submission" once to check for hidden fields** | dry-run | JR+CL | doing |
 
 ## P4 — Submit
