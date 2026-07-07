@@ -56,14 +56,14 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-302 | Deploy API — **DEFERRED (Jul 7): no AWS details; JR will host under mconnectsolutions.com when ready. Local-only until then.** Container is deploy-ready (T-301) | NFR-2 | JR+CL | blocked |
 | T-303 | Deploy frontend — deferred with T-302 (single container already serves the SPA, so one host may cover both) | NFR-2 | JR+CL | blocked |
 | T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
-| T-305 | README: quickstart, architecture diagram, demo GIF, MIT, no-secrets scan | NFR-3/7, G1c | NP+CL | todo |
-| T-306 | Deck 10 slides in IDBI template — stats from research-findings §3 ONLY | G1a | JR+JT | todo |
+| T-305 | README rewritten (verified stats, Docker+bare quickstart, architecture, MIT LICENSE) + no-secrets scan clean; **demo GIF pending (after T-308 video)** | NFR-3/7, G1c | NP+CL | doing |
+| T-306 | Deck: full 10-slide content draft + 250-word abstract ready (`deck-draft.md`, private) — **JT builds in IDBI template Jul 8 (needs B-4)** | G1a | JR+JT | doing |
 | T-307 | Deck speaker notes: primary source per number | G1a | JT | todo |
 | T-308 | 2-min demo video | G1a booster | JT | todo |
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
-| T-311 | Juror-rebuttal one-pager (6 attacks incl. "why your parameters" + translation table) for rehearsal | G1a | JT+CL | todo |
-| T-312 | Logo SVGs (hallmark-stamp concept) → JR picks; into app header + deck + favicon + OG image | docs/10 | CL+JR | todo |
+| T-311 | Juror-rebuttal one-pager **done** (`juror-rebuttals.md`, private): 6 attacks + translation table + stat guardrails | G1a | JT+CL | **done** |
+| T-312 | Logo: 4 hallmark-stamp options committed (`assets/brand/`) + preview gallery sent — **JR picks**, then path-convert + favicon/OG/banner + app header | docs/10 | CL+JR | doing |
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script fitted to final screens (draft done); JR voices video; pitch-roles rehearsal | docs/10 | JT+JR | todo |
