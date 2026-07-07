@@ -53,6 +53,20 @@ export function SourceSeals({ coverage, fetches, dark, size = 'md' }) {
 }
 
 /* The gauge: 300-900 arc, band-coloured segments, confidence halo */
+/* Option B "Navy Assay" hallmark mark — JR's pick, T-312 (assets/brand/logo-b-navy-assay.svg).
+   Keyline thickened slightly so it survives 28px header rendering. */
+export function BrandMark({ size = 28 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 120 120" className="shrink-0" aria-label="Parakh">
+      <rect x="8" y="8" width="104" height="104" rx="22" fill="#14243D" />
+      <rect x="15" y="15" width="90" height="90" rx="16" fill="none" stroke="#0E6E5C" strokeWidth="5" />
+      <path d="M8 86 L8 90 A22 22 0 0 0 30 112 L34 112 Z" fill="#E8A33D" />
+      <text x="60" y="86" textAnchor="middle" fontFamily="Mukta,'Noto Sans Devanagari','Nirmala UI',sans-serif"
+        fontWeight="700" fontSize="62" fill="#F7F5F0">प</text>
+    </svg>
+  )
+}
+
 export function ScoreGauge({ score, band, width, dark, size = 240 }) {
   const cx = size / 2, cy = size / 2 + 10, r = size / 2 - 18
   const a0 = Math.PI

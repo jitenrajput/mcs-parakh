@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { api, inr } from '../api'
 import { ScoreGauge, SourceSeals, DimensionRow, SyntheticStamp } from '../components/bits'
-import { useT, LangToggle } from '../i18n'
+import { useT, LangToggle, STRINGS } from '../i18n'
 
 const ACTION_ORDER = ['gst_on_time_3m', 'gst_on_time_6m', 'clear_bounces_6m', 'reduce_emi_25pct']
 
@@ -64,7 +64,7 @@ export default function MsmeView() {
             </div>
             <div className="text-right">
               <div className="caps-label text-ink-soft/70">{t('confidence')}</div>
-              <div className="font-display font-bold">{r.confidence} ±{r.confidence_width}</div>
+              <div className="font-display font-bold">{t('conf_' + r.confidence.toLowerCase())} ±{r.confidence_width}</div>
             </div>
           </div>
         </div>
@@ -95,15 +95,16 @@ export default function MsmeView() {
           <div className="mt-3 space-y-2">
             {actions.map(a => {
               const on = picked.includes(a.id)
+              const loc = STRINGS[lang]?.actions?.[a.id] ?? a  // localized label/hint, API text as fallback
               return (
                 <button key={a.id} disabled={busy}
                   onClick={() => runSim(on ? picked.filter(x => x !== a.id) : [...picked, a.id])}
                   className={`w-full text-left p-3 border-2 transition-all ${on ? 'border-teal-700 bg-teal-700/10' : 'border-ink/20 bg-paper hover:border-ink/40'}`}>
                   <div className="flex items-center gap-2.5">
                     <span className={`w-5 h-5 stamp-chip text-[11px] ${on ? 'bg-teal-700 text-paper' : 'border border-ink/30 text-transparent'}`}>✓</span>
-                    <span className="font-semibold text-[13.5px] flex-1">{a.label}</span>
+                    <span className="font-semibold text-[13.5px] flex-1">{loc.label}</span>
                   </div>
-                  <div className="text-ink-soft text-[11px] mt-1 ml-7">{a.hint}</div>
+                  <div className="text-ink-soft text-[11px] mt-1 ml-7">{loc.hint}</div>
                 </button>
               )
             })}
@@ -113,7 +114,7 @@ export default function MsmeView() {
           )}
           {sim && (
             <div className="mt-3 bg-paper-dark border border-ink/15 p-3 text-[11.5px] text-ink-soft seal-in">
-              ⚙ {sim.note}
+              ⚙ {lang === 'en' ? sim.note : t('sim_note')}
             </div>
           )}
         </div>

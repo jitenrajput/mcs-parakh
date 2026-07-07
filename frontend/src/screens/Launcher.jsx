@@ -1,7 +1,7 @@
 /* S0 — Demo Launcher: built for the jury (U6). Nobody lands on a login screen. */
 
 import { Link } from 'react-router-dom'
-import { Footer, SyntheticStamp } from '../components/bits'
+import { BrandMark, Footer, SyntheticStamp } from '../components/bits'
 
 /* Hairline SVG seat marks — rule 1: no emoji in product UI */
 function SeatMark({ kind }) {
@@ -41,10 +41,7 @@ export default function Launcher() {
       <div className="max-w-5xl mx-auto px-5 pt-14 pb-6">
         <header className="rise">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-navy-800 hairline grid place-items-center relative">
-              <span className="font-display font-extrabold text-2xl text-paper">प</span>
-              <span className="absolute -top-px -right-px w-3.5 h-3.5 bg-amber-500" style={{ clipPath: 'polygon(0 0,100% 0,100% 100%)' }} />
-            </div>
+            <BrandMark size={48} />
             <div>
               <h1 className="font-display font-extrabold text-3xl leading-none">Parakh <span className="text-paper/40 font-semibold text-lg">परख</span></h1>
               <p className="caps-label text-amber-500 mt-1">Every genuine business, recognized.</p>

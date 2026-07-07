@@ -21,6 +21,14 @@ export const STRINGS = {
     reset: 'Reset',
     synthetic: 'SYNTHETIC DATA',
     band_note: 'Score band 300–900, like your personal credit score — but built from how your business actually runs.',
+    conf_high: 'High', conf_medium: 'Medium', conf_low: 'Low',
+    sim_note: 'Projection re-runs the actual scoring engine with modified inputs — not an animation.',
+    actions: {
+      gst_on_time_3m: { label: 'File GSTR-1 & 3B on time for the next 3 months', hint: 'Sets the 3 most recent filings to their due date' },
+      gst_on_time_6m: { label: 'File GSTR-1 & 3B on time for 6 months', hint: 'Sets the 6 most recent filings to their due date' },
+      clear_bounces_6m: { label: 'No payment bounces for 6 months', hint: 'Clears inward bounces in the last 6 months' },
+      reduce_emi_25pct: { label: 'Refinance / part-prepay EMIs (−25%)', hint: 'Reduces EMI debits 25% across the last 12 months' },
+    },
   },
   hi: {
     your_score: 'आपका परख स्कोर',
@@ -39,6 +47,14 @@ export const STRINGS = {
     reset: 'रीसेट',
     synthetic: 'नमूना डेटा',
     band_note: 'स्कोर 300–900 — आपके निजी क्रेडिट स्कोर जैसा, पर आपके व्यापार की असल चाल से बना।',
+    conf_high: 'उच्च', conf_medium: 'मध्यम', conf_low: 'कम',
+    sim_note: 'यह अनुमान असली स्कोरिंग इंजन को बदले हुए इनपुट के साथ दोबारा चलाकर निकला है — कोई एनीमेशन नहीं।',
+    actions: {
+      gst_on_time_3m: { label: 'अगले 3 महीने GSTR-1 और 3B समय पर भरें', hint: 'सबसे हाल की 3 फाइलिंग नियत तारीख़ पर मानी जाती हैं' },
+      gst_on_time_6m: { label: '6 महीने तक GSTR-1 और 3B समय पर भरें', hint: 'सबसे हाल की 6 फाइलिंग नियत तारीख़ पर मानी जाती हैं' },
+      clear_bounces_6m: { label: '6 महीने तक कोई पेमेंट बाउंस नहीं', hint: 'पिछले 6 महीनों के इनवर्ड बाउंस हटाकर देखा जाता है' },
+      reduce_emi_25pct: { label: 'EMI रीफाइनेंस / आंशिक चुकौती (−25%)', hint: 'पिछले 12 महीनों की EMI 25% कम मानी जाती है' },
+    },
   },
   gu: {
     your_score: 'તમારો પરખ સ્કોર',
@@ -57,6 +73,14 @@ export const STRINGS = {
     reset: 'રીસેટ',
     synthetic: 'નમૂનાનો ડેટા',
     band_note: 'સ્કોર 300–900 — તમારા અંગત ક્રેડિટ સ્કોર જેવો, પણ તમારા ધંધાની સાચી ચાલ પરથી બનેલો.',
+    conf_high: 'ઉચ્ચ', conf_medium: 'મધ્યમ', conf_low: 'ઓછો',
+    sim_note: 'આ અંદાજ સાચા સ્કોરિંગ એન્જિનને બદલેલા ઇનપુટ સાથે ફરી ચલાવીને મળ્યો છે — કોઈ એનિમેશન નથી.',
+    actions: {
+      gst_on_time_3m: { label: 'આગામી 3 મહિના GSTR-1 અને 3B સમયસર ભરો', hint: 'સૌથી તાજેતરની 3 ફાઇલિંગ નિયત તારીખે ગણાય છે' },
+      gst_on_time_6m: { label: '6 મહિના સુધી GSTR-1 અને 3B સમયસર ભરો', hint: 'સૌથી તાજેતરની 6 ફાઇલિંગ નિયત તારીખે ગણાય છે' },
+      clear_bounces_6m: { label: '6 મહિના સુધી કોઈ પેમેન્ટ બાઉન્સ નહીં', hint: 'છેલ્લા 6 મહિનાના ઇનવર્ડ બાઉન્સ દૂર ગણીને જોવાય છે' },
+      reduce_emi_25pct: { label: 'EMI રિફાઇનાન્સ / આંશિક ચુકવણી (−25%)', hint: 'છેલ્લા 12 મહિનાની EMI 25% ઓછી ગણાય છે' },
+    },
   },
 }
 

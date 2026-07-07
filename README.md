@@ -1,3 +1,5 @@
+![MCS Parakh — Every genuine business, recognized.](assets/brand/banner.png)
+
 # MCS Parakh (परख) — by M-Connect Labs
 
 [![CI](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml/badge.svg)](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml)

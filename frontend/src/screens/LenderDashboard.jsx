@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, inr, BAND_COLOR } from '../api'
-import { Sparkline, SyntheticStamp, Footer } from '../components/bits'
+import { BrandMark, Sparkline, SyntheticStamp, Footer } from '../components/bits'
 import KillSwitchStrip from '../components/KillSwitchStrip'
 
 export default function LenderDashboard() {
@@ -97,10 +97,7 @@ export function TopBar() {
     <div className="hairline-b bg-navy-950/80 backdrop-blur sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-navy-800 hairline grid place-items-center relative">
-            <span className="font-display font-extrabold text-sm">प</span>
-            <span className="absolute -top-px -right-px w-2 h-2 bg-amber-500" style={{ clipPath: 'polygon(0 0,100% 0,100% 100%)' }} />
-          </div>
+          <BrandMark size={28} />
           <span className="font-display font-bold">Parakh</span>
           <span className="caps-label text-paper/30 hidden sm:inline">Lender console</span>
         </Link>
