@@ -53,8 +53,8 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | ID | Task | Req | Owner | Status |
 |---|---|---|---|---|
 | T-301 | Dockerfile + compose; container runs full stack locally (single image 255 MB; `docker compose up` → :8000; pytest 16/16 in-container; healthcheck green) | NFR-4 | CL | **done** |
-| T-302 | Deploy → **Render** (fallback path taken Jul 7 — no AWS access; JR confirmed). Blueprint `render.yaml` + private repo `jitenrajput/mcs-parakh` pushed. **Waiting: JR logs into Render + applies Blueprint** | NFR-2 | JR+CL | doing |
-| T-303 | Frontend hosting — collapsed into T-302 single container (image serves SPA); Amplify deferred to AWS swap | NFR-2 | JR+CL | **done** |
+| T-302 | Deploy API — **DEFERRED (Jul 7): no AWS details; JR will host under mconnectsolutions.com when ready. Local-only until then.** Container is deploy-ready (T-301) | NFR-2 | JR+CL | blocked |
+| T-303 | Deploy frontend — deferred with T-302 (single container already serves the SPA, so one host may cover both) | NFR-2 | JR+CL | blocked |
 | T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
 | T-305 | README: quickstart, architecture diagram, demo GIF, MIT, no-secrets scan | NFR-3/7, G1c | NP+CL | todo |
 | T-306 | Deck 10 slides in IDBI template — stats from research-findings §3 ONLY | G1a | JR+JT | todo |
