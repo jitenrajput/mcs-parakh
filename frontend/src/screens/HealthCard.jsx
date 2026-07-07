@@ -107,10 +107,12 @@ function ReasonCol({ title, items, tone }) {
 function Propensity({ r }) {
   const d = r.dimensions
   const suggestions = []
-  if (d.cash_flow.score < 60 && d.growth.score >= 50) suggestions.push(['Overdraft / CC line', 'volatile inflows need a cushion, not a term EMI'])
-  if (d.cash_flow.score >= 60 && d.growth.score >= 65) suggestions.push(['Term loan (expansion)', 'steady inflows + growth momentum carry an EMI'])
-  if (d.growth.score >= 80) suggestions.push(['Higher WC limit review', 'turnover is outgrowing the current limit'])
-  if (r.coverage.epfo_ecr) suggestions.push(['Salary account cross-sell', 'active payroll runs through EPFO'])
+  // Band gate mirrors docs/12 RM action gates: Weak = coaching, Critical = rehab — no cross-sell.
+  const rehabOnly = r.band === 'Weak' || r.band === 'Critical'
+  if (!rehabOnly && d.cash_flow.score < 60 && d.growth.score >= 50) suggestions.push(['Overdraft / CC line', 'volatile inflows need a cushion, not a term EMI'])
+  if (!rehabOnly && d.cash_flow.score >= 60 && d.growth.score >= 65) suggestions.push(['Term loan (expansion)', 'steady inflows + growth momentum carry an EMI'])
+  if (!rehabOnly && d.growth.score >= 80) suggestions.push(['Higher WC limit review', 'turnover is outgrowing the current limit'])
+  if (!rehabOnly && r.coverage.epfo_ecr) suggestions.push(['Salary account cross-sell', 'active payroll runs through EPFO'])
   if (!suggestions.length) suggestions.push(['Rehabilitation path', 'stabilize before new exposure — see MSME-side actions'])
   return (
     <div className="hairline bg-navy-900/70 p-4 rise rise-2">

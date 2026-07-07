@@ -55,7 +55,7 @@ export function SourceSeals({ coverage, fetches, dark, size = 'md' }) {
 /* The gauge: 300-900 arc, band-coloured segments, confidence halo */
 export function ScoreGauge({ score, band, width, dark, size = 240 }) {
   const cx = size / 2, cy = size / 2 + 10, r = size / 2 - 18
-  const a0 = Math.PI, toXY = a => [cx + r * Math.cos(a), cy - r * Math.sin(a)]
+  const a0 = Math.PI
   const frac = v => Math.max(0, Math.min(1, (v - 300) / 600))
   const arc = (v1, v2, rr = r) => {
     const [x1, y1] = [cx + rr * Math.cos(a0 - frac(v1) * Math.PI), cy - rr * Math.sin(a0 - frac(v1) * Math.PI)]
@@ -64,13 +64,16 @@ export function ScoreGauge({ score, band, width, dark, size = 240 }) {
   }
   const bands = [[300, 480, '#C0392B'], [480, 600, '#D96F32'], [600, 720, '#E8A33D'], [720, 780, '#57B79F'], [780, 900, '#1E8E5A']]
   const na = a0 - frac(score) * Math.PI
-  const [nx, ny] = toXY(na)
   return (
     <svg width={size} height={size * 0.62} viewBox={`0 0 ${size} ${size * 0.62}`} className="overflow-visible">
       {width ? <path d={arc(Math.max(300, score - width), Math.min(900, score + width), r)} stroke={BAND_COLOR[band]} strokeOpacity="0.18" strokeWidth="22" fill="none" /> : null}
       {bands.map(([v1, v2, c]) => <path key={v1} d={arc(v1 + 4, v2 - 4)} stroke={c} strokeWidth="5" fill="none" strokeLinecap="butt" opacity={dark ? 0.85 : 0.9} />)}
-      <line x1={cx} y1={cy} x2={nx} y2={ny} stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="2.5" />
-      <circle cx={cx} cy={cy} r="5" fill={BAND_COLOR[band]} stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="1.5" />
+      {/* pointer = tick across the arc + band-color jewel just inside it — clears the score digits at any angle */}
+      <line x1={cx + r * 0.86 * Math.cos(na)} y1={cy - r * 0.86 * Math.sin(na)}
+        x2={cx + r * 1.12 * Math.cos(na)} y2={cy - r * 1.12 * Math.sin(na)}
+        stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="3" />
+      <circle cx={cx + r * 0.76 * Math.cos(na)} cy={cy - r * 0.76 * Math.sin(na)} r="4.5"
+        fill={BAND_COLOR[band]} stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="1.5" />
       <text x={cx} y={cy - r * 0.36} textAnchor="middle" className="tnum"
         fontFamily="Mukta" fontWeight="800" fontSize={size * 0.19} fill={dark ? '#F7F5F0' : '#1C2434'}>{score}</text>
       <text x={cx} y={cy - r * 0.16} textAnchor="middle" fontFamily="Mukta" fontWeight="700"

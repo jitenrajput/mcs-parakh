@@ -32,7 +32,7 @@ const PERSONAS = [
   { gstin: '24AABCT9876K1Z3', name: 'TrendKart Online', who: 'Meena Shah · Surat',
     story: 'Ethnic wear online. No CIBIL file at all — invisible to every bureau.', score: '692 · Watch', tone: '#E8A33D' },
   { gstin: '24AADCM4321P1Z8', name: 'Maruti Trading Co', who: 'Dineshbhai Soni · Ahmedabad',
-    story: 'Textiles trader, 9 years. Inflows sliding, EMIs biting.', score: '410 · Critical', tone: '#C0392B' },
+    story: 'Textiles trader, 9 years. Inflows sliding, EMIs biting.', score: '409 · Critical', tone: '#C0392B' },
 ]
 
 export default function Launcher() {
