@@ -12,8 +12,8 @@
 | U6 | **The Jury** | **BUILD** — Demo Launcher; jurors open the link alone, no narrator |
 
 ## Journeys
-- **J1 Lender** — "RM's Monday morning": portfolio → alert triage (Maruti −55) → reasons → new lead → consent → card assembles (one source fails → band widens) → 690 NTC → propensity + CGTMSE.
-- **J2 MSME** — "Meena finds her next ₹10 lakh": invite → AA consent (HI/GU toggle) → own card → improve actions in ₹ → simulator (+₹3.8L) → readiness meter.
+- **J1 Lender** — "RM's Monday morning": portfolio → alert triage (Maruti EMI-burden alert + watchlist decliners) → reasons → new lead → consent → card assembles (one source fails → band widens) → 692 NTC → propensity + CGTMSE.
+- **J2 MSME** — "Meena finds her next ₹10 lakh": invite → AA consent (HI/GU toggle) → own card → improve actions in ₹ → simulator (+₹3.9L) → readiness meter.
 - **J3 Jury** — unguided 3 minutes: Launcher → RM seat → alert → drill → flip → simulator. **Every screen must survive being the first screen.**
 
 ## Screens (11)

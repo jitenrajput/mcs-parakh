@@ -19,7 +19,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-109 | Confidence band from coverage vector (majors/minors; lower-edge eligibility) | FR-1.4 | CL | **done** |
 | T-110 | Unit tests: persona bands, determinism, degradation, monotonicity, lower-edge, version stamps — **10/10 green** | NFR-5/6 | ZS+NP | **done** |
 
-**✅ P1 GATE PASSED (Jul 06 night): personas score 781 Prime High±15 / 691 Watch Medium±35 / 410 Critical from CLI; pytest 10/10.**
+**✅ P1 GATE PASSED (Jul 06 night): personas score 781 Prime High±15 / 691 Watch Medium±35 / 410 Critical from CLI; pytest 10/10.** *(Shipped dataset scores 781/692/409 — canon reconciled in docs/12 on Jul 7; live-verified via API.)*
 
 ## P2 — End-to-end product (gate: full flow clickable locally)
 
@@ -32,7 +32,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-205 | Parakh Watch: score time-series (rolling monthly) + transparent alert rules | FR-1.5/1.6 | ZS | **done** |
 | T-213b | Kal-Parakh backend (`/simulate` re-runs real engine; canon verified 692→721, +₹3.9L) | FR-4.8 | CL | **done** |
 
-**⚠️ Policy amendment pending JR confirm (docs/12): lower-edge eligibility now applies at Low confidence only; High/Medium use point band — required to keep the canonical +₹3.8L moment true. API tests 6/6, engine 10/10.**
+**⚠️ Policy amendment pending JR confirm (docs/12): lower-edge eligibility now applies at Low confidence only; High/Medium use point band — required to keep the canonical +₹3.9L moment true (persona canon reconciled Jul 7). API tests 6/6, engine 10/10.**
 | T-206 | React scaffold (Vite + Tailwind; custom SVG viz — lighter than Recharts) | FR-4.x | FE+CL | **done** |
 | T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record) | FR-4.1 | FE+CL | **done** |
 | T-208 | AA consent screen (para-6.3 fields) + DPDP notice + declined state | FR-4.2, CR-1/2 | FE+CL | **done** |

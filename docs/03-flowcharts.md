@@ -18,9 +18,9 @@ flowchart TD
     H --> I[Flip card → MSME self-view<br/>strengths · improve-your-score actions<br/>loan-readiness meter]
     I --> J[Portfolio view<br/>book ranked by trend<br/>early-warning alerts w/ reasons]
     J --> K{Persona}
-    K -->|P1 Rajkot manufacturer ~780| L[Term-loan-ready · CGTMSE-eligible<br/>Rs 75L expansion lead]
-    K -->|P2 Surat NTC seller ~690| M[No bureau file, still scored<br/>INCLUSION hero-moment]
-    K -->|P3 Stressed trader ~410| N[Deterioration alert fired<br/>improvement path on MSME side]
+    K -->|P1 Rajkot manufacturer 781| L[Term-loan-ready · CGTMSE-eligible<br/>Rs 75L expansion lead]
+    K -->|P2 Surat NTC seller 692| M[No bureau file, still scored<br/>INCLUSION hero-moment]
+    K -->|P3 Stressed trader 409| N[Parakh Watch alert fired<br/>improvement path on MSME side]
 ```
 
 ## 2. Scoring pipeline (engine internals)
