@@ -66,7 +66,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-312 | Logo: 4 hallmark-stamp options committed (`assets/brand/`) + preview gallery sent — **JR picks**, then path-convert + favicon/OG/banner + app header | docs/10 | CL+JR | doing |
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
-| T-315 | Demo script fitted to final screens (draft done); JR voices video; pitch-roles rehearsal | docs/10 | JT+JR | todo |
+| T-315 | Demo script **written & live-verified** (`demo-script.md`, private): 2-min video VO + 5-min walkthrough + kill-switch choreography + reset checklist. **Pending: JR voices video, pitch-roles rehearsal** | docs/10 | JT+JR | doing |
 | T-316 | PS-language mirror pass: slide 4 uses PS3's exact vocabulary verbatim | pre-mortem | JT+CL | todo |
 | T-317 | Template-compliance checklist (structure, slide count, PDF ≤5MB, naming) | pre-mortem | NP | todo |
 | T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
