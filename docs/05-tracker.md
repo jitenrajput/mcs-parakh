@@ -46,7 +46,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-216 | Demo Launcher S0: seat-picker, persona cards, 30-sec explainer | docs/10 | FE+CL | **done** |
 | T-217 | Error states: consent-declined, unknown-GSTIN→persona chips, API-cold, skeletons, 404→S0, source-failed toast-equivalent | docs/10 | FE+CL+NP | **done** (NP re-test Jul 7) |
 | T-218 | Tokens wired into tailwind.config.js; **copy to Slides master pending (JT)** | docs/10 | CL+JT | doing |
-| T-219 | Strings EN/HI/GU live in i18n.jsx; **JR native review pending** | docs/10 | CL+JR | doing |
+| T-219 | Strings EN/HI/GU in i18n.jsx — extended Jul 7 (Kal-Parakh action labels+hints, confidence words, sim note per JR's go). **JR native review of all strings pending** | docs/10 | CL+JR | doing |
 
 ## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
 
@@ -63,7 +63,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
 | T-311 | Juror-rebuttal one-pager **done** (`juror-rebuttals.md`, private): 6 attacks + translation table + stat guardrails | G1a | JT+CL | **done** |
-| T-312 | Logo: 4 hallmark-stamp options committed (`assets/brand/`) + preview gallery sent — **JR picks**, then path-convert + favicon/OG/banner + app header | docs/10 | CL+JR | doing |
+| T-312 | Logo **DONE**: JR picked **B (Navy Assay)** Jul 7. Shipped: BrandMark in app headers, favicon, apple-touch icon, OG image (1200×630, meta live on deploy), README banner, mono SVG deck cuts | docs/10 | CL+JR | **done** |
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script **written & live-verified** (`demo-script.md`, private): 2-min video VO + 5-min walkthrough + kill-switch choreography + reset checklist. **Pending: JR voices video, pitch-roles rehearsal** | docs/10 | JT+JR | doing |
