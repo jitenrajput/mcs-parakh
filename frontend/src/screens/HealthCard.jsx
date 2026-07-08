@@ -52,12 +52,16 @@ export default function HealthCard() {
                 </div>
                 <ScoreGauge score={r.score} band={r.band} width={r.confidence_width} dark />
               </div>
-              <div className="grid sm:grid-cols-2 gap-x-8 mt-4 pt-4 hairline-b border-t border-[color:var(--hair)]">
-                <div>{Object.entries(r.dimensions).slice(0, 3).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} dark />)}</div>
-                <div>{Object.entries(r.dimensions).slice(3).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} dark />)}</div>
+              <div className="mt-4 pt-4 hairline-b border-t border-[color:var(--hair)]">
+                <div className="caps-label text-paper/35 mb-2">Five dimensions · weights set by credit policy</div>
+                <div className="grid sm:grid-cols-2 gap-x-8">
+                  <div>{Object.entries(r.dimensions).slice(0, 3).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} dark />)}</div>
+                  <div>{Object.entries(r.dimensions).slice(3).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} dark />)}</div>
+                </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-6 mt-4">
-                <ReasonCol title="Working against" items={r.reasons_negative} tone="#C0392B" />
+                <ReasonCol title="Working against" items={r.reasons_negative} tone="#C0392B"
+                  emptyCaveat={r.missing_sources?.length ? `Limited data — ${r.missing_sources.length} of 5 sources unavailable; score is provisional` : null} />
                 <ReasonCol title="Working for" items={r.reasons_positive} tone="#57B79F" />
               </div>
             </div>
@@ -90,10 +94,11 @@ export default function HealthCard() {
   )
 }
 
-function ReasonCol({ title, items, tone }) {
+function ReasonCol({ title, items, tone, emptyCaveat }) {
   return (
     <div>
       <div className="caps-label mb-2" style={{ color: tone }}>{title}</div>
+      {items.length === 0 && <div className="text-[13px] text-paper/45 py-1 italic">{emptyCaveat ?? '— none flagged'}</div>}
       {items.map((x, i) => (
         <div key={i} className="text-[13px] text-paper/80 py-1 flex gap-2">
           <span style={{ color: tone }}>▪</span> {x.text}

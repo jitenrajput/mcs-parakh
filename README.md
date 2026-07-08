@@ -19,7 +19,7 @@ For centuries, a goldsmith could tell genuine gold with a touchstone. India's MS
 ## What it does
 
 **Lender side** — a portfolio the RM opens on Monday morning:
-- **Parakh Score**: 300–900 composite over 5 transparent dimensions — Cash-Flow Strength (30%), Compliance Discipline (20%), Obligation Load (20%), Growth Trajectory (15%), Business Stability (15%) — graded-bin scorecard, no black box.
+- **Parakh Score**: 300–900 composite over 5 transparent dimensions — Cash-Flow Strength (30%), Compliance Discipline (20%), Obligation Load (20%), Growth Trajectory (15%), Business Stability (15%) — graded-bin scorecard, no black box. Each weight is shown on the card as **bank-set credit policy**, not a model-learned coefficient — auditable and stable, the way a credit committee needs it.
 - **Reason codes** from point contributions; A–E dimension chips; every score contestable.
 - **Coverage ring + confidence band**: five source icons around the gauge; a missing source visibly dims and widens the band (±15/±35/±60).
 - **Parakh Watch**: rolling monthly score series + transparent early-warning alert rules.
@@ -59,7 +59,7 @@ docker compose up
 # API
 cd backend
 pip install -r requirements.txt
-uvicorn api.main:app --port 8000
+uvicorn api.main:app --port 8000 --root-path /api   # --root-path so the /api/docs link resolves behind the Vite proxy
 
 # Frontend (second terminal; dev server proxies /api → :8000)
 cd frontend

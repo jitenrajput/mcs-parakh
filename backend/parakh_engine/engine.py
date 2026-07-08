@@ -10,6 +10,7 @@ No framework, no I/O, no randomness. Same input -> same output, always.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field, asdict
 
 from . import config
@@ -22,6 +23,7 @@ class Reason:
     text: str
     dimension: str
     points_delta: float  # +/- vs neutral, weighted into the dimension
+    vstr: str | None = None  # formatted value ("18", "93%") so the UI can localize the template
 
 
 @dataclass
@@ -33,7 +35,7 @@ class ScoreResult:
     band_lower_edge: str      # band used for eligibility (lower-edge rule)
     confidence: str
     confidence_width: int
-    dimensions: dict          # name -> {score, grade}
+    dimensions: dict          # name -> {score, grade, weight}  (weight = policy weight, config.WEIGHTS)
     reasons_positive: list
     reasons_negative: list
     coverage: dict
@@ -80,10 +82,16 @@ def score(record: dict) -> ScoreResult:
             if not was_neutral:
                 delta = w * (comp_score - config.NEUTRAL)
                 pos_t, neg_t = config.REASON_LABELS[feat]
-                text = (pos_t if delta >= 0 else neg_t)
+                tmpl = pos_t if delta >= 0 else neg_t
                 v = feats[feat]
-                text = text.format(v=v) if "{v" in text else text
-                reasons.append(Reason(feat, text, dim, round(delta, 1)))
+                vstr = None
+                if "{v" in tmpl:
+                    text = tmpl.format(v=v)
+                    m = re.search(r"\{v(:[^}]*)?\}", tmpl)  # same spec → same formatted value for i18n
+                    vstr = ("{v" + (m.group(1) or "") + "}").format(v=v)
+                else:
+                    text = tmpl
+                reasons.append(Reason(feat, text, dim, round(delta, 1), vstr=vstr))
         dims[dim] = round(total, 1)
 
     composite = sum(config.WEIGHTS[d] * s for d, s in dims.items())
@@ -125,13 +133,18 @@ def score(record: dict) -> ScoreResult:
     )
 
     reasons.sort(key=lambda r: r.points_delta)
+    # Only genuine helps go in "working for", only genuine drags in "working
+    # against" — never show a positive under "holding you back" (or vice-versa),
+    # even for a near-perfect profile with < 3 of one kind.
+    pos = [r for r in reasons if r.points_delta > 0]
+    neg = [r for r in reasons if r.points_delta < 0]
     return ScoreResult(
         gstin=profile["gstin"], name=profile["name"], score=pt,
         band=band_pt, band_lower_edge=band_elig,
         confidence=conf_label, confidence_width=width,
-        dimensions={d: dict(score=s, grade=letter(s)) for d, s in dims.items()},
-        reasons_positive=[asdict(r) for r in reversed(reasons[-3:])],
-        reasons_negative=[asdict(r) for r in reasons[:3]],
+        dimensions={d: dict(score=s, grade=letter(s), weight=config.WEIGHTS[d]) for d, s in dims.items()},
+        reasons_positive=[asdict(r) for r in reversed(pos[-3:])],
+        reasons_negative=[asdict(r) for r in neg[:3]],
         coverage=coverage,
         missing_sources=[s for s, ok in coverage.items() if not ok],
         eligibility=eligibility,

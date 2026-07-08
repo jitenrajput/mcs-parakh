@@ -19,7 +19,7 @@ export const api = {
   explain: gstin => req(`/explain/${gstin}`),
   consent: gstin => req('/consent', { method: 'POST', body: JSON.stringify({ gstin }) }),
   simulate: (gstin, actions) => req('/simulate', { method: 'POST', body: JSON.stringify({ gstin, actions }) }),
-  simActions: () => req('/simulate/actions'),
+  simActions: gstin => req('/simulate/actions' + (gstin ? `?gstin=${gstin}` : '')),
   killState: () => req('/admin/killswitch'),
   kill: (source_id, killed) => req('/admin/killswitch', { method: 'POST', body: JSON.stringify({ source_id, killed }) }),
   version: () => req('/model/version'),

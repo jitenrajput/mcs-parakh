@@ -34,19 +34,19 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 **✅ Policy amendment LOCKED by JR (Jul 7): lower-edge eligibility applies at Low confidence only; High/Medium use point band (docs/12). Demo-canon tests pin the behavior.**
 | T-206 | React scaffold (Vite + Tailwind; custom SVG viz — lighter than Recharts) | FR-4.x | FE+CL | **done** |
-| T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record) | FR-4.1 | FE+CL | **done** |
+| T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record). **Jul 8: each dimension row now shows its policy weight % + "weights set by credit policy" caption — explicit transparency edge vs learned-weight competitors (see `competitor-intel.md`)** | FR-4.1 | FE+CL | **done** |
 | T-208 | AA consent screen (para-6.3 fields) + DPDP notice + declined state | FR-4.2, CR-1/2 | FE+CL | **done** |
 | T-209 | Lender portfolio: ranked ledger, sparklines, Parakh Watch section on top | FR-4.3 | FE+CL | **done** |
 | T-210 | MSME self-view: card + plain-words reasons + readiness meter | FR-4.4 | FE+CL | **done** |
-| T-211 | Flip button + watermark done; **mobile pass on real phone pending (Jul 7 QA)** | FR-4.5/4.6/4.7 | FE | doing |
+| T-211 | Flip button + watermark done; **mobile pass on real phone pending (Jul 7 QA)**. **Jul 8 dev-review: browser console cleaned — React Router v7 future-flags opted in + `/favicon.ico` added → 0 errors / 0 warnings** | FR-4.5/4.6/4.7 | FE | doing |
 | T-212 | CGTMSE flag (4-condition, circulars cited) + propensity rail | FR-1.8/1.9 | ZS+FE | **done** |
-| T-213 | Kal-Parakh UI: action toggles → live re-score → +₹ delta (canon 692→721 +₹3.9L) | FR-4.8 | CL+ZS | **done** |
+| T-213 | Kal-Parakh UI: action toggles → live re-score → +₹ delta (canon 692→721 +₹3.9L). **Jul 8: `/simulate` now returns full after-state (dimensions + reasons) → the WHOLE card transforms on projection, not just the number; persona-aware actions grey out no-impact levers (e.g. no-EMI business can't "refinance"); reason-sign fix (positives never shown under "holding you back"); coverage-aware "Working against" caveat when sources missing** | FR-4.8 | CL+ZS | **done** |
 | T-214 | Seal-dot coverage ring + assay-stamp A–E chips | FR-4.9 | FE+CL | **done** |
 | T-215 | EN/HI/GU toggle (custom i18n, one block per language) | FR-4.10 | FE+CL | **done** |
 | T-216 | Demo Launcher S0: seat-picker, persona cards, 30-sec explainer | docs/10 | FE+CL | **done** |
 | T-217 | Error states: consent-declined, unknown-GSTIN→persona chips, API-cold, skeletons, 404→S0, source-failed toast-equivalent | docs/10 | FE+CL+NP | **done** (NP re-test Jul 7) |
 | T-218 | Tokens wired into tailwind.config.js; **copy to Slides master pending (JT)** | docs/10 | CL+JT | doing |
-| T-219 | Strings EN/HI/GU in i18n.jsx — extended Jul 7 (Kal-Parakh action labels+hints, confidence words, sim note per JR's go). **JR native review of all strings pending** | docs/10 | CL+JR | doing |
+| T-219 | Strings EN/HI/GU in i18n.jsx — extended Jul 7 (Kal-Parakh action labels+hints, confidence words, sim note). **Jul 8: full MSME-view localization — reason codes (engine emits `vstr`; 34 HI/GU templates), 5 dimension names, score-makeup header, footer, empty-states/caveats. Review sheet: `t219-translations-review.txt`. JR native review (esp. Gujarati) pending** | docs/10 | CL+JR | doing |
 
 ## P3 — Ship & tell (gate: public URL on phone; deck sourced; 2-command clone)
 
@@ -63,7 +63,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
 | T-311 | Juror-rebuttal one-pager **done** (`juror-rebuttals.md`, private): 6 attacks + translation table + stat guardrails | G1a | JT+CL | **done** |
-| T-312 | Logo **DONE**: JR picked **B (Navy Assay)** Jul 7. Shipped: BrandMark in app headers, favicon, apple-touch icon, OG image (1200×630, meta live on deploy), README banner, mono SVG deck cuts | docs/10 | CL+JR | **done** |
+| T-312 | Logo **DONE**: JR picked **B (Navy Assay)** Jul 7. Shipped: BrandMark in app headers, favicon, apple-touch icon, OG image (1200×630, meta live on deploy), README banner, mono SVG deck cuts. **Jul 8: API-docs Swagger now carries the प hallmark favicon too (branded `/docs` route, root_path-safe)** | docs/10 | CL+JR | **done** |
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script **written & live-verified** (`demo-script.md`, private): 2-min video VO + 5-min walkthrough + kill-switch choreography + reset checklist. **Pending: JR voices video, pitch-roles rehearsal** | docs/10 | JT+JR | doing |
@@ -71,7 +71,7 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-317 | Template-compliance checklist — facts confirmed Jul 7: 15 mandatory sections, section titles kept, PDF ≤5 MB, links ≤1024 chars, video ≤3 min, repo public. NP verifies final PDF against `submission-form.md` | pre-mortem | NP | doing |
 | T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
 | T-319 | **DONE (Jul 7):** terms researched (standard H2S boilerplate — IP retained, 6-mo ROFR on exclusive licenses only, MIT-compatible); JR found no separate participation agreement → **repo flipped PUBLIC** (github.com/jitenrajput/mcs-parakh) | IP | JR+CL | **done** |
-| T-320 | Form captured + template analyzed Jul 7 (`submission-form.md`): Challenges dropdown · deployment link · **PDF ≤5 MB mandatory** · GitHub link. No abstract field seen (draft kept as backup). **Remaining: JR clicks "Add Submission" once to check for hidden fields** | dry-run | JR+CL | doing |
+| T-320 | **DONE (full form confirmed Jul 8):** only 2 required fields — **Challenges** (select "Problem Statement 3: Financial Health Score") + **PoC PPT PDF ≤5 MB**. Deployment Link & GitHub link both **optional**. No abstract field (goes inside PDF). No hidden wizard fields — single-page form. `submission-form.md` updated | dry-run | JR+CL | **done** |
 
 ## P4 — Submit
 

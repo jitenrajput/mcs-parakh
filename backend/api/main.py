@@ -15,8 +15,9 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.openapi.docs import get_swagger_ui_html
 from pydantic import BaseModel, Field
 
 import sys
@@ -32,12 +33,36 @@ DB_PATH = Path(os.environ.get("PARAKH_DB", Path(__file__).resolve().parents[1] /
 app = FastAPI(
     title="MCS Parakh — MSME Financial Health API",
     version=ENGINE_VERSION,
+    docs_url=None,  # replaced below by a branded Swagger route (Parakh favicon)
     description="Two-sided, explainable MSME Financial Health Card for IDBI Innovate 2026. "
                 "**All data is synthetic** (schema-faithful to ReBIT/GSTR conventions). "
                 "Adapter layer swaps to IDBI sandbox APIs in the prototype phase — "
                 "scoring code unchanged.",
 )
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+
+# Same प hallmark data-URI the SPA uses, so the /docs browser tab matches the app.
+_FAVICON = (
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E"
+    "%3Crect x='8' y='8' width='104' height='104' rx='22' fill='%2314243D'/%3E"
+    "%3Crect x='15' y='15' width='90' height='90' rx='16' fill='none' stroke='%230E6E5C' stroke-width='6'/%3E"
+    "%3Cpath d='M8 86 L8 90 A22 22 0 0 0 30 112 L34 112 Z' fill='%23E8A33D'/%3E"
+    "%3Ctext x='60' y='86' font-size='62' font-family='sans-serif' font-weight='700' "
+    "fill='%23F7F5F0' text-anchor='middle'%3E%E0%A4%AA%3C/text%3E%3C/svg%3E"
+)
+
+
+@app.get("/docs", include_in_schema=False)
+async def swagger_docs(request: Request):
+    """Swagger UI carrying the Parakh hallmark favicon (matches the SPA tab).
+    root_path keeps the spec URL correct whether the API is mounted at /api
+    (container) or run bare with --root-path /api (dev)."""
+    root = request.scope.get("root_path", "").rstrip("/")
+    return get_swagger_ui_html(
+        openapi_url=f"{root}{app.openapi_url}",
+        title=f"{app.title} — docs",
+        swagger_favicon_url=_FAVICON,
+    )
 
 registry = AdapterRegistry(DATA_DIR)
 _index_cache: dict | None = None
@@ -200,8 +225,16 @@ def kal_parakh(req: SimulateRequest):
 
 
 @app.get("/simulate/actions", tags=["kal-parakh"])
-def simulate_actions():
-    return dict(actions=[dict(id=k, **v) for k, v in ACTIONS.items()])
+def simulate_actions(gstin: str | None = None):
+    """Available Kal-Parakh actions. With ?gstin, each action is flagged
+    `applicable` = does it actually move THIS business's score (e.g. a
+    no-EMI business can't benefit from 'refinance EMIs')."""
+    acts = [dict(id=k, **v) for k, v in ACTIONS.items()]
+    if gstin:
+        rec = load_record(gstin)
+        for a in acts:
+            a["applicable"] = simulate(rec, [a["id"]])["delta_score"] != 0
+    return dict(actions=acts)
 
 
 @app.get("/portfolio", tags=["portfolio"])

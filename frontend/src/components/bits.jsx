@@ -14,12 +14,18 @@ export function GradeChip({ grade, dark }) {
 }
 
 /* Dimension bar: grade chip + thin bar underneath (locked design) */
-export function DimensionRow({ dim, data, dark }) {
+export function DimensionRow({ dim, data, dark, label }) {
   return (
     <div className="flex items-center gap-3 py-1.5">
       <GradeChip grade={data.grade} dark={dark} />
       <div className="flex-1 min-w-0">
-        <div className={`text-[13px] font-semibold truncate ${dark ? 'text-paper/90' : 'text-ink'}`}>{DIM_LABEL[dim]}</div>
+        <div className="flex items-baseline gap-1.5">
+          <div className={`text-[13px] font-semibold truncate ${dark ? 'text-paper/90' : 'text-ink'}`}>{label ?? DIM_LABEL[dim]}</div>
+          {data.weight != null && (
+            <span className={`tnum font-mono text-[10px] shrink-0 ${dark ? 'text-paper/40' : 'text-ink-soft'}`}
+              title="weight set by credit policy">{Math.round(data.weight * 100)}%</span>
+          )}
+        </div>
         <div className={`h-[3px] mt-1 ${dark ? 'bg-paper/10' : 'bg-ink/10'}`}>
           <div className="h-full" style={{ width: `${data.score}%`, background: BAND_COLOR[data.score >= 80 ? 'Prime' : data.score >= 65 ? 'Good' : data.score >= 50 ? 'Watch' : data.score >= 35 ? 'Weak' : 'Critical'] }} />
         </div>

@@ -2,9 +2,10 @@
 
 Single source of truth for the numbers. Datagen, engine, UI, script, and deck all quote THESE values — any change happens here first. *(Jul 07: canonical persona values updated to what the shipped dataset + engine actually produce, live-verified: 781 / 692→721 / +₹3.9L / 409. Earlier drafts said 780/690→720/+₹3.8L/410.)*
 
-## Dimension weights (config-driven; shown in UI)
+## Dimension weights (config-driven; **rendered on the card** as bank-set policy)
 Cash-Flow Strength **30%** · Compliance Discipline **20%** · Obligation Load **20%** · Growth Trajectory **15%** · Business Stability **15%**.
 Defense: a credit memo's question order — can they repay (30), are they disciplined (20), how burdened already (20); growth/stability modulate.
+Single source of truth = `config.WEIGHTS`; the API returns each dimension's `weight`, and the Health Card + MSME make-up render it per row under the caption **"weights set by credit policy"** (Jul 8). This is deliberate contrast to model-*learned* weights: policy weights are auditable, stable across versions, and owned by the bank's credit committee — a regulator can defend "compliance is 20% because policy says so" but not "the model learned 30.6% from synthetic data."
 
 ## Bands, multipliers, action gates (300–900 scale)
 

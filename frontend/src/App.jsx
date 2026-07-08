@@ -9,7 +9,7 @@ import MsmeView from './screens/MsmeView'
 export default function App() {
   return (
     <I18nProvider>
-      <HashRouter>
+      <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Routes>
           <Route path="/" element={<Launcher />} />
           <Route path="/lender" element={<LenderDashboard />} />

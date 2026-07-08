@@ -3,9 +3,9 @@
 
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { api, inr } from '../api'
+import { api, inr, DIM_LABEL } from '../api'
 import { ScoreGauge, SourceSeals, DimensionRow, SyntheticStamp } from '../components/bits'
-import { useT, LangToggle, STRINGS } from '../i18n'
+import { useT, LangToggle, STRINGS, locReason } from '../i18n'
 
 const ACTION_ORDER = ['gst_on_time_3m', 'gst_on_time_6m', 'clear_bounces_6m', 'reduce_emi_25pct']
 
@@ -21,7 +21,7 @@ export default function MsmeView() {
   useEffect(() => {
     setR(null); setSim(null); setPicked([])
     api.score(gstin).then(setR).catch(() => {})
-    api.simActions().then(d => setActions(ACTION_ORDER.map(id => d.actions.find(a => a.id === id)).filter(Boolean)))
+    api.simActions(gstin).then(d => setActions(ACTION_ORDER.map(id => d.actions.find(a => a.id === id)).filter(Boolean)))
   }, [gstin])
 
   const runSim = async next => {
@@ -35,6 +35,12 @@ export default function MsmeView() {
 
   const first = r.name.split(' ')[0]
   const shown = sim?.after ?? { score: r.score, band: r.band, indicative_limit: r.eligibility.indicative_limit }
+  // When a projection is active, the whole card reflects the simulated future.
+  const dims = sim?.after?.dimensions ?? r.dimensions
+  const posReasons = sim?.after?.reasons_positive ?? r.reasons_positive
+  const negReasons = sim?.after?.reasons_negative ?? r.reasons_negative
+  const missingN = r.missing_sources?.length || 0
+  const riskCaveat = missingN > 0 ? (STRINGS[lang]?.limited_data ?? STRINGS.en.limited_data).replace('{n}', missingN) : null
 
   return (
     <div className="paper-bg min-h-screen text-ink pb-10" lang={lang}>
@@ -95,16 +101,17 @@ export default function MsmeView() {
           <div className="mt-3 space-y-2">
             {actions.map(a => {
               const on = picked.includes(a.id)
+              const na = a.applicable === false  // doesn't move THIS business's score
               const loc = STRINGS[lang]?.actions?.[a.id] ?? a  // localized label/hint, API text as fallback
               return (
-                <button key={a.id} disabled={busy}
+                <button key={a.id} disabled={busy || na}
                   onClick={() => runSim(on ? picked.filter(x => x !== a.id) : [...picked, a.id])}
-                  className={`w-full text-left p-3 border-2 transition-all ${on ? 'border-teal-700 bg-teal-700/10' : 'border-ink/20 bg-paper hover:border-ink/40'}`}>
+                  className={`w-full text-left p-3 border-2 transition-all ${na ? 'border-ink/10 bg-ink/[0.03] opacity-55 cursor-not-allowed' : on ? 'border-teal-700 bg-teal-700/10' : 'border-ink/20 bg-paper hover:border-ink/40'}`}>
                   <div className="flex items-center gap-2.5">
                     <span className={`w-5 h-5 stamp-chip text-[11px] ${on ? 'bg-teal-700 text-paper' : 'border border-ink/30 text-transparent'}`}>✓</span>
                     <span className="font-semibold text-[13.5px] flex-1">{loc.label}</span>
                   </div>
-                  <div className="text-ink-soft text-[11px] mt-1 ml-7">{loc.hint}</div>
+                  <div className={`text-[11px] mt-1 ml-7 ${na ? 'text-teal-700 italic' : 'text-ink-soft'}`}>{na ? t('not_applicable') : loc.hint}</div>
                 </button>
               )
             })}
@@ -121,17 +128,17 @@ export default function MsmeView() {
 
         {/* — strengths & risks in plain words — */}
         <div className="mt-5 grid grid-cols-1 gap-4 rise rise-3">
-          <PlainList title={t('strengths')} items={r.reasons_positive} tone="#1E8E5A" />
-          <PlainList title={t('risks')} items={r.reasons_negative} tone="#C0392B" />
+          <PlainList title={t('strengths')} items={posReasons} tone="#1E8E5A" lang={lang} />
+          <PlainList title={t('risks')} items={negReasons} tone="#C0392B" lang={lang} emptyCaveat={riskCaveat} />
         </div>
 
         <div className="mt-5 rise rise-4">
-          <div className="caps-label text-ink-soft/70 mb-1">Score make-up</div>
-          {Object.entries(r.dimensions).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} />)}
+          <div className="caps-label text-ink-soft/70 mb-1">{t('score_makeup')}</div>
+          {Object.entries(dims).map(([d, v]) => <DimensionRow key={d} dim={d} data={v} label={STRINGS[lang]?.dims?.[d] ?? DIM_LABEL[d]} />)}
         </div>
 
         <div className="text-center text-[10.5px] text-ink-soft/60 mt-8">
-          MCS Parakh · built for IDBI Innovate 2026 · {t('synthetic')} · Hi {first}, this card is yours — no one changes it but you.
+          MCS Parakh · {t('built_for')} · {t('synthetic')} · {t('card_yours').replace('{name}', first)}
         </div>
       </div>
       <SyntheticStamp t={t} />
@@ -139,12 +146,13 @@ export default function MsmeView() {
   )
 }
 
-function PlainList({ title, items, tone }) {
+function PlainList({ title, items, tone, lang, emptyCaveat }) {
   return (
     <div className="bg-paper border border-ink/20 p-4">
       <div className="caps-label mb-2" style={{ color: tone }}>{title}</div>
+      {items.length === 0 && <div className="text-[13.5px] py-1 italic text-ink-soft/50">{emptyCaveat ?? '— ' + (STRINGS[lang]?.none_flagged ?? STRINGS.en.none_flagged)}</div>}
       {items.map((x, i) => (
-        <div key={i} className="text-[13.5px] py-1 flex gap-2"><span style={{ color: tone }}>▪</span>{x.text}</div>
+        <div key={i} className="text-[13.5px] py-1 flex gap-2"><span style={{ color: tone }}>▪</span>{locReason(x, lang)}</div>
       ))}
     </div>
   )
