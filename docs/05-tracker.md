@@ -57,8 +57,8 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-303 | Deploy frontend — deferred with T-302 (single container already serves the SPA, so one host may cover both) | NFR-2 | JR+CL | blocked |
 | T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
 | T-305 | README rewritten (verified stats, Docker+bare quickstart, architecture, MIT LICENSE) + no-secrets scan clean; **demo GIF pending (after T-308 video)** | NFR-3/7, G1c | NP+CL | doing |
-| T-306 | Deck: content draft + abstract ready; **template analyzed Jul 7 — STRUCTURE-MANDATORY, 15 prescribed slides; full remap in `deck-draft.md`. JT builds Jul 8 against the mapping** | G1a | JR+JT | doing |
-| T-307 | Deck speaker notes: primary source per number | G1a | JT | todo |
+| T-306 | **Deck BUILT Jul 8 by CL** (JT didn't) — 15-slide PPTX+PDF on the OFFICIAL IDBI template (cropped IDBI header band + section titles as dimmed eyebrows, our claims as headlines, ONLY our content — no leftover template prompts). Real screenshots embedded, verified numbers, QR, appendix sources. Self-QA'd render slide-by-slide. Files `MCS-Parakh_PS3_M-Connect-Labs.pptx/.pdf` (root, private; **PDF 956 KB ≤5 MB**). Built via `python-pptx` + PowerPoint-COM PDF export + poppler render-check. **Pending: JR review, confirm registered team name, QR→live URL on deploy** | G1a | CL+JR | **done** |
+| T-307 | Deck speaker notes **done** — every slide carries notes with the primary source per number (in the built deck) | G1a | CL | **done** |
 | T-308 | Demo video — **template allows 3 min**; script + optional extension beats in `demo-script.md`; JR voices | G1a booster | JT | todo |
 | T-309 | QA: 3 persona walkthroughs + kill-switch moment + deck-vs-demo consistency | G1 | NP | todo |
 | T-310 | (Stretch) LightGBM monotonic + SHAP lens | FR-1.7 | ZS | todo |
@@ -67,9 +67,9 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-313 | Subdomain parakh.mconnectsolutions.com (CNAME + SSL on App Runner/Amplify) | docs/10 | JR+CL | todo |
 | T-314 | Demo hygiene: disclaimer page, event footer, slowapi rate limit, UptimeRobot keep-warm ping | docs/10 | CL | todo |
 | T-315 | Demo script **written & live-verified** (`demo-script.md`, private): 2-min video VO + 5-min walkthrough + kill-switch choreography + reset checklist. **Pending: JR voices video, pitch-roles rehearsal** | docs/10 | JT+JR | doing |
-| T-316 | PS-language mirror pass: slide 4 uses PS3's exact vocabulary verbatim | pre-mortem | JT+CL | todo |
-| T-317 | Template-compliance checklist — facts confirmed Jul 7: 15 mandatory sections, section titles kept, PDF ≤5 MB, links ≤1024 chars, video ≤3 min, repo public. NP verifies final PDF against `submission-form.md` | pre-mortem | NP | doing |
-| T-318 | QR code for slide 5 → parakh.mconnectsolutions.com | pre-mortem | CL | todo |
+| T-316 | PS-language mirror — deck slide 1 uses "PS3 — Financial Health Score" verbatim + slide 3 answers the template's Opportunities prompts in PS3 terms. **JR: confirm exact registered team name/leader** | pre-mortem | CL+JR | doing |
+| T-317 | Template-compliance — **Jul 8: built deck IS compliant** (15 IDBI sections, official template design, PDF 956 KB ≤5 MB, links present). NP final-verify the exported PDF against `submission-form.md` | pre-mortem | NP | doing |
+| T-318 | QR **created** on the Links slide — currently → public GitHub repo (safe, always-live placeholder). **Swap to live app URL (or 3-min demo video) once hosting up — JR will signal; ~10-sec regen + re-export** | pre-mortem | CL | doing |
 | T-319 | **DONE (Jul 7):** terms researched (standard H2S boilerplate — IP retained, 6-mo ROFR on exclusive licenses only, MIT-compatible); JR found no separate participation agreement → **repo flipped PUBLIC** (github.com/jitenrajput/mcs-parakh) | IP | JR+CL | **done** |
 | T-320 | **DONE (full form confirmed Jul 8):** only 2 required fields — **Challenges** (select "Problem Statement 3: Financial Health Score") + **PoC PPT PDF ≤5 MB**. Deployment Link & GitHub link both **optional**. No abstract field (goes inside PDF). No hidden wizard fields — single-page form. `submission-form.md` updated | dry-run | JR+CL | **done** |
 
