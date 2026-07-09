@@ -4,6 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
+  workflow_dispatch:   # a startup_failure run cannot be rerun; this gives us a manual trigger
 
 jobs:
   backend:
