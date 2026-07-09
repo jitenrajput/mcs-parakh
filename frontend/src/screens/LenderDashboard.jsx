@@ -42,7 +42,7 @@ export default function LenderDashboard() {
           <>
             {alerts.length > 0 && (
               <section className="mt-5">
-                <div className="caps-label text-band-red mb-2">⚠ Parakh Watch — needs your eyes</div>
+                <div className="caps-label text-band-red-lit mb-2">⚠ Parakh Watch — needs your eyes</div>
                 <div className="hairline bg-navy-900/60">
                   {alerts.map(m => <Row key={m.gstin} m={m} alert />)}
                 </div>
@@ -77,7 +77,7 @@ function Row({ m, alert }) {
           {m.demo_persona && <span className="ml-2 text-[9px] px-1 border border-teal-300/40 text-teal-300">DEMO</span>}
         </div>
         <div className="font-mono text-[10.5px] text-paper/40">{m.gstin} · {m.city}</div>
-        {alert && <div className="text-band-red text-[11.5px] mt-0.5">{m.alerts[0].text}</div>}
+        {alert && <div className="text-band-red-lit text-[11.5px] mt-0.5">{m.alerts[0].text}</div>}
       </div>
       <div className="col-span-2"><Sparkline series={m.trend} /></div>
       <div className={`col-span-1 text-right tnum font-mono text-xs ${m.delta_1m < 0 ? 'text-band-red' : 'text-teal-300'}`}>

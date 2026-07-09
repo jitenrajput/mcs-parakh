@@ -9,7 +9,9 @@ export default {
         amber: { 500: '#E8A33D', 400: '#F0B65C' },
         paper: { DEFAULT: '#F7F5F0', dark: '#EFEBE2' },
         ink: { DEFAULT: '#1C2434', soft: '#485062' },
-        band: { red: '#C0392B', amber: '#E8A33D', green: '#1E8E5A' },
+        /* `red` is the band colour — correct as a thick arc stroke, but only ~2.3:1
+           on navy, so `red-lit` carries the same alarm as text on dark surfaces. */
+        band: { red: '#C0392B', 'red-lit': '#F2897C', amber: '#E8A33D', green: '#1E8E5A' },
       },
       fontFamily: {
         display: ['Mukta', 'Noto Sans', 'sans-serif'],

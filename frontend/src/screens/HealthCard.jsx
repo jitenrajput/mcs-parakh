@@ -45,7 +45,7 @@ export default function HealthCard() {
                   <div className="mt-4"><SourceSeals coverage={r.coverage} fetches={r.fetches} dark /></div>
                   <div className="caps-label text-paper/35 mt-1.5">data seals · {r.confidence} confidence ±{r.confidence_width}</div>
                   {trend?.alerts?.length > 0 && (
-                    <div className="mt-3 border border-band-red/50 bg-band-red/10 px-3 py-2 text-band-red text-[13px]">
+                    <div className="mt-3 border border-band-red-lit/45 bg-band-red/15 px-3 py-2 text-band-red-lit text-[13px]">
                       ⚠ {trend.alerts.map(a => a.text).join(' · ')}
                     </div>
                   )}
