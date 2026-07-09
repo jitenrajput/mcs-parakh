@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { api, inr, BAND_COLOR } from '../api'
-import { ScoreGauge, SourceSeals, DimensionRow, SyntheticStamp, Footer } from '../components/bits'
+import { ScoreGauge, SourceSeals, DimensionRow, SyntheticStamp, Footer, RED_ON_DARK } from '../components/bits'
 import { TopBar, SkeletonRows, ApiDown } from './LenderDashboard'
 import KillSwitchStrip from '../components/KillSwitchStrip'
 
@@ -60,7 +60,7 @@ export default function HealthCard() {
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-6 mt-4">
-                <ReasonCol title="Working against" items={r.reasons_negative} tone="#C0392B"
+                <ReasonCol title="Working against" items={r.reasons_negative} tone={RED_ON_DARK}
                   emptyCaveat={r.missing_sources?.length ? `Limited data — ${r.missing_sources.length} of 5 sources unavailable; score is provisional` : null} />
                 <ReasonCol title="Working for" items={r.reasons_positive} tone="#57B79F" />
               </div>

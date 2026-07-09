@@ -2,9 +2,13 @@
 
 import { BAND_COLOR, SOURCE_META, DIM_LABEL } from '../api'
 
+/* Band red (#C0392B) holds up as a thick arc but is only ~2.3:1 on navy.
+   Anything thin — text, a 1.75px sparkline, a chip letter — uses this instead. */
+export const RED_ON_DARK = '#F2897C'
+
 /* Assay-stamp grade chip: notched corner, stamped letter */
 export function GradeChip({ grade, dark }) {
-  const tone = { A: '#1E8E5A', B: '#57B79F', C: '#E8A33D', D: '#D96F32', E: '#C0392B' }[grade] || '#888'
+  const tone = { A: '#1E8E5A', B: '#57B79F', C: '#E8A33D', D: '#D96F32', E: dark ? RED_ON_DARK : '#C0392B' }[grade] || '#888'
   return (
     <span className="stamp-chip w-7 h-7 text-sm"
       style={{ color: tone, border: `1.5px solid ${tone}`, background: dark ? 'rgba(0,0,0,0.25)' : 'rgba(255,255,255,0.5)' }}>
@@ -119,8 +123,8 @@ export function Sparkline({ series, w = 96, h = 26 }) {
   const falling = scores[scores.length - 1] < scores[0]
   return (
     <svg width={w} height={h} className="overflow-visible">
-      <polyline points={pts} fill="none" stroke={falling ? '#C0392B' : '#57B79F'} strokeWidth="1.75" />
-      <circle cx={w} cy={h - ((scores[scores.length - 1] - min) / (max - min)) * h} r="2.4" fill={falling ? '#C0392B' : '#57B79F'} />
+      <polyline points={pts} fill="none" stroke={falling ? RED_ON_DARK : '#57B79F'} strokeWidth="1.75" />
+      <circle cx={w} cy={h - ((scores[scores.length - 1] - min) / (max - min)) * h} r="2.4" fill={falling ? RED_ON_DARK : '#57B79F'} />
     </svg>
   )
 }

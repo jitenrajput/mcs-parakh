@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { api, SOURCE_META } from '../api'
-import { SyntheticStamp } from '../components/bits'
+import { SyntheticStamp, RED_ON_DARK } from '../components/bits'
 import { TopBar } from './LenderDashboard'
 import { UnknownGstin } from './HealthCard'
 
@@ -81,11 +81,11 @@ export default function NewAssessment() {
             <div className="flex justify-center gap-4 mt-8 flex-wrap">
               {fetches.map(f => (
                 <div key={f.source} className="seal-in">
-                  <div className={`w-16 h-16 stamp-chip font-mono text-sm ${f.status === 'OK' ? '' : 'opacity-50'}`}
-                    style={{ color: f.status === 'OK' ? '#57B79F' : '#C0392B', border: `2px ${f.status === 'OK' ? 'solid' : 'dashed'} currentColor` }}>
+                  <div className="w-16 h-16 stamp-chip font-mono text-sm"
+                    style={{ color: f.status === 'OK' ? '#57B79F' : RED_ON_DARK, border: `2px ${f.status === 'OK' ? 'solid' : 'dashed'} currentColor` }}>
                     {SOURCE_META[f.source]?.short}
                   </div>
-                  <div className={`text-[10px] mt-1.5 ${f.status === 'OK' ? 'text-teal-300' : 'text-band-red'}`}>
+                  <div className={`text-[10px] mt-1.5 ${f.status === 'OK' ? 'text-teal-300' : 'text-band-red-lit'}`}>
                     {f.status === 'OK' ? (f.error ? 'no file held' : 'sealed ✓') : 'unreachable'}
                   </div>
                 </div>
