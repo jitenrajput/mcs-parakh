@@ -67,6 +67,7 @@ async def swagger_docs(request: Request):
 registry = AdapterRegistry(DATA_DIR)
 _index_cache: dict | None = None
 _portfolio_cache: list | None = None
+_portfolio_cache_key: frozenset | None = None  # the kill set the cache was built under
 
 
 def db() -> sqlite3.Connection:
@@ -239,12 +240,18 @@ def simulate_actions(gstin: str | None = None):
 
 @app.get("/portfolio", tags=["portfolio"])
 def portfolio(refresh: bool = False):
-    """Lender book: every MSME scored + trend + Parakh Watch alerts (UC2)."""
-    global _portfolio_cache
-    if _portfolio_cache is None or refresh:
+    """Lender book: every MSME scored + trend + Parakh Watch alerts (UC2).
+
+    Scored through the same coverage as the card (FR-2.4): a killed source is
+    invisible here too, so the book and the card can never disagree. The cache
+    is keyed on the kill set, so flipping a switch rebuilds it.
+    """
+    global _portfolio_cache, _portfolio_cache_key
+    kill_key = frozenset(registry.killed)
+    if _portfolio_cache is None or refresh or _portfolio_cache_key != kill_key:
         rows = []
         for m in load_index()["msmes"]:
-            record = load_record(m["gstin"])
+            record = registry.visible(load_record(m["gstin"]))
             r = engine_score(record)
             series = score_series(record)
             alerts = alerts_for(record, series)
@@ -262,6 +269,7 @@ def portfolio(refresh: bool = False):
             ))
         rows.sort(key=lambda x: (len(x["alerts"]) == 0, x["delta_1m"]))
         _portfolio_cache = rows
+        _portfolio_cache_key = kill_key
     alerts_n = sum(1 for r in _portfolio_cache if r["alerts"])
     return dict(count=len(_portfolio_cache), with_alerts=alerts_n,
                 msmes=_portfolio_cache, synthetic=True)

@@ -104,3 +104,15 @@ class AdapterRegistry:
         """FetchResults -> the engine's `sources` dict. FAILED -> absent."""
         return {sid: (r.payload if r.status == "OK" else None)
                 for sid, r in results.items()}
+
+    def visible(self, record: dict) -> dict:
+        """The record as the engine may see it right now: killed sources blanked.
+
+        Bulk views (the lender book) need the same coverage the card gets, but
+        without fanning 5 adapters x 65 MSMEs through their demo latency. Same
+        end state as `to_sources` over a live fetch, which is what /score does.
+        """
+        if not self.killed:
+            return record
+        return dict(record, sources={sid: (None if sid in self.killed else payload)
+                                     for sid, payload in record["sources"].items()})

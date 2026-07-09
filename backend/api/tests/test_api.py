@@ -41,6 +41,40 @@ def test_killswitch_widens_band():
                for f in degraded["fetches"])
 
 
+def test_book_and_card_never_disagree_under_killswitch():
+    """The book is scored through the same coverage as the card (FR-2.4).
+
+    Regression: /portfolio used to score the full record and cache it forever,
+    so a killed source left the dashboard claiming High confidence while the
+    card had gone provisional — and the trend's last point contradicted the
+    gauge sitting next to it.
+    """
+    def book_row(gstin):
+        rows = client.get("/portfolio").json()["msmes"]
+        return next(m for m in rows if m["gstin"] == gstin)
+
+    card = client.post("/score", json={"gstin": DINESH}).json()
+    row = book_row(DINESH)
+    assert (row["score"], row["confidence"]) == (card["score"], card["confidence"])
+    assert row["trend"][-1]["score"] == card["score"]
+
+    client.post("/admin/killswitch", json={"source_id": "bureau", "killed": True})
+    card = client.post("/score", json={"gstin": DINESH}).json()
+    row = book_row(DINESH)  # cache is keyed on the kill set, so this rebuilds
+    assert card["confidence"] != "High"
+    assert (row["score"], row["confidence"]) == (card["score"], card["confidence"])
+    assert row["trend"][-1]["score"] == card["score"]
+
+
+def test_book_survives_losing_the_trend_source():
+    """Killing the bank feed empties the series; the book must not 500."""
+    client.post("/admin/killswitch", json={"source_id": "aa_deposit", "killed": True})
+    r = client.get("/portfolio")
+    assert r.status_code == 200
+    row = next(m for m in r.json()["msmes"] if m["gstin"] == DINESH)
+    assert row["trend"] == [] and row["delta_1m"] == 0 and row["alerts"] == []
+
+
 def test_kal_parakh_meena_crosses_to_good():
     """The canonical wow: GST discipline lifts Meena into the Good band."""
     sim = client.post("/simulate", json={
