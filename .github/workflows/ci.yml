@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r backend/requirements.txt
-      - name: pytest (engine 10 · API 6 · demo-canon 4)
+      - name: pytest (engine 10 · API 8 · demo-canon 4)
         run: python -m pytest -q
         working-directory: backend
 
