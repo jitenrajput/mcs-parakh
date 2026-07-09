@@ -43,12 +43,16 @@ export function SourceSeals({ coverage, fetches, dark, size = 'md' }) {
       {Object.entries(SOURCE_META).map(([sid, meta]) => {
         const ok = coverage?.[sid]
         const failed = fetches?.find(f => f.source === sid)?.status === 'FAILED'
+        /* An off seal states a fact ("not counted"), not an error — so it stays legible
+           grey whether the provider is down or simply holds nothing. Why it is off
+           lives in the tooltip, the fetch banner and the coverage caveat. */
         return (
           <div key={sid} title={meta.label + (ok ? ' — included' : failed ? ' — provider unreachable' : ' — no data held')}
             className={`${dims} stamp-chip font-mono font-semibold`}
             style={{
-              color: ok ? '#57B79F' : failed ? '#E06A5E' : (dark ? '#AEB8C7' : '#5A6373'),
+              color: ok ? '#57B79F' : (dark ? '#C6CEDA' : '#4C5768'),
               border: `1.5px ${ok ? 'solid' : 'dashed'} currentColor`,
+              background: ok ? 'transparent' : (dark ? 'rgba(198,206,218,0.08)' : 'rgba(76,87,104,0.06)'),
             }}>
             {meta.short}
           </div>
