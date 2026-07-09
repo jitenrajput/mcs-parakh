@@ -92,10 +92,11 @@ export function ScoreGauge({ score, band, width, dark, size = 240 }) {
     <svg width={size} height={size * 0.62} viewBox={`0 0 ${size} ${size * 0.62}`} className="overflow-visible">
       {bands.map(([v1, v2, c]) => <path key={v1} d={arc(v1 + 4, v2 - 4)} stroke={c} strokeWidth="6" fill="none" strokeLinecap="butt" opacity={dark ? 0.9 : 0.92} />)}
       {/* confidence range = thin bracket arc OUTSIDE the colour scale — shows ±width without smearing the bands */}
-      {width ? <path d={arc(Math.max(300, score - width), Math.min(900, score + width), r + 9)} stroke={BAND_COLOR[band]} strokeOpacity="0.55" strokeWidth="3" strokeLinecap="round" fill="none" /> : null}
-      {/* pointer = tick across the arc + band-color jewel just inside it — clears the score digits at any angle */}
-      <line x1={cx + r * 0.86 * Math.cos(na)} y1={cy - r * 0.86 * Math.sin(na)}
-        x2={cx + r * 1.12 * Math.cos(na)} y2={cy - r * 1.12 * Math.sin(na)}
+      {width ? <path d={arc(Math.max(300, score - width), Math.min(900, score + width), r + 10)} stroke={BAND_COLOR[band]} strokeOpacity="0.85" strokeWidth="3" strokeLinecap="round" fill="none" /> : null}
+      {/* pointer = tick across the arc + band-color jewel just inside it — clears the score digits at any angle.
+         Outer end stops short of the bracket arc (r+10) so the tick never crosses it. */}
+      <line x1={cx + (r - 16) * Math.cos(na)} y1={cy - (r - 16) * Math.sin(na)}
+        x2={cx + (r + 5) * Math.cos(na)} y2={cy - (r + 5) * Math.sin(na)}
         stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="3" />
       <circle cx={cx + r * 0.76 * Math.cos(na)} cy={cy - r * 0.76 * Math.sin(na)} r="4.5"
         fill={BAND_COLOR[band]} stroke={dark ? '#F7F5F0' : '#1C2434'} strokeWidth="1.5" />
