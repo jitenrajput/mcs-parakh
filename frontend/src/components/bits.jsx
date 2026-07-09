@@ -45,9 +45,9 @@ export function SourceSeals({ coverage, fetches, dark, size = 'md' }) {
         const failed = fetches?.find(f => f.source === sid)?.status === 'FAILED'
         return (
           <div key={sid} title={meta.label + (ok ? ' — included' : failed ? ' — provider unreachable' : ' — no data held')}
-            className={`${dims} stamp-chip font-mono font-semibold ${ok ? '' : 'opacity-35'}`}
+            className={`${dims} stamp-chip font-mono font-semibold`}
             style={{
-              color: ok ? '#57B79F' : failed ? '#C0392B' : (dark ? '#8892a6' : '#485062'),
+              color: ok ? '#57B79F' : failed ? '#E06A5E' : (dark ? '#AEB8C7' : '#5A6373'),
               border: `1.5px ${ok ? 'solid' : 'dashed'} currentColor`,
             }}>
             {meta.short}
@@ -86,8 +86,9 @@ export function ScoreGauge({ score, band, width, dark, size = 240 }) {
   const na = a0 - frac(score) * Math.PI
   return (
     <svg width={size} height={size * 0.62} viewBox={`0 0 ${size} ${size * 0.62}`} className="overflow-visible">
-      {width ? <path d={arc(Math.max(300, score - width), Math.min(900, score + width), r)} stroke={BAND_COLOR[band]} strokeOpacity="0.18" strokeWidth="22" fill="none" /> : null}
-      {bands.map(([v1, v2, c]) => <path key={v1} d={arc(v1 + 4, v2 - 4)} stroke={c} strokeWidth="5" fill="none" strokeLinecap="butt" opacity={dark ? 0.85 : 0.9} />)}
+      {bands.map(([v1, v2, c]) => <path key={v1} d={arc(v1 + 4, v2 - 4)} stroke={c} strokeWidth="6" fill="none" strokeLinecap="butt" opacity={dark ? 0.9 : 0.92} />)}
+      {/* confidence range = thin bracket arc OUTSIDE the colour scale — shows ±width without smearing the bands */}
+      {width ? <path d={arc(Math.max(300, score - width), Math.min(900, score + width), r + 9)} stroke={BAND_COLOR[band]} strokeOpacity="0.55" strokeWidth="3" strokeLinecap="round" fill="none" /> : null}
       {/* pointer = tick across the arc + band-color jewel just inside it — clears the score digits at any angle */}
       <line x1={cx + r * 0.86 * Math.cos(na)} y1={cy - r * 0.86 * Math.sin(na)}
         x2={cx + r * 1.12 * Math.cos(na)} y2={cy - r * 1.12 * Math.sin(na)}

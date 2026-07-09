@@ -34,14 +34,14 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 **✅ Policy amendment LOCKED by JR (Jul 7): lower-edge eligibility applies at Low confidence only; High/Medium use point band (docs/12). Demo-canon tests pin the behavior.**
 | T-206 | React scaffold (Vite + Tailwind; custom SVG viz — lighter than Recharts) | FR-4.x | FE+CL | **done** |
-| T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record). **Jul 8: each dimension row now shows its policy weight % + "weights set by credit policy" caption — explicit transparency edge vs learned-weight competitors (see `competitor-intel.md`)** | FR-4.1 | FE+CL | **done** |
+| T-207 | Health Card (gauge + confidence halo, dimension rows, reasons, decision record). **Jul 8: each dimension row now shows its policy weight % + "weights set by credit policy" caption — explicit transparency edge vs learned-weight competitors (see `competitor-intel.md`). Jul 9 readability fix: at LOW ±60 the old fat on-arc confidence halo (22px butt-cap) smeared the colored score arc into an unreadable grey slab → replaced with a thin (3px) bracket arc drawn OUTSIDE the colour scale (`ScoreGauge` in `bits.jsx`); score bands thickened 5→6px. Gauge now crisp at any confidence width.** | FR-4.1 | FE+CL | **done** |
 | T-208 | AA consent screen (para-6.3 fields) + DPDP notice + declined state | FR-4.2, CR-1/2 | FE+CL | **done** |
 | T-209 | Lender portfolio: ranked ledger, sparklines, Parakh Watch section on top | FR-4.3 | FE+CL | **done** |
 | T-210 | MSME self-view: card + plain-words reasons + readiness meter | FR-4.4 | FE+CL | **done** |
 | T-211 | Flip button + watermark done; **mobile pass on real phone pending (Jul 7 QA)**. **Jul 8 dev-review: browser console cleaned — React Router v7 future-flags opted in + `/favicon.ico` added → 0 errors / 0 warnings** | FR-4.5/4.6/4.7 | FE | doing |
 | T-212 | CGTMSE flag (4-condition, circulars cited) + propensity rail | FR-1.8/1.9 | ZS+FE | **done** |
 | T-213 | Kal-Parakh UI: action toggles → live re-score → +₹ delta (canon 692→721 +₹3.9L). **Jul 8: `/simulate` now returns full after-state (dimensions + reasons) → the WHOLE card transforms on projection, not just the number; persona-aware actions grey out no-impact levers (e.g. no-EMI business can't "refinance"); reason-sign fix (positives never shown under "holding you back"); coverage-aware "Working against" caveat when sources missing** | FR-4.8 | CL+ZS | **done** |
-| T-214 | Seal-dot coverage ring + assay-stamp A–E chips | FR-4.9 | FE+CL | **done** |
+| T-214 | Seal-dot coverage ring + assay-stamp A–E chips. **Jul 9 readability fix (JR): disabled/off source seals were dim red-maroon at 35% opacity → unreadable & looked like errors. Removed `opacity-35`; now full-opacity, state shown by colour+border — live=teal solid, off/killed=light-slate grey dashed, genuine-fail=readable soft red (`SourceSeals` in `bits.jsx`). Readable in BOTH states.** | FR-4.9 | FE+CL | **done** |
 | T-215 | EN/HI/GU toggle (custom i18n, one block per language) | FR-4.10 | FE+CL | **done** |
 | T-216 | Demo Launcher S0: seat-picker, persona cards, 30-sec explainer | docs/10 | FE+CL | **done** |
 | T-217 | Error states: consent-declined, unknown-GSTIN→persona chips, API-cold, skeletons, 404→S0, source-failed toast-equivalent | docs/10 | FE+CL+NP | **done** (NP re-test Jul 7) |
@@ -70,16 +70,18 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | T-316 | PS-language mirror — deck slide 1 uses "PS3 — Financial Health Score" verbatim + slide 3 answers the template's Opportunities prompts in PS3 terms. **JR: confirm exact registered team name/leader** | pre-mortem | CL+JR | doing |
 | T-317 | Template-compliance — **Jul 8: built deck IS compliant** (15 IDBI sections, official template design, PDF 956 KB ≤5 MB, links present). NP final-verify the exported PDF against `submission-form.md` | pre-mortem | NP | doing |
 | T-318 | QR **created** on the Links slide — currently → public GitHub repo (safe, always-live placeholder). **Swap to live app URL (or 3-min demo video) once hosting up — JR will signal; ~10-sec regen + re-export** | pre-mortem | CL | doing |
-| T-319 | **DONE (Jul 7):** terms researched (standard H2S boilerplate — IP retained, 6-mo ROFR on exclusive licenses only, MIT-compatible); JR found no separate participation agreement → **repo flipped PUBLIC** (github.com/jitenrajput/mcs-parakh) | IP | JR+CL | **done** |
+| T-319 | **DONE (Jul 7):** terms researched (standard H2S boilerplate — IP retained, 6-mo ROFR on exclusive licenses only, MIT-compatible); JR found no separate participation agreement → repo flipped PUBLIC. **Jul 09: repo set back PRIVATE** (`gh repo edit --visibility private`, verified) per JR — stop competitor/crawler (SEO/AEO/GEO) access to weights/Kal-Parakh logic before shortlist; GitHub link is OPTIONAL for submission so no impact. **Flip PUBLIC again at submit-time / prototype phase when a live GitHub link is wanted. ⚠️ Deck QR currently → this private repo; swap to live URL/video before submit (see T-318).** | IP | JR+CL | **done** |
 | T-320 | **DONE (full form confirmed Jul 8):** only 2 required fields — **Challenges** (select "Problem Statement 3: Financial Health Score") + **PoC PPT PDF ≤5 MB**. Deployment Link & GitHub link both **optional**. No abstract field (goes inside PDF). No hidden wizard fields — single-page form. `submission-form.md` updated | dry-run | JR+CL | **done** |
 
 ## P4 — Submit
 
+**⏰ DEADLINE CORRECTED (Jul 09): submission closes Mon Jul 13, 2026 11:59 PM IST (per official H2S roadmap — was mistakenly Jul 09). Internal target: submit by Jul 12. Team Formation module ALSO closes Jul 13 → close out T-403 before then.**
+
 | ID | Task | Owner | Status |
 |---|---|---|---|
-| T-401 | Final review meeting 09:00 Jul 9 | all | todo |
-| T-402 | Export PDF ≤ 5 MB; slide-1 fields; submit deck + links before noon | JR | todo |
-| T-403 | Confirm Hack2Skill team formation complete | JR | todo |
+| T-401 | Final review meeting (target Jul 12 AM) | all | todo |
+| T-402 | Export PDF ≤ 5 MB; slide-1 fields; submit deck + links by Jul 12 (hard deadline Jul 13 11:59 PM IST) | JR | todo |
+| T-403 | Confirm Hack2Skill team formation complete — **module closes Jul 13, do NOT leave to last day** | JR | todo |
 | T-404 | Confirmation screenshot archived | JR | todo |
 
 ## Blockers (live)
