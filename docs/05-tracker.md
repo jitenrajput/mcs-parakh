@@ -53,9 +53,9 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | ID | Task | Req | Owner | Status |
 |---|---|---|---|---|
 | T-301 | Dockerfile + compose; container runs full stack locally (single image 255 MB; `docker compose up` → :8000; pytest 16/16 in-container; healthcheck green) | NFR-4 | CL | **done** |
-| T-302 | Deploy API — **DEFERRED (Jul 7): no AWS details; JR will host under mconnectsolutions.com when ready. Local-only until then.** Container is deploy-ready (T-301) | NFR-2 | JR+CL | blocked |
-| T-303 | Deploy frontend — deferred with T-302 (single container already serves the SPA, so one host may cover both) | NFR-2 | JR+CL | blocked |
-| T-304 | Phone + incognito + cold-start test | NFR-2 | NP | todo |
+| T-302 | **DONE (Jul 13): LIVE at https://parakh.mconnectsolutions.com.** Deployed BARE (no Docker) on JR's shared Contabo/RiantPOS VPS, non-destructively: dedicated `parakh` user → systemd `parakh.service` (uvicorn 127.0.0.1:8000) → nginx vhost → Let's Encrypt SSL. Existing RiantPOS sites untouched. Canon 781/692/409 verified over public HTTPS. | NFR-2 | JR+CL | **done** |
+| T-303 | **DONE (Jul 13): one service serves API + built SPA** (Vite dist via FastAPI static). Frontend built on server (npm). | NFR-2 | JR+CL | **done** |
+| T-304 | **DONE (Jul 13): mobile verified via headless captures** — found + fixed 2 responsive bugs (portfolio row reflow; DEMO-PANEL/synthetic-ribbon overlap), both live. | NFR-2 | NP+CL | **done** |
 | T-305 | README rewritten (verified stats, Docker+bare quickstart, architecture, MIT LICENSE) + no-secrets scan clean; **demo GIF pending (after T-308 video)**. **Jul 9: CI went red on repo settings, not code — making the repo private flipped the Actions policy to `allowed_actions: local_only`, refusing `actions/checkout@v4` / `setup-python@v5` / `setup-node@v4` (jobs died at 0s, `startup_failure`). Policy narrowed to `selected` + `github_owned_allowed`; `workflow_dispatch` added to `ci.yml` because a `startup_failure` run cannot be rerun. ✅ CI GREEN again — run 29004771741, 3/3 jobs, `22 passed`.** | NFR-3/7, G1c | NP+CL+JR | doing |
 | T-306 | **Deck BUILT Jul 8 by CL** (JT didn't) — 15-slide PPTX+PDF on the OFFICIAL IDBI template (cropped IDBI header band + section titles as dimmed eyebrows, our claims as headlines, ONLY our content — no leftover template prompts). Real screenshots embedded, verified numbers, QR, appendix sources. Self-QA'd render slide-by-slide. Files `MCS-Parakh_PS3_M-Connect-Labs.pptx/.pdf` (root, private; **PDF 956 KB ≤5 MB**). Built via `python-pptx` + PowerPoint-COM PDF export + poppler render-check. **Pending: JR review, confirm registered team name, QR→live URL on deploy** | G1a | CL+JR | **done** |
 | T-307 | Deck speaker notes **done** — every slide carries notes with the primary source per number (in the built deck) | G1a | CL | **done** |
@@ -75,14 +75,14 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 
 ## P4 — Submit
 
-**⏰ DEADLINE CORRECTED (Jul 09): submission closes Mon Jul 13, 2026 11:59 PM IST (per official H2S roadmap — was mistakenly Jul 09). Internal target: submit by Jul 12. Team Formation module ALSO closes Jul 13 → close out T-403 before then.**
+**✅ SUBMITTED & CONFIRMED — Jul 13, 2026 16:13 IST (H2S email receipt). Deployment link + PoC PDF + GitHub link all filed for PS3. Team Formation 4/4 (full). Next milestone: Shortlist Jul 21 → Prototype Jul 22–31.**
 
 | ID | Task | Owner | Status |
 |---|---|---|---|
-| T-401 | Final review meeting (target Jul 12 AM) | all | todo |
-| T-402 | Export PDF ≤ 5 MB; slide-1 fields; submit deck + links by Jul 12 (hard deadline Jul 13 11:59 PM IST) | JR | todo |
-| T-403 | Confirm Hack2Skill team formation complete — **module closes Jul 13, do NOT leave to last day** | JR | todo |
-| T-404 | Confirmation screenshot archived | JR | todo |
+| T-401 | Final review — 15-slide render pass reviewed live; 2 fixes applied (20/20→22/22, dropped demo-video bullet) | all | **done** |
+| T-402 | PDF exported (0.88 MB ≤5 MB), links filed, submitted 16:13 IST (deadline 11:59 PM) | JR | **done** |
+| T-403 | Hack2Skill team formation **4/4 full**: JR (leader) · Jayesh Trivedi · Zaid Shaikh · Nirmal Prajapati | JR | **done** |
+| T-404 | Confirmation = H2S email receipt (16:13 IST) — archived by JR | JR | **done** |
 
 ## Blockers (live)
 
@@ -92,4 +92,4 @@ Owners: **JR** Jitendra · **JT** Jayesh · **ZS** Zaid · **NP** Nirmal · **FE
 | B-2 | Working defaults unconfirmed (deploy / model scope / EPFO) | T-302, T-310, T-103 | JR | Jul 6 | **resolved** — EPFO shipped; scorecard-only shipped (GBM stays stretch); deploy superseded by B-5 |
 | B-3 | AWS account access not verified | T-302/303 | JR | Jul 6 | **superseded Jul 7** — no AWS; hosting = mconnectsolutions.com (B-5) |
 | B-4 | IDBI template access not verified | T-306 | JT | Jul 6 | **resolved Jul 7** — template downloaded + analyzed; 15-slide structure mapped |
-| B-5 | **Hosting timing on mconnectsolutions.com (JR)** — blocks deploy chain T-302/303/304/313/314/318 (QR) | deploy chain | JR | Jul 7 | **live** |
+| B-5 | **Hosting timing on mconnectsolutions.com (JR)** — blocks deploy chain T-302/303/304/313/314/318 (QR) | deploy chain | JR | Jul 7 | **RESOLVED Jul 13** — JR provided shared Contabo/RiantPOS VPS; deployed non-destructively to `parakh.mconnectsolutions.com`; QR + deck screenshots + live link all done |
