@@ -22,7 +22,7 @@ export default function LenderDashboard() {
   return (
     <div className="ledger-bg min-h-screen text-paper">
       <TopBar />
-      <div className="max-w-6xl mx-auto px-4 pb-4">
+      <div className="max-w-6xl mx-auto px-4 pb-24 sm:pb-4">
         <div className="flex flex-wrap items-end justify-between gap-3 pt-5">
           <div>
             <h2 className="font-display font-bold text-xl">Portfolio · MSME Book</h2>
@@ -31,9 +31,9 @@ export default function LenderDashboard() {
             </div>
           </div>
           <form onSubmit={e => { e.preventDefault(); if (gstin.trim()) nav(`/assess/${gstin.trim().toUpperCase()}`) }}
-            className="flex">
+            className="flex w-full sm:w-auto">
             <input value={gstin} onChange={e => setGstin(e.target.value)} placeholder="New assessment — enter GSTIN"
-              className="bg-navy-900 hairline px-3 py-2 text-sm font-mono w-72 placeholder:text-paper/30 outline-none focus:border-amber-500/60" />
+              className="bg-navy-900 hairline px-3 py-2 text-sm font-mono w-full sm:w-72 placeholder:text-paper/30 outline-none focus:border-amber-500/60" />
             <button className="bg-amber-500 text-navy-950 px-4 font-display font-bold text-sm hover:bg-amber-400">ASSAY →</button>
           </form>
         </div>
@@ -51,7 +51,7 @@ export default function LenderDashboard() {
             <section className="mt-6">
               <div className="caps-label text-paper/40 mb-2">Book · ranked by momentum</div>
               <div className="hairline bg-navy-900/40">
-                <div className="grid grid-cols-12 gap-2 px-3 py-2 caps-label text-paper/35 hairline-b">
+                <div className="hidden sm:grid grid-cols-12 gap-2 px-3 py-2 caps-label text-paper/35 hairline-b">
                   <div className="col-span-4">Account</div><div className="col-span-2">Trend 8m</div>
                   <div className="col-span-1 text-right">Δ1m</div><div className="col-span-2 text-right">Score</div>
                   <div className="col-span-3 text-right">Indicative limit</div>
@@ -71,23 +71,26 @@ export default function LenderDashboard() {
 
 function Row({ m, alert }) {
   return (
-    <Link to={`/lender/${m.gstin}`} className="ledger-row grid grid-cols-12 gap-2 px-3 py-2.5 items-center">
-      <div className="col-span-4 min-w-0">
+    <Link to={`/lender/${m.gstin}`} className="ledger-row block sm:grid sm:grid-cols-12 sm:gap-2 px-3 py-2.5 sm:items-center">
+      <div className="sm:col-span-4 min-w-0">
         <div className="font-semibold text-[13.5px] truncate">{m.name}
           {m.demo_persona && <span className="ml-2 text-[9px] px-1 border border-teal-300/40 text-teal-300">DEMO</span>}
         </div>
-        <div className="font-mono text-[10.5px] text-paper/40">{m.gstin} · {m.city}</div>
+        <div className="font-mono text-[10.5px] text-paper/40 truncate">{m.gstin} · {m.city}</div>
         {alert && <div className="text-band-red-lit text-[11.5px] mt-0.5">{m.alerts[0].text}</div>}
       </div>
-      <div className="col-span-2"><Sparkline series={m.trend} /></div>
-      <div className={`col-span-1 text-right tnum font-mono text-xs ${m.delta_1m < 0 ? 'text-band-red' : 'text-teal-300'}`}>
-        {m.delta_1m > 0 ? '+' : ''}{m.delta_1m}
+      {/* metrics: second line on mobile (flex), dissolve into the grid on desktop */}
+      <div className="mt-2 flex items-center justify-between gap-3 sm:mt-0 sm:contents">
+        <div className="shrink-0 sm:col-span-2"><Sparkline series={m.trend} /></div>
+        <div className={`shrink-0 text-right tnum font-mono text-xs sm:col-span-1 ${m.delta_1m < 0 ? 'text-band-red' : 'text-teal-300'}`}>
+          {m.delta_1m > 0 ? '+' : ''}{m.delta_1m}
+        </div>
+        <div className="shrink-0 text-right sm:col-span-2">
+          <span className="tnum font-display font-bold text-lg" style={{ color: BAND_COLOR[m.band] }}>{m.score}</span>
+          <span className="text-[10px] text-paper/40 ml-1.5">{m.band}</span>
+        </div>
+        <div className="shrink-0 text-right tnum font-mono text-[13px] text-paper/80 sm:col-span-3">{inr(m.indicative_limit)}</div>
       </div>
-      <div className="col-span-2 text-right">
-        <span className="tnum font-display font-bold text-lg" style={{ color: BAND_COLOR[m.band] }}>{m.score}</span>
-        <span className="text-[10px] text-paper/40 ml-1.5">{m.band}</span>
-      </div>
-      <div className="col-span-3 text-right tnum font-mono text-[13px] text-paper/80">{inr(m.indicative_limit)}</div>
     </Link>
   )
 }
