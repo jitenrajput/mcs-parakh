@@ -3,7 +3,7 @@ fastapi>=0.110
 uvicorn[standard]>=0.29
 pydantic>=2.6
 pytest>=8.0
-httpx2  # starlette TestClient dependency (api/tests)
+httpx  # starlette TestClient dependency (api/tests)
 
 # Stretch only (T-310 GBM risk lens) — install when built
 # lightgbm>=4.3
