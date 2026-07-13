@@ -12,7 +12,7 @@ export default function KillSwitchStrip() {
   const toggle = async s => setState(await api.kill(s.source_id, !s.killed))
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed bottom-20 left-4 z-50 sm:bottom-4">
       {open && state && (
         <div className="mb-2 hairline bg-navy-950/95 backdrop-blur p-3 w-64 seal-in">
           <div className="caps-label text-amber-500 mb-2">Demo panel · kill a source</div>
