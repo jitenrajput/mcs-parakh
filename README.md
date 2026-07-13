@@ -3,7 +3,7 @@
 # MCS Parakh (परख) — by M-Connect Labs
 
 [![CI](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml/badge.svg)](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
+[![License: Evaluation-Only](https://img.shields.io/badge/License-evaluation--only-C86E1E.svg)](LICENSE)
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-14243D)
 ![Node 20](https://img.shields.io/badge/Node-20-14243D)
 ![Data: synthetic](https://img.shields.io/badge/Data-100%25%20synthetic-E8A33D)
@@ -130,6 +130,9 @@ assets/brand/       logo marks
 
 ## License
 
-[MIT](LICENSE) — © 2026 M-Connect Labs. Built for IDBI Innovate 2026.
+**Source-available for evaluation only** — not open-source. © 2026 M-Connect Labs.
+All rights reserved. The code may be read and evaluated (including by IDBI Innovate
+2026 judges and IDBI Bank); no use, reproduction, modification, distribution, or
+deployment is permitted. See [LICENSE](LICENSE). Built for IDBI Innovate 2026.
 
 *Stats above: SIDBI "Understanding Indian MSME Sector" (May 2025); PIB Udyam registration data (Feb 2026).*

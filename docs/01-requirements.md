@@ -55,7 +55,7 @@ Each requirement carries an ID (used in commits, tracker, and PRs), a priority, 
 |---|---|---|
 | NFR-1 | Score computation < 2 s per MSME end-to-end in demo | MUST |
 | NFR-2 | Deployed URLs live from Jul 8 through at least Jul 21 (shortlist date) — no sleeping free-tier that cold-starts > 30 s | MUST |
-| NFR-3 | Zero secrets/PII in repo; MIT license; public-safe | MUST |
+| NFR-3 | Zero secrets/PII in repo; evaluation-only source-available license (not open-source); public-safe | MUST |
 | NFR-4 | Fresh clone → running locally in 2 commands | SHOULD |
 | NFR-5 | Scoring engine = pure stateless module, framework-free, unit-tested (the "swap FastAPI→SageMaker" credibility) | MUST |
 | NFR-6 | Deterministic demo: same inputs → same score, no randomness at request time | MUST |

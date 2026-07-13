@@ -36,7 +36,7 @@ Rules: tracker status updates ride **in the same commit** as the work · no `WIP
 
 ## Repo hygiene (jury-facing, NFR-3)
 
-- **MIT `LICENSE`** file before submission.
+- **Evaluation-only source-available `LICENSE`** file before submission (proprietary; not open-source — preserves IDBI ROFR/exclusivity).
 - **No secrets ever**: AWS keys/tokens via env only; `.env` in `.gitignore`; `git grep -iE "(api[_-]?key|secret|token|password)"` before every push (NP runs it daily).
 - **Synthetic data is committed deliberately** (jury should run without a datagen step) and watermarked SYNTHETIC in every file.
 - History stays clean: no force-push to master after Jul 7; if history surgery is ever needed, JR decides.

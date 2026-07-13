@@ -1,21 +1,62 @@
-MIT License
+MCS Parakh — Evaluation-Only Source-Available License
+Copyright (c) 2026 M-Connect Labs. All rights reserved.
 
-Copyright (c) 2026 M-Connect Labs
+This repository and all of its contents — source code, documentation, designs,
+data and other materials (the "Software") — are made source-available by
+M-Connect Labs ("Licensor") SOLELY so that they may be read and evaluated. The
+Software is proprietary and is NOT open-source software.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. LIMITED PERMISSION
+   Subject to the restrictions below, Licensor grants you a non-exclusive,
+   non-transferable, revocable permission to view and read the Software for the
+   sole purpose of evaluating it — including evaluation by the organizers and
+   judges of IDBI Innovate 2026 and by IDBI Bank Ltd. and its authorized
+   representatives in connection with that program. No other use is permitted.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. RESTRICTIONS
+   Except as expressly permitted in Section 1, you may NOT, in whole or in part:
+   (a) use, run, deploy, host, or operate the Software for any purpose;
+   (b) reproduce or copy the Software, other than transient copies made
+       automatically by the hosting platform (e.g., GitHub viewing/forking);
+   (c) modify, adapt, translate, or create derivative works of the Software;
+   (d) distribute, publish, sublicense, sell, rent, lease, or otherwise transfer
+       the Software or any rights in it to any third party;
+   (e) use the Software for any commercial or production purpose; or
+   (f) remove, obscure, or alter any copyright, trademark, or other proprietary
+       notice.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. NO TRANSFER OF RIGHTS
+   All right, title, and interest in and to the Software, including all
+   intellectual property rights, remain exclusively with Licensor. No license or
+   right is granted by implication, estoppel, or otherwise, except as expressly
+   set out in Section 1. All rights not expressly granted are reserved.
+
+4. NO TRADEMARK OR PATENT LICENSE
+   No rights are granted to any trademark, service mark, trade name, or patent of
+   Licensor.
+
+5. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+   OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+7. TERMINATION
+   This permission terminates automatically if you breach any term, and may be
+   revoked by Licensor at any time. Upon termination you must cease all access
+   to and use of the Software.
+
+8. DATA NOTICE
+   All data included in this repository is SYNTHETIC and generated for
+   demonstration only. It does not describe any real person or business.
+
+9. GOVERNING LAW
+   This License is governed by the laws of India, with exclusive jurisdiction in
+   the courts of Ahmedabad, Gujarat.
+
+For licensing inquiries, contact M-Connect Labs (https://mconnectsolutions.com).

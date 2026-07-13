@@ -19,7 +19,7 @@ G0  WIN IDBI Innovate 2026 (Demo Day, Aug 21)
 1. **Clickable deployed demo** running 3 scripted personas end-to-end:
    GSTIN → AA-style consent → Health Card assembles → lender/MSME flip → portfolio early-warning.
 2. **10-slide deck** with zero unverifiable stats (only numbers from `research-findings.md` §3) and the corrected differentiation story (product model vs FIT Rank — never the data recipe).
-3. **Public repo**: MIT license, no secrets, README with architecture diagram + demo GIF, `2 commands to run`.
+3. **Public repo**: evaluation-only source-available license (not open-source), no secrets, README with architecture diagram + demo GIF, `2 commands to run`.
 4. **Three bank-grade credibility signals** visible in the demo:
    - AA-style 7-step consent screen (RBI AA Master Direction literacy)
    - Explainable reason codes on every score (FREE-AI / draft MRM 2026 alignment)
