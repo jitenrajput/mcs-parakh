@@ -2,6 +2,7 @@
 
 # MCS Parakh (परख) — by M-Connect Labs
 
+[![Live demo](https://img.shields.io/badge/%E2%96%B6%20Live%20demo-parakh.mconnectsolutions.com-0E6E5C.svg)](https://parakh.mconnectsolutions.com)
 [![CI](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml/badge.svg)](https://github.com/jitenrajput/mcs-parakh/actions/workflows/ci.yml)
 [![License: Evaluation-Only](https://img.shields.io/badge/License-evaluation--only-C86E1E.svg)](LICENSE)
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-14243D)
@@ -9,6 +10,8 @@
 ![Data: synthetic](https://img.shields.io/badge/Data-100%25%20synthetic-E8A33D)
 
 **A two-sided, explainable MSME Financial Health Card. Built for IDBI Innovate 2026 (PS3).**
+
+**▶ Live demo: [parakh.mconnectsolutions.com](https://parakh.mconnectsolutions.com)** — the running PoC (synthetic data, watermarked).
 
 > *Parakh — har khare vyapar ki pehchaan.* Every genuine business, recognized.
 
